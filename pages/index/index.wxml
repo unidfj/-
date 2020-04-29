@@ -1,0 +1,123 @@
+<!-- banner轮播 -->
+<view class="diy-banner">
+	<swiper autoplay class="banner-box swiper-box dot-round" duration="{{duration}}" circular="{{800}}" interval="{{3000}}" indicator-dots indicator-color="{{wxapp.BackgroundColor}}" indicator-active-color="{{wxapp.TopTextColor}}">
+		<navigator hover-class="none" wx:for-item="banner" url="../news/index?id={{banner.id}}" wx:for="{{banner}}" wx:key="this">
+			<swiper-item item-id="{{index}}">
+				<image class="slide-image" mode="aspectFill" src="{{banner.image}}" data-id="{{index}}"></image>
+			</swiper-item>
+		</navigator>
+	</swiper>
+</view>
+
+
+<view class="grid">
+	<van-grid column-num="5" gutter="{{ 13 }}">
+		<!--  -->
+		<van-grid-item wx:for='{{3}}' icon="photo-o" text="文字" />
+
+		<van-grid-item icon="photo-o" text="会员福利" />
+		<van-grid-item icon="photo-o" text="会员注册" />
+	</van-grid>
+</view>
+
+<!-- 广告 -->
+<view class="ad">
+	<ad unit-id="adunit-2a1643b3e873e2a3"></ad>
+</view>
+
+<!-- 热门活动 -->
+<block>
+	<view class="cell">
+		<van-cell is-link title="热门活动" value="更多" link-type="navigateTo" url="" />
+	</view>
+	<view class="remen">
+		<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+	</view>
+
+	<view class="df m15 pl15">
+		<view class="remenleft">
+			<view>雅韵茶舍体验(1日)</view>
+			<button type="warn" size="mini">立即参与</button>
+		</view>
+		<view class="remenright">
+			<van-steps active-icon='circle' inactive-icon='circle' steps="{{ steps }}" active="{{ active }}" direction="vertical" active-color="green" inactive-color='red' custom-class='stepclass' />
+		</view>
+	</view>
+
+</block>
+
+
+<!-- <view class="til_conview">
+		<van-row class='in-title'>
+			<van-col>
+				<van-icon name="new" color="{{wxapp.BackgroundColor}}" size="2em" custom-class="van-icon-new" />
+			</van-col>
+			<van-col><text class="til_con"> 最新上架 </text></van-col>
+		</van-row>
+	</view> -->
+<!-- 最新上架列表 S -->
+<!-- <view class="index_sale ">
+		<scroll-view scroll-x="true">
+			<navigator hover-class="none" style="display: inline-block;" url="../goods/index?goods_id={{item.goods_id}}" wx:for="{{newlist}}" wx:key="this">
+				<view class="page-column">
+					<view class="sale_img">
+						<image mode="aspectFill" src="{{item.ImageFrist}}"></image>
+					</view>
+					<view class="content onelist-hidden">
+						<text>{{item.goods_name}}</text>
+					</view>
+					<text class="price">￥{{item.spec[0].goods_price}}</text>
+				</view>
+			</navigator>
+		</scroll-view>
+	</view> -->
+
+
+
+<!-- 随机推荐 -->
+<view class='complist'>
+	<!-- <view class="til_conview">
+		<van-row class='in-title'>
+			<van-col>
+				<van-icon name="send-gift" color="{{wxapp.BackgroundColor}}" size="2em" custom-class="van-icon-new" />
+			</van-col>
+			<van-col><text class="til_con"> 随机推荐 </text></van-col>
+		</van-row>
+
+	</view> -->
+	<!-- 随机推荐列表 S -->
+	<!--<view class="index_sale ">
+		 <view class="free-WaterfallFlow">
+			<block>
+				<view class="flex-wrap" wx:for="{{randomlist}}" wx:key='{{item.goods_id}}' wx:for-index="idx" wx:if="{{idx%2!=''}}">
+					<navigator hover-class="none" url="../goods/index?goods_id={{item.goods_id}}">
+						<view class="page-column">
+							<view>
+								<image mode="widthFix" src="{{item.ImageFrist}}"></image>
+							</view>
+							<view class="content_raddom">
+								<text>{{item.goods_name}}</text>
+							</view>
+							<text class="price">￥{{item.spec[0].goods_price}}</text>
+						</view>
+					</navigator>
+				</view>
+			</block>
+			<block>
+				<view class="flex-wrap" wx:for="{{randomlist}}" wx:key='{{item.goods_id}}' wx:for-index="idx" wx:if="{{idx%2==''}}">
+					<navigator hover-class="none" url="../goods/index?goods_id={{item.goods_id}}">
+						<view class="page-column">
+							<view>
+								<image mode="widthFix" src="{{item.ImageFrist}}"></image>
+							</view>
+							<view class="content_raddom">
+								<text>{{item.goods_name}}</text>
+							</view>
+							<text class="price">￥{{item.spec[0].goods_price}}</text>
+						</view>
+					</navigator>
+				</view>
+			</block>
+		</view> 
+	</view>-->
+</view>

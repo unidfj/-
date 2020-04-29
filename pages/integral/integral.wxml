@@ -1,0 +1,15 @@
+<view class="jifen">
+	积分余额 : {{'99'}}
+</view>
+
+<van-tabs active="{{ active }}" bind:change="onChange" tab-class='height50'>
+	<van-tab wx:for='{{tab}}' wx:key='index' title="{{item.title}}">
+		<block wx:for='{{item.data}}' wx:key='index'>
+
+			<cardblock props='{}'>
+			</cardblock>
+
+			<!-- <view>   </view> -->
+		</block>
+	</van-tab>
+</van-tabs>

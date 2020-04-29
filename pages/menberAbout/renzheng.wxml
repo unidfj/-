@@ -1,0 +1,117 @@
+<view class="renzheng" wx:if="{{type=='0'}}">
+	<form bindsubmit="submit0">
+		<!--  -->
+		<view class="margintb">
+			认证状态: <text class="tips">未认证</text>
+		</view>
+		<!--  -->
+		<view class="df adress margintb">
+			所在地区:
+			<view class="adressitem">
+				<myselect options="{{options}}" />
+			</view>
+			省
+			<view class="adressitem">
+				<myselect />
+			</view>
+			市
+			<view class="adressitem">
+				<myselect />
+			</view>区
+		</view>
+		<!--  -->
+		<view class="df lh40 margintb">
+			业主楼盘:
+			<view class="loupanitem">
+				<myselect />
+			</view>
+		</view>
+		<!--  -->
+		<view class="df lh40 margintb">
+			业主楼号:
+			<view class="loupanitem">
+				<myselect />
+			</view>
+		</view>
+		<!--  -->
+		<block wx:for='{{wxfordata0}}' wx:key='index'>
+			<view class="df lh40 margintb">
+				{{item.title}}
+				<input class="inputuitem lh40" placeholder="{{item.placeholder}}" type="{{item.type}}"></input>
+			</view>
+		</block>
+		<view class="tips"> *注意: 业主信息必须为购房者信息 </view>
+		<button class="btn" type="warn" form-form-type="sumbit">提交申请</button>
+	</form>
+</view>
+
+
+<!-- 第二套 -->
+<view class="renzheng" wx:if="{{type=='1'}}">
+	<form bindsubmit="submit1">
+		<!--  -->
+		<view class="margintb">
+			认证状态: <text class="tips">未认证</text>
+		</view>
+		<!--  -->
+		<view class="df adress margintb">
+			所在地区:
+			<view class="adressitem">
+				<myselect options="{{options}}" />
+			</view>
+			省
+			<view class="adressitem">
+				<myselect />
+			</view>
+			市
+			<view class="adressitem">
+				<myselect />
+			</view>
+			区
+		</view>
+		<!--  -->
+		<view class="df lh40 margintb">
+			商家楼盘:
+			<view class="loupanitem">
+				<myselect />
+			</view>
+		</view>
+		<!--  -->
+		<block wx:for='{{wxfordata1}}' wx:key='index'>
+			<view class="df lh40 margintb">
+				{{item.title}}
+				<input class="inputuitem lh40" placeholder="{{item.placeholder}}" type="{{item.type}}"></input>
+			</view>
+		</block>
+		<!--  -->
+		<view class="df margintb">
+			<view>营业执照照片:
+				<view class="jpg">(只支持.jpg格式)</view>
+			</view>
+			<view>
+				<van-uploader use-before-read bind:before-read="beforeRead" accept='image'>
+					<view class="uploadview dfcol">
+						<van-icon name="plus" size="24px" />
+						上传照片
+					</view>
+				</van-uploader>
+			</view>
+		</view>
+		<!--  -->
+		<view class="df margintb">
+			<view>门店照片:
+				<view class="jpg">(只支持.jpg格式)</view>
+			</view>
+			<view>
+				<van-uploader use-before-read bind:before-read="beforeRead" accept='image'>
+					<view class="uploadview dfcol">
+						<van-icon name="plus" size="24px" />
+						上传照片
+					</view>
+				</van-uploader>
+			</view>
+		</view>
+		<view class="tips"> *注意: 业主信息必须为购房者信息 </view>
+		<button class="btn" type="warn" form-type="submit">提交申请</button>
+	</form>
+</view>

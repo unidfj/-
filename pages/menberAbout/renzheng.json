@@ -1,0 +1,9 @@
+{
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "会员认证",
+  "usingComponents": {
+    "myselect":"/pages/menberAbout/select",
+    "van-uploader": "/res/vant/uploader/index",
+    "van-icon": "/res/vant/icon/index"
+  }
+}

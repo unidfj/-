@@ -1,0 +1,10 @@
+<view id="luckdraw_box">
+	<view id="luckdraw_back">
+		<image style='transform:rotate({{ change_angle}}deg)' mode="scaleToFill" src="./bg.jpg"></image>
+	</view>
+	<view id="luckdraw_pointer" bindtap='luckDrawStart'>
+		<image mode="scaleToFill" src="./zhizhen.jpg"></image>
+	</view>
+</view>
+<view class="available">剩余{{available_num}}次机会</view>
+<view class="available" wx:if='{{available_num<=0}}'> 去买次数吧 </view>

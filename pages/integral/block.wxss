@@ -1,0 +1,63 @@
+.tabitem {
+	margin: 15px 12px 15px 10px;
+	padding: 20px 6px 0 6px;
+	box-sizing: border-box;
+	width: 706rpx;
+	height: 330rpx;
+	box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+	border-radius: 4px;
+}
+
+.itemleft {
+	width: 125px;
+	height: 125px;
+	box-sizing: border-box;
+	margin-right: 10px;
+}
+
+
+
+.itemright {
+	flex: 1;
+}
+
+.text {
+	margin-left: 10px;
+	color: rgba(146, 146, 146, 1);
+	text-align: justify;
+}
+
+
+/* page {
+	font-size: 14px;
+	font-family: PingFangSC-regular;
+} */
+
+.xiaohao {
+	width: 120px;
+	height: 20px;
+	color: rgba(221, 50, 50, 1);
+	text-align: left;
+}
+
+.df {
+	display: flex;
+}
+
+.dfcenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.dfcol {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.img {
+	width: 100% !important;
+	height: 100% !important;
+}

@@ -1,0 +1,64 @@
+{
+	"pages": [
+		"pages/index/index",
+		"pages/demo/index",
+		"pages/goods/index",
+		"pages/category/index",
+		"pages/category/list",
+		"pages/cart/index",
+		"pages/cart/checout",
+		"pages/adress/index",
+		"pages/adress/create",
+		"pages/adress/edit",
+		"pages/order/index",
+		"pages/member/index",
+		"pages/order/detail",
+		"pages/lottery/lottery",
+		"pages/integral/integral",
+		"pages/menberAbout/renzheng",
+		"pages/menberAbout/select",
+		"pages/integral/block",
+		"pages/integral/detail"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "怡福荟",
+		"navigationBarTextStyle": "black"
+	},
+	"tabBar": {
+		"color": "#6e6d6b",
+		"selectedColor": "#6d189e",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "res/imgs/home.png",
+				"selectedIconPath": "res/imgs/home-active.png"
+			},
+			{
+				"pagePath": "pages/category/index",
+				"text": "会员福利",
+				"iconPath": "res/imgs/category.png",
+				"selectedIconPath": "res/imgs/category-active.png"
+			},
+			{
+				"pagePath": "pages/cart/index",
+				"text": "参与活动",
+				"iconPath": "res/imgs/flow.png",
+				"selectedIconPath": "res/imgs/flow-active.png"
+			},
+			{
+				"pagePath": "pages/member/index",
+				"text": "会员中心",
+				"iconPath": "res/imgs/my.png",
+				"selectedIconPath": "res/imgs/my-active.png"
+			}
+		],
+		"position": "bottom"
+	},
+	"debug": true,
+	"sitemapLocation": "sitemap.json"
+}

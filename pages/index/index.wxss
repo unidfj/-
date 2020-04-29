@@ -1,0 +1,123 @@
+/* banner轮播 */
+.slide-image {
+  background: #fff;
+}
+
+.diy-banner {
+  position: relative;
+  background-color: white;
+}
+
+/* banner组件按钮 */
+.swiper-box .wx-swiper-dot {
+  height: 20rpx;
+  width: 20rpx;
+}
+
+.swiper-box {
+  width: 750rpx;
+  height: 416.6rpx;
+  position: relative;
+}
+
+.swiper-box image {
+  width: 100%;
+  height: 100%;
+}
+
+.van-nbar-c {
+  background-color: #6d189e !important;
+}
+
+.van-grid-item__text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* .van-step--vertical .van-step__icon {
+  background: #fff !important;
+  z-index: 999 !important;
+} */
+/* .van-step--vertical .van-step__icon {
+  font-size: 12px;
+  font-size: var(--step-icon-size, 12px);
+  background: #fff !important;
+  z-index: 999 !important;
+} */
+
+.stepclass {
+  height: 180rpx;
+}
+
+.stepclass .van-step--vertical .van-icon-circle {
+  background: #fff !important;
+  z-index: 999 !important;
+}
+
+
+
+.grid {
+  margin: 20rpx 0;
+}
+
+.cell {
+  padding-left: 5px;
+  margin: 5rpx 0;
+  position: relative;
+  background-color: red;
+}
+
+.remen {
+  width: 100%;
+  height: 250rpx;
+}
+
+.remenleft {
+  flex: 6;
+  flex-shrink: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.remenleft view {
+  margin: 10rpx 0;
+}
+
+.remenright {
+  flex: 4;
+  flex-shrink: 0;
+
+}
+
+
+/* 瀑布流 */
+/* .free-WaterfallFlow {
+  width: 100%;
+  column-count: 2;
+}
+
+.free-WaterfallFlow .flex-wrap {
+  display: inline-block;
+  width: 98%;
+  border: 1px solid #ecd1fc;
+  padding: 2%;
+  padding-top: 5%;
+  margin-right: 2%;
+  box-shadow: 0 1px 2px #dfb3f8;
+  text-align: center;
+  vertical-align: top;
+}
+
+.flex-wrap image {
+  width: 98%;
+  margin: 0 auto;
+}
+
+.index_sale .content_raddom {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+} */

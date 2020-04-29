@@ -1,0 +1,25 @@
+.jifen {
+	width: 355*2rpx;
+	height: 62*2rpx;
+	background: rgba(221, 50, 50, 1);
+	color: #fff;
+	font-family: PingFangSC-bold;
+	font-size: 14px;
+	padding: 48rpx;
+	border-radius: 16rpx;
+	margin: 15rpx 10rpx;
+}
+
+.tab {
+	width: 375px;
+	height: 50px;
+	border: 1px solid #BBBBBB;
+}
+
+.height50 {
+	height: 50px;
+}
+
+.van-ellipsis {
+	height: 100%;
+}

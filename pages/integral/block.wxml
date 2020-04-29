@@ -1,0 +1,29 @@
+	<navigator url="../integral/detail?id={{12}}">
+		<view class="tabitem df">
+			<view class="itemleft">
+				<image mode="aspectFill" class="img" src="https://img.yzcdn.cn/vant/cat.jpeg">
+				</image>
+			</view>
+			<view class="itemright">
+				V·型理发卡代金券
+				<view class="xiaohao df">
+					消耗积分：
+					<view>
+						{{'45积分'}}
+					</view>
+				</view>
+				<view class="mendian df">
+					<view>兑换门店:</view>
+					<text class="text">{{'V·型时尚美业（光明路店）'}}</text>
+				</view>
+				<view class="df">
+					<view>兑换时间:</view>
+					<text class="text">{{'2020-04-23'}}</text>
+				</view>
+				<view class="df">
+					<view>领取时间:</view>
+					<text class="text">{{'2020-04-23'}}</text>
+				</view>
+			</view>
+		</view>
+	</navigator>

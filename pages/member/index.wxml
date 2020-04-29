@@ -1,0 +1,29 @@
+<view class="header dfcenter">
+	<view class="userimg">
+		<image class="img" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+	</view>
+	<view class="userdata">
+		<view class="username">
+			James <text>未认证</text>
+		</view>
+		<view class="userBalance">
+			积分余额 : 99
+		</view>
+	</view>
+</view>
+
+<!-- bind:click cell点击事件 -->
+<view class="cellclass" wx:for='{{member}}' wx:key='index'>
+	<van-cell title="{{item.title}}" icon="{{url.icon}}" url="{{item.url}}" data-index="{{index}}" bind:click='handleClick' is-link />
+</view>
+
+<van-overlay show="{{ show }}">
+	<view class="overlay dfcenter">
+		<view class="overlayitem" bindtap="renzheng" data-type="0">
+			<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+		</view>
+		<view class="overlayitem" bindtap="renzheng" data-type='1'>
+			<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+		</view>
+	</view>
+</van-overlay>
