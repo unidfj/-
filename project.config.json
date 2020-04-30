@@ -81,13 +81,6 @@
 				},
 				{
 					"id": 4,
-					"name": "pages/goods/index",
-					"pathName": "pages/goods/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 4,
 					"name": "pages/member/index",
 					"pathName": "pages/member/index",
 					"query": "id=16",
@@ -101,10 +94,24 @@
 					"scene": null
 				},
 				{
+					"id": 6,
+					"name": "卡片详情 intergral detail",
+					"pathName": "pages/integral/detail",
+					"query": "id=0001",
+					"scene": null
+				},
+				{
 					"id": -1,
-					"name": "积分订单",
-					"pathName": "pages/integral/integral",
-					"query": "id=16",
+					"name": "会员中心 menber index",
+					"pathName": "pages/member/index",
+					"query": "id=0001",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "参与活动",
+					"pathName": "pages/activity/index",
+					"query": "id=0001",
 					"scene": null
 				}
 			]

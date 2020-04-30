@@ -33,7 +33,6 @@
 	<view class="remen">
 		<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
 	</view>
-
 	<view class="df m15 pl15">
 		<view class="remenleft">
 			<view>雅韵茶舍体验(1日)</view>
@@ -45,79 +44,3 @@
 	</view>
 
 </block>
-
-
-<!-- <view class="til_conview">
-		<van-row class='in-title'>
-			<van-col>
-				<van-icon name="new" color="{{wxapp.BackgroundColor}}" size="2em" custom-class="van-icon-new" />
-			</van-col>
-			<van-col><text class="til_con"> 最新上架 </text></van-col>
-		</van-row>
-	</view> -->
-<!-- 最新上架列表 S -->
-<!-- <view class="index_sale ">
-		<scroll-view scroll-x="true">
-			<navigator hover-class="none" style="display: inline-block;" url="../goods/index?goods_id={{item.goods_id}}" wx:for="{{newlist}}" wx:key="this">
-				<view class="page-column">
-					<view class="sale_img">
-						<image mode="aspectFill" src="{{item.ImageFrist}}"></image>
-					</view>
-					<view class="content onelist-hidden">
-						<text>{{item.goods_name}}</text>
-					</view>
-					<text class="price">￥{{item.spec[0].goods_price}}</text>
-				</view>
-			</navigator>
-		</scroll-view>
-	</view> -->
-
-
-
-<!-- 随机推荐 -->
-<view class='complist'>
-	<!-- <view class="til_conview">
-		<van-row class='in-title'>
-			<van-col>
-				<van-icon name="send-gift" color="{{wxapp.BackgroundColor}}" size="2em" custom-class="van-icon-new" />
-			</van-col>
-			<van-col><text class="til_con"> 随机推荐 </text></van-col>
-		</van-row>
-
-	</view> -->
-	<!-- 随机推荐列表 S -->
-	<!--<view class="index_sale ">
-		 <view class="free-WaterfallFlow">
-			<block>
-				<view class="flex-wrap" wx:for="{{randomlist}}" wx:key='{{item.goods_id}}' wx:for-index="idx" wx:if="{{idx%2!=''}}">
-					<navigator hover-class="none" url="../goods/index?goods_id={{item.goods_id}}">
-						<view class="page-column">
-							<view>
-								<image mode="widthFix" src="{{item.ImageFrist}}"></image>
-							</view>
-							<view class="content_raddom">
-								<text>{{item.goods_name}}</text>
-							</view>
-							<text class="price">￥{{item.spec[0].goods_price}}</text>
-						</view>
-					</navigator>
-				</view>
-			</block>
-			<block>
-				<view class="flex-wrap" wx:for="{{randomlist}}" wx:key='{{item.goods_id}}' wx:for-index="idx" wx:if="{{idx%2==''}}">
-					<navigator hover-class="none" url="../goods/index?goods_id={{item.goods_id}}">
-						<view class="page-column">
-							<view>
-								<image mode="widthFix" src="{{item.ImageFrist}}"></image>
-							</view>
-							<view class="content_raddom">
-								<text>{{item.goods_name}}</text>
-							</view>
-							<text class="price">￥{{item.spec[0].goods_price}}</text>
-						</view>
-					</navigator>
-				</view>
-			</block>
-		</view> 
-	</view>-->
-</view>

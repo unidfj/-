@@ -32,10 +32,24 @@
 
 .cellclass {
 	margin: 30rpx 20rpx;
-	border: 4px solid #ccc;
-	border-radius: 15rpx;
 	overflow: hidden;
+	width: 355px;
+	height: 51px;
+	border-radius: 4px;
 	box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.4);
+	border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.cellitem .icon {
+	width: 24px;
+	height: 24px;
+	margin: 13px 18px 14px 10px;
+}
+
+.cellitem text {
+	flex: 1;
+	display: block;
+	padding-left: 10px;
 }
 
 .overlay {

@@ -12,8 +12,8 @@
 						{{'45积分'}}
 					</view>
 				</view>
-				<view class="mendian df">
-					<view>兑换门店:</view>
+				<view class="df">
+					<view class="mendian">兑换门店:</view>
 					<text class="text">{{'V·型时尚美业（光明路店）'}}</text>
 				</view>
 				<view class="df">

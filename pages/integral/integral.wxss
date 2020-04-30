@@ -13,13 +13,31 @@
 .tab {
 	width: 375px;
 	height: 50px;
-	border: 1px solid #BBBBBB;
+	border: 1px solid rgba(187, 187, 187, 1);
+	font-size: 14px;
+
 }
 
-.height50 {
+.tabitem {
+	flex: 1;
 	height: 50px;
+	line-height: 50px;
+	text-align: center;
 }
 
-.van-ellipsis {
-	height: 100%;
+.tabitem {
+	position: relative;
+}
+
+
+.active::after {
+	content: "";
+	position: absolute;
+	bottom: -4rpx;
+	display: block;
+	left: 90rpx;
+	width: 62rpx;
+	height: 3px;
+	background: rgba(221, 50, 50, 1);
+	margin: 0 auto;
 }

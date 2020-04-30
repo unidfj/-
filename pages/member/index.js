@@ -6,19 +6,19 @@ Page({
     member: [{
       title: '身份认证',
       icon: '',
-      url: ''
+      src: ''
     }, {
       title: '积分订单',
       icon: '',
-      url: ''
+      src: ''
     }, {
       title: '我的活动',
       icon: '',
-      url: ''
+      src: ''
     }, {
       title: '积分明细',
       icon: '',
-      url: ''
+      src: ''
     }],
 
     // 遮罩层
@@ -54,7 +54,7 @@ Page({
     let { type } = e.currentTarget.dataset
     // 0是业主,1是商家
     wx.redirectTo({
-      url: `/pages/menberAbout/renzheng?type=${type}`
+      url: `/pages/member/memberAbout/renzheng?type=${type}`
     })
   },
 

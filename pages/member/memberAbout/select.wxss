@@ -1,11 +1,9 @@
-page{
-	font-family: Microsoft Yahei;
-	font-size: 14px;
-}
 .select-box {
 	position: relative;
 	width: 100%;
 	font-size: 30rpx;
+	font-family: Microsoft Yahei;
+	font-size: 14px;
 }
 
 .select-current {

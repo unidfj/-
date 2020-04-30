@@ -5,20 +5,14 @@
 		"pages/goods/index",
 		"pages/category/index",
 		"pages/category/list",
-		"pages/cart/index",
-		"pages/cart/checout",
-		"pages/adress/index",
-		"pages/adress/create",
-		"pages/adress/edit",
-		"pages/order/index",
 		"pages/member/index",
-		"pages/order/detail",
 		"pages/lottery/lottery",
 		"pages/integral/integral",
-		"pages/menberAbout/renzheng",
-		"pages/menberAbout/select",
-		"pages/integral/block",
-		"pages/integral/detail"
+		"pages/member/memberAbout/renzheng",
+		"pages/member/memberAbout/select",
+		"pages/integral/detail",
+		"pages/activity/myactivity",
+		"pages/activity/index"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
@@ -45,7 +39,7 @@
 				"selectedIconPath": "res/imgs/category-active.png"
 			},
 			{
-				"pagePath": "pages/cart/index",
+				"pagePath": "pages/activity/index",
 				"text": "参与活动",
 				"iconPath": "res/imgs/flow.png",
 				"selectedIconPath": "res/imgs/flow-active.png"

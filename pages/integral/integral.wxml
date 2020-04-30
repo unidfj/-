@@ -2,14 +2,13 @@
 	积分余额 : {{'99'}}
 </view>
 
-<van-tabs active="{{ active }}" bind:change="onChange" tab-class='height50'>
-	<van-tab wx:for='{{tab}}' wx:key='index' title="{{item.title}}">
-		<block wx:for='{{item.data}}' wx:key='index'>
 
-			<cardblock props='{}'>
-			</cardblock>
-
-			<!-- <view>   </view> -->
-		</block>
-	</van-tab>
-</van-tabs>
+<view class="tab dfcenter">
+	<view wx:for='{{tab}}' wx:key='index' class="tabitem {{active==index?'active':''}}" bindtap="toogleCurren" data-index="{{index}}"> {{item.title}}
+	</view>
+</view>
+<!-- 循环卡片 -->
+<block>
+	<cardblock props='{}'>
+	</cardblock>
+</block>

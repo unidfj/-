@@ -14,7 +14,12 @@
 
 <!-- bind:click cell点击事件 -->
 <view class="cellclass" wx:for='{{member}}' wx:key='index'>
-	<van-cell title="{{item.title}}" icon="{{url.icon}}" url="{{item.url}}" data-index="{{index}}" bind:click='handleClick' is-link />
+	<view class="dfcenter cellitem" data-index="{{index}}" bindtap="handleClick">
+		<view class="icon">
+			<image class="img" mode="aspectFill" src="{{item.src}}"></image>
+		</view>
+		<text>{{item.title}}</text>
+	</view>
 </view>
 
 <van-overlay show="{{ show }}">

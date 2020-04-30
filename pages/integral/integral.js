@@ -13,7 +13,10 @@ Page({
 		]
 
 	},
-
+	toogleCurren(e) {
+		let { index } = e.target.dataset
+		this.setData({ active: index })
+	},
 	/**
 	 * 生命周期函数--监听页面加载
 	 */

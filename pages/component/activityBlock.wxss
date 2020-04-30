@@ -1,0 +1,70 @@
+/* pages/activityBlock.wxss */
+/* @import "res/vant/common/index.wxss"; */
+@import "../../res/vant/common/index.wxss";
+
+.pic {
+	margin: 0 10px 11px;
+	width: 355px;
+	height: 211px;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.picimg {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.blockitem {
+	margin: 0 10px 11px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.left {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+
+.name {
+	width: 154px;
+	height: 22px;
+	color: rgba(16, 16, 16, 1);
+	font-size: 16px;
+	text-align: left;
+	font-family: PingFangSC-bold;
+	font-weight: 600;
+}
+
+.isstart {
+	margin-top: 7px;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 4px;
+	background-color: rgba(221, 50, 50, 1);
+	color: rgba(254, 253, 253, 1);
+	font-size: 14px;
+	text-align: center;
+	font-family: Microsoft Yahei;
+	border: 1px solid rgba(255, 255, 255, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.stepclass .van-step--vertical .van-icon-circle {
+	background: #fff !important;
+	z-index: 999 !important;
+}

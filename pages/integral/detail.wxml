@@ -1,2 +1,16 @@
-<!--pages/integral/detail.wxml-->
-<text>pages/integral/detail.wxml</text>
+<!-- 卡片详情页面 -->
+<cardblock />
+
+
+<view class="userinfo">
+	<view>
+		兑换人姓名：{{'詹姆斯'}}
+	</view>
+	<view>
+		兑换人手机：{{'13213213213'}}
+	</view>
+</view>
+
+<view class="code">
+	兑换码：{{'1234 5678 9012'}}
+</view>

@@ -1,0 +1,15 @@
+.lottery {
+	margin: 12px 10px 0 16px;
+	width: 349px;
+	height: 160px;
+}
+
+.hot {
+	margin: 10px 0 4px 16px;
+	width: 72px;
+	height: 25px;
+	color: rgba(16, 16, 16, 1);
+	font-size: 18px;
+	text-align: left;
+	font-family: PingFangSC-regular;
+}

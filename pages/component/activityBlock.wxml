@@ -1,0 +1,22 @@
+<view class="pic">
+	<image class="picimg" src="https://img.yzcdn.cn/vant/cat.jpeg" mode="asaspectFill"></image>
+</view>
+
+
+<view class="blockitem">
+	<view class="left">
+		<view class="name">
+			雅韵茶舍体验（1日）
+		</view>
+		<view class="isstart">
+			已开始
+		</view>
+	</view>
+
+	<view class="right">
+
+		<van-steps active-icon='circle' inactive-icon='circle' steps="{{ steps }}" active="{{ active }}" direction="vertical" active-color="green" inactive-color='red' custom-class='stepclass' />
+		2020-03-31
+		2020-03-31
+	</view>
+</view>

@@ -1,0 +1,11 @@
+<!-- tabbar活动首页 -->
+<navigator class="lottery" url="/pages/lottery/lottery">
+	<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+</navigator>
+
+<!-- 热门活动 -->
+<view class="hot">
+	热门活动
+</view>
+<!-- 组件 -->
+<activityBlock />
