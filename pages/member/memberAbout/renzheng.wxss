@@ -1,5 +1,5 @@
 page {
-	padding: 0 10px;
+	padding: 0 20rpx 40rpx 20rpx;
 	font-style: Microsoft Yahei;
 }
 
@@ -55,8 +55,8 @@ page {
 .uploadview {
 	border: rgba(0, 0, 0, 0.15) solid 1px;
 	border-radius: 6rpx;
-	width: 104px;
-	height: 104px;
+	width: 208rpx;
+	height: 208rpx;
 	font-size: 14px;
 	background: rgba(0, 0, 0, 0.02);
 }

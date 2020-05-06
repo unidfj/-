@@ -30,6 +30,14 @@ Page({
   },
 
   onShow: function () {
+    if (this.data.show)
+      this.setData({ show: false })
+  },
+  // 点击空白隐藏遮罩
+  onClickHide(e) {
+    setTimeout(() => {
+      this.setData({ show: false })
+    }, 100);
 
   },
   // 4
@@ -42,20 +50,24 @@ Page({
         show: true
       })
     }
+    // 2积分订单
     if (index === 1) {
       wx.navigateTo({
         url: '/pages/integral/integral',
       })
     }
-  },
-
-  renzheng(e) {
-    console.log(e)
-    let { type } = e.currentTarget.dataset
-    // 0是业主,1是商家
-    wx.redirectTo({
-      url: `/pages/member/memberAbout/renzheng?type=${type}`
-    })
+    //3我的活动
+    if (index === 2) {
+      wx.navigateTo({
+        url: '/pages/activity/myactivity',
+      })
+    }
+    //4积分明细
+    if (index === 3) {
+      wx.navigateTo({
+        url: '/pages/integral/integralDetail',
+      })
+    }
   },
 
 

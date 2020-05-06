@@ -1,2 +1,6 @@
-<!-- 会员中心>我的活动页面 -->
-
+<view class="activitybox">
+	<navigator url="/pages/activity/activitydetail?id={{'0001'}}" hover-class="none">
+		<activityBlock />
+	</navigator>
+	<view class="bd"></view>
+</view>

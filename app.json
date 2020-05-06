@@ -1,18 +1,21 @@
 {
 	"pages": [
 		"pages/index/index",
-		"pages/demo/index",
-		"pages/goods/index",
-		"pages/category/index",
-		"pages/category/list",
+		"pages/project/index",
+		"pages/benefits/index",
 		"pages/member/index",
 		"pages/lottery/lottery",
 		"pages/integral/integral",
 		"pages/member/memberAbout/renzheng",
 		"pages/member/memberAbout/select",
 		"pages/integral/detail",
+		"pages/activity/index",
 		"pages/activity/myactivity",
-		"pages/activity/index"
+		"pages/activity/activitydetail",
+		"pages/activity/shangjiaActivity",
+		"pages/integral/integralDetail",
+		"pages/benefits/goodsDetail",
+		"pages/project/projectDetail"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
@@ -33,7 +36,7 @@
 				"selectedIconPath": "res/imgs/home-active.png"
 			},
 			{
-				"pagePath": "pages/category/index",
+				"pagePath": "pages/benefits/index",
 				"text": "会员福利",
 				"iconPath": "res/imgs/category.png",
 				"selectedIconPath": "res/imgs/category-active.png"

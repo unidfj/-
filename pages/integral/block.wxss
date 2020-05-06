@@ -1,25 +1,25 @@
 .tabitem {
-	margin: 15px 12px 15px 10px;
-	padding: 20px 6px 0 6px;
+	margin: 30rpx 24rpx 30rpx 20rpx;
+	padding: 40rpx 12rpx 0 12rpx;
 	box-sizing: border-box;
 	width: 706rpx;
 	height: 330rpx;
-	box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
-	border-radius: 4px;
+	box-shadow: 2rpx 2rpx 12rpx rgba(0, 0, 0, 0.4);
+	border-radius: 8rpx;
 }
 
 .itemleft {
-	width: 125px;
-	height: 125px;
+	width: 250rpx;
+	height: 250rpx;
 	box-sizing: border-box;
-	margin-right: 10px;
-	border-radius: 4px;
+	margin-right: 20rpx;
+	border-radius: 8rpx;
 	overflow: hidden;
 }
 
 .mendian {
 	white-space: nowrap;
-	height: 40px;
+	height: 40rpx;
 }
 
 .itemright {
@@ -27,7 +27,7 @@
 }
 
 .text {
-	margin-left: 10px;
+	margin-left: 20rpx;
 	color: rgba(146, 146, 146, 1);
 	text-align: justify;
 }
@@ -39,8 +39,8 @@ page {
 } */
 
 .xiaohao {
-	width: 120px;
-	height: 20px;
+	width: 240rpx;
+	height: 40rpx;
 	color: rgba(221, 50, 50, 1);
 	text-align: left;
 }

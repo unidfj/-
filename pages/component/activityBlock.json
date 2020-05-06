@@ -1,6 +1,6 @@
 {
 	"component": true,
 	"usingComponents": {
-		"van-steps": "/res/vant/steps/index"
+		"van-icon": "/res/vant/icon/index"
 	}
 }

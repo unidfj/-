@@ -1,4 +1,4 @@
-	<navigator url="../integral/detail?id={{12}}">
+	<navigator url="../integral/detail?id={{12}}" hover-class="none">
 		<view class="tabitem df">
 			<view class="itemleft">
 				<image mode="aspectFill" class="img" src="https://img.yzcdn.cn/vant/cat.jpeg">

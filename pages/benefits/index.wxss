@@ -1,0 +1,97 @@
+.swiper {
+	margin: 24rpx auto;
+	width: 710rpx;
+	height: 272rpx;
+}
+
+.inpbox {
+	box-sizing: border-box;
+	width: 100%;
+	height: 100rpx;
+	padding: 14rpx 46rpx;
+	position: relative;
+	background-color: rgba(238, 238, 238, 1);
+	border: 2rpx solid rgba(255, 0, 0, 0);
+}
+
+.inpbox>view {
+	width: 100%;
+	height: 100%;
+	padding-left: 26rpx;
+	align-items: center;
+	border-radius: 6rpx 6rpx 6rpx 6rpx;
+	border: 1px solid rgba(255, 0, 0, 0);
+	background: #fff;
+	color: rgba(173, 174, 174, 1);
+	font-size: 28rpx;
+}
+
+.inp {
+	width: 100%;
+	margin-left: 12rpx;
+}
+
+
+.card {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 20rpx;
+	border-radius: 8rpx;
+	overflow: hidden;
+}
+
+.carditem {
+	box-sizing: border-box;
+	width: 334rpx;
+	height: 524rpx;
+	margin-bottom: 32rpx;
+	left: 20rpx;
+	border-radius: 0px 0px 10rpx 10rpx;
+	text-align: center;
+	border: 2rpx solid rgba(239, 239, 239, 1);
+}
+
+.carditem:nth-child(2n-1) {
+	margin-right: 40rpx;
+}
+
+.itemimg {
+	width: 334rpx;
+	height: 334rpx;
+	border-radius: 8rpx;
+	overflow: hidden;
+}
+
+.itemchit {
+	margin-left: 12rpx;
+	margin-top: 20rpx;
+	color: rgba(16, 16, 16, 1);
+	font-size: 14px;
+	text-align: left;
+	font-family: PingFangSC-regular;
+}
+
+.itemjifen {
+	margin-top: 70rpx;
+	margin-right: 14rpx;
+	justify-content: space-between;
+}
+
+.jifenleft {
+	margin-left: 20rpx;
+	color: rgba(215, 89, 76, 1);
+	font-size: 30rpx;
+	text-align: left;
+
+}
+
+.jifenright {
+
+	width: 114rpx;
+	height: 46rpx;
+	line-height: 46rpx;
+	background-color: rgba(255, 67, 69, 1);
+	text-align: center;
+	border: 1px solid rgba(255, 0, 0, 0);
+	color: #fff;
+}

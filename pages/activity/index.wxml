@@ -1,5 +1,5 @@
 <!-- tabbar活动首页 -->
-<navigator class="lottery" url="/pages/lottery/lottery">
+<navigator class="lottery" url="/pages/lottery/lottery" hover-class="none">
 	<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
 </navigator>
 
@@ -7,5 +7,7 @@
 <view class="hot">
 	热门活动
 </view>
-<!-- 组件 -->
-<activityBlock />
+<!-- 活动块组件 id-->
+<navigator url="/pages/activity/activitydetail?id={{}}" hover-class="none">
+	<activityBlock props='{{ {value:"ligoudan",text1:"123",text2:"321",isstart:"已结束"} }}' />
+</navigator>

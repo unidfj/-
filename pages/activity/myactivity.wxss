@@ -1,1 +1,9 @@
-/* pages/activity/myactivity.wxss */
+.activitybox {
+	margin: 30rpx 0;
+}
+
+.bd {
+	width: 710rpx;
+	margin: 0 auto;
+	border-bottom: solid rgba(187, 187, 187, 1) 2rpx;
+}

@@ -1,22 +1,27 @@
-<view class="pic">
-	<image class="picimg" src="https://img.yzcdn.cn/vant/cat.jpeg" mode="asaspectFill"></image>
-</view>
+<view class="block">
 
+	<view class="pic">
+		<image class="picimg" src="https://img.yzcdn.cn/vant/cat.jpeg" mode="asaspectFill"></image>
+	</view>
 
-<view class="blockitem">
-	<view class="left">
-		<view class="name">
-			雅韵茶舍体验（1日）
+	<view class="blockitem">
+		<view class="left">
+			<view class="name">
+				{{props.value||'雅韵茶舍体验'}}（1日）
+			</view>
+			<view class="isstart">
+				{{props.isstart||'已开始'}}
+			</view>
 		</view>
-		<view class="isstart">
-			已开始
+
+		<view class="right">
+			<view class="text">
+				<van-icon class="texticon" name="circle" size="10" color="#55D940" /> {{props.text1||'描述信息1'}}
+			</view>
+			<view class="text">
+				<van-icon class="texticon" name="circle" size="10" color="#DD3232" /> {{props.text2||'信息2'}}
+			</view>
 		</view>
 	</view>
 
-	<view class="right">
-
-		<van-steps active-icon='circle' inactive-icon='circle' steps="{{ steps }}" active="{{ active }}" direction="vertical" active-color="green" inactive-color='red' custom-class='stepclass' />
-		2020-03-31
-		2020-03-31
-	</view>
 </view>

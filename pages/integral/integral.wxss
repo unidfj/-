@@ -1,6 +1,6 @@
 .jifen {
-	width: 355*2rpx;
-	height: 62*2rpx;
+	width: 710rpx;
+	height: 124rpx;
 	background: rgba(221, 50, 50, 1);
 	color: #fff;
 	font-family: PingFangSC-bold;
@@ -11,17 +11,17 @@
 }
 
 .tab {
-	width: 375px;
-	height: 50px;
-	border: 1px solid rgba(187, 187, 187, 1);
-	font-size: 14px;
+	width: 100%;
+	height: 100rpx;
+	border: 2rpx solid rgba(187, 187, 187, 1);
+	font-size: 28rpx;
 
 }
 
 .tabitem {
 	flex: 1;
-	height: 50px;
-	line-height: 50px;
+	height: 100rpx;
+	line-height: 100rpx;
 	text-align: center;
 }
 
@@ -37,7 +37,7 @@
 	display: block;
 	left: 90rpx;
 	width: 62rpx;
-	height: 3px;
+	height: 6rpx;
 	background: rgba(221, 50, 50, 1);
 	margin: 0 auto;
 }

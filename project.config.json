@@ -66,51 +66,79 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "积分商城",
+					"id": 1,
+					"name": "积分商城intergral",
 					"pathName": "pages/integral/integral",
 					"query": "id=16",
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "pages/index/index",
-					"pathName": "pages/index/index",
-					"query": "",
-					"scene": null
-				},
-				{
 					"id": 4,
-					"name": "pages/member/index",
-					"pathName": "pages/member/index",
-					"query": "id=16",
-					"scene": null
-				},
-				{
-					"id": 5,
-					"name": "pages/menberAbout/renzheng",
-					"pathName": "pages/menberAbout/renzheng",
-					"query": "type=1",
-					"scene": null
-				},
-				{
-					"id": 6,
-					"name": "卡片详情 intergral detail",
+					"name": "积分 卡片详情 intergral detail",
 					"pathName": "pages/integral/detail",
 					"query": "id=0001",
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "会员中心 menber index",
+					"id": 6,
+					"name": "tabbar4会员中心 menber index",
 					"pathName": "pages/member/index",
 					"query": "id=0001",
 					"scene": null
 				},
 				{
 					"id": 7,
-					"name": "参与活动",
+					"name": "tabbar3参与活动",
 					"pathName": "pages/activity/index",
+					"query": "id=0001",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "活动详情 activitydetail",
+					"pathName": "pages/activity/activitydetail",
+					"query": "id=0001",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的订单activ/myactiv",
+					"pathName": "pages/activity/myactivity",
+					"query": "id=0001",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商家活动商家activ",
+					"pathName": "pages/activity/shangjiaActivity",
+					"query": "id=16",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "积分明细",
+					"pathName": "pages/integral/integralDetail",
+					"query": "id=0001",
+					"scene": null
+				},
+				{
+					"id": 11,
+					"name": "tabbar2会员福利",
+					"pathName": "pages/benefits/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "tabbar2会员福利商品详情",
+					"pathName": "pages/benefits/goodsDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "project详情",
+					"pathName": "pages/project/projectDetail",
 					"query": "id=0001",
 					"scene": null
 				}

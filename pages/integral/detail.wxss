@@ -1,30 +1,30 @@
 /* pages/integral/detail.wxss */
 page {
 	font-family: PingFangSC-regular;
-	font-size: 14px;
+	font-size: 28rpx;
 }
 
 .userinfo {
-	margin: 0 10px;
-	padding-left: 10px;
+	margin: 0 20rpx;
+	padding-left: 20rpx;
 	box-sizing: border-box;
-	width: 355px;
-	height: 76px;
-	line-height: 38px;
-	border-radius: 4px;
-	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+	width: 710rpx;
+	height: 152rpx;
+	line-height: 76rpx;
+	border-radius: 8rpx;
+	box-shadow: 0px 2rpx 12rpx 0px rgba(0, 0, 0, 0.4);
 	border: 1px solid rgba(255, 255, 255, 0);
 }
 
 
 .code {
-	margin: 13px 10px;
-	padding-left: 10px;
+	margin: 26rpx 20rpx;
+	padding-left: 20rpx;
 	box-sizing: border-box;
-	width: 355px;
-	height: 48px;
-	line-height: 48px;
-	border-radius: 4px;
-	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+	width: 710rpx;
+	height: 96rpx;
+	line-height: 96rpx;
+	border-radius: 8rpx;
+	box-shadow: 0px 4rpx 12rpx 0px rgba(0, 0, 0, 0.4);
 	border: 1px solid rgba(255, 255, 255, 0);
 }

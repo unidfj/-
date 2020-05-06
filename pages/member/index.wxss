@@ -1,6 +1,6 @@
 .header {
-	width: 355*2rpx;
-	height: 177*2rpx;
+	width: 710rrpx;
+	height: 354rpx;
 	height: 300rpx;
 	background: var(--basecolor);
 	margin: 0 20rpx;
@@ -21,35 +21,35 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	font-size: 16px;
+	font-size: 32rpx;
 	color: #fff;
 }
 
 .username text {
-	font-size: 14px;
+	font-size: 28rpx;
 	color: rgba(253, 204, 8, 1);
 }
 
 .cellclass {
 	margin: 30rpx 20rpx;
 	overflow: hidden;
-	width: 355px;
-	height: 51px;
-	border-radius: 4px;
-	box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.4);
+	width: 710rpx;
+	height: 102rpx;
+	border-radius: 8rpx;
+	box-shadow: 0px 0px 6rpx 0px rgba(0, 0, 0, 0.4);
 	border: 1px solid rgba(255, 255, 255, 0);
 }
 
 .cellitem .icon {
-	width: 24px;
-	height: 24px;
-	margin: 13px 18px 14px 10px;
+	width: 48rpx;
+	height: 48rpx;
+	margin: 26rpx 36rpx 28rpx 20rpx;
 }
 
 .cellitem text {
 	flex: 1;
 	display: block;
-	padding-left: 10px;
+	padding-left: 20rpx;
 }
 
 .overlay {

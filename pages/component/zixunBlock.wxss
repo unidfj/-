@@ -1,0 +1,34 @@
+.zixunbox {
+	width: 100%;
+	margin-top: 32rpx;
+}
+
+.zixunimg {
+	margin: 0 auto 16rpx;
+	width: 638rpx;
+	height: 302rpx;
+	border-radius: 8rpx;
+	overflow: hidden;
+}
+
+.img {
+	width: 100%;
+	height: 100%;
+}
+
+.zixuntext {
+	padding-left: 64rpx;
+	padding-right: 42rpx;
+	margin-bottom: 56rpx;
+	color: rgba(16, 16, 16, 1);
+	font-size: 32rpx;
+	font-family: PingFangSC-regular;
+}
+
+.bg {
+	margin: 0 auto;
+	width: 720rpx;
+	height: 6rpx;
+	opacity: 0.3;
+	background: rgba(187, 187, 187, 1);
+}

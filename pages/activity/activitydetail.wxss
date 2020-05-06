@@ -1,0 +1,145 @@
+page {
+	box-sizing: border-box;
+	padding: 0 20rpx 40rpx 20rpx;
+}
+
+.pic {
+	margin: 16rpx auto;
+	width: 710rpx;
+	height: 476rpx;
+	border-radius: 8rpx;
+	overflow: hidden;
+}
+
+.text {
+	width: 100%;
+	height: 174rpx;
+	line-height: 174rpx;
+	border: 2rpx solid rgba(239, 239, 239, 1);
+	justify-content: space-between;
+	font-weight: 600;
+}
+
+.left {
+	color: rgba(16, 16, 16, 1);
+	font-family: PingFangSC-bold;
+	font-size: 36rpx;
+	/* font-weight: 600; */
+}
+
+.right {
+	color: rgba(221, 50, 50, 1);
+	font-size: 40rpx;
+	font-family: PingFangSC-bold;
+}
+
+
+.time {
+	margin-top: 16rpx;
+	width: 100%;
+	height: 154rpx;
+	padding-left: 4rpx;
+	font-family: PingFangSC-regular;
+	font-size: 28rpx;
+	border: 2rpx solid rgba(239, 239, 239, 1);
+}
+
+.time1 {
+	margin: 26rpx 0 16rpx;
+	color: rgba(221, 50, 50, 1);
+}
+
+.time2 {
+	height: 40rpx;
+	line-height: 40rpx;
+	vertical-align: center;
+	color: rgba(16, 16, 16, 1);
+}
+
+.detail {
+	margin: 20rpx auto;
+	width: 156rpx;
+	height: 50rpx;
+	color: rgba(16, 16, 16, 1);
+	font-size: 36rpx;
+	text-align: left;
+	font-weight: 600;
+	font-family: PingFangSC-bold;
+}
+
+.detailtext {
+	color: rgba(16, 16, 16, 1);
+	font-size: 28rpx;
+	font-family: PingFangSC-regular;
+}
+
+.btn {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 88rpx;
+	line-height: 88rpx;
+	background-color: rgba(221, 50, 50, 1);
+	color: rgba(254, 253, 253, 1);
+	font-size: 32rpx;
+	font-weight: 600;
+	text-align: center;
+	font-family: Microsoft Yahei;
+	border: 2rpx solid rgba(255, 255, 255, 0);
+}
+
+
+.overlaybox {
+	width: 644rpx;
+	height: 554rpx;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding-left: 40rpx;
+	border-radius: 8rpx;
+	overflow: hidden;
+	background: #fff;
+
+}
+
+.overlaybox .info {
+	height: 120rpx;
+	line-height: 120rpx;
+	text-align: center;
+	position: relative;
+}
+
+.overlaybox .icon {
+	position: absolute;
+	right: 20rpx;
+	top: 30rpx;
+}
+
+.overlaybox .inpbox {
+	padding-left: 10rpx;
+	margin-left: 10rpx;
+	margin-bottom: 30rpx;
+	height: 56rpx;
+	line-height: 56rpx;
+}
+
+.overlaybox .inp {
+	width: 400rpx;
+	height: 52rpx;
+	border-radius: 8rpx;
+	margin-left: 12rpx;
+	border: #c1c1c1 solid 2rpx;
+}
+
+.overlaybox .tips {
+	color: var(--basecolor);
+}
+
+.overlaybox .sure {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}

@@ -1,0 +1,54 @@
+<swiper class="swiper" indicator-dots circular="{{800}}" interval="{{3000}}" autoplay>
+	<swiper-item>
+		<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+		<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+	</swiper-item>
+</swiper>
+
+<view class="info">
+	<view class="infotop">{{' V·型理发卡代金券'}} </view>
+	<view class="df infobottom">
+		<view class="jifen">
+			{{'35'}} 积分
+		</view>
+		<view class="kucun">
+			库存 {{'100'}} 张
+		</view>
+	</view>
+</view>
+
+
+<view class="time">
+	积分兑换时间：{{'2020.04.23 ~ 2020.04.30'}}
+</view>
+
+
+<view class="detail">
+	<view class="df">
+		<van-icon name="wap-home" size="20" color='#000' /> V·型时尚美业（光明路店） </view>
+	<view class="df">
+		<van-icon name="location" size="20" color='#000' />广东省广州市天河区光明新街123号</view>
+	<view class="df">
+		<van-icon name="phone-circle" size="20" color='#000' /> 020-6666666</view>
+	<view> 领取时间：2020.05.01 ~ 2020.05.07</view>
+</view>
+
+
+<view class="goodsdetail">
+	<view class="title dfcenter">
+		商品详情
+	</view>
+	<view class="xiangqing">
+		这里显示商品的详情文本。这里显示商品的详情文本。这里显示商品的详情文本。这里显示商品的详情文本。这里显示商品的详情文本。这里显示商品的详情文本。这里显示商品的详情文本。这里显示商品的详情文本。
+	</view>
+	<view class="goodsimg">
+		<image src="https://img.yzcdn.cn/vant/cat.jpeg" mode="aspectFill" class="img"></image>
+	</view>
+</view>
+
+
+
+
+<view class="btn" bindtap="handleClick">
+	立即兑换
+</view>

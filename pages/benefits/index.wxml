@@ -1,0 +1,40 @@
+<swiper class="swiper" indicator-dots circular="{{800}}" interval="{{3000}}" autoplay>
+	<swiper-item>
+		<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+		<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+	</swiper-item>
+</swiper>
+
+<view class="inpbox">
+
+	<view class="df">
+		<icon class="searchicon" type="search" size="20"></icon>
+		<input value="{{value}}" class="inp" confirm-type="search" type="text" placeholder="搜索" maxlength='{{16}}'> </input>
+	</view>
+
+</view>
+
+<!-- 广告 -->
+<view class="ad">
+	<ad unit-id="adunit-2a1643b3e873e2a3"></ad>
+</view>
+
+<view class="card">
+	<block wx:for='{{4}}' wx:key='index'>
+		<navigator hover-class="none"  class="carditem" url="/pages/benefits/goodsDetail?id={{item.id}}">
+			<view class="itemimg">
+				<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"> </image>
+			</view>
+			<view class="itemchit"> V·型理发卡代金券 </view>
+			<view class="df itemjifen">
+				<view class="jifenleft">35 积分</view>
+				<view class="jifenright">兑换</view>
+			</view>
+		</navigator>
+	</block>
+</view>
+
+<!-- 活动块组件 id -->
+<navigator url="/pages/activity/activitydetail?id={{}}" hover-class="none">
+	<activityBlock props='{{ {value:"李狗蛋",text1:"hello",text2:"hekl"} }}' />
+</navigator>

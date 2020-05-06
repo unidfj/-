@@ -1,0 +1,54 @@
+<view wx:if='{{type===1}}'>
+	<view class='title'>
+		{{'23亿!增城中新镇霞迳村旧改招标!资产门槛需1000亿!'}}
+	</view>
+
+	<view class="imgbox">
+		<image src="https://img.yzcdn.cn/vant/cat.jpeg" class="img" mode="aspectFill"></image>
+	</view>
+
+	<view class="detail">
+		<view>楼盘地址：广东省广州市天河区光明一路</view>
+		<view>近期开盘：2020年04月23日</view>
+		<view>主力户型：三房3居室2厅</view>
+		<view>产权年限：70年</view>
+		<view>交房时间：2020年06月01日</view>
+		<view>建筑类型：小别墅</view>
+		<view>装修状态：毛坯</view>
+		<view>售楼地址：广东省广州市荔湾区星源路26号</view>
+		<view>规划户数：8000</view>
+		<view>容积率：80 %</view>
+		<view>绿化率：66 %</view>
+	</view>
+
+
+	<view class="richtext">
+		<rich-text nodes='{{text}}' />
+	</view>
+
+	<view class="imgbox" style="margin-bottom:40px;border-radius: 4px;overflow: hidden;">
+		<image src="https://img.yzcdn.cn/vant/cat.jpeg" class="img" mode="aspectFill"></image>
+	</view>
+</view>
+
+<view wx:else>
+	<view class='title'>
+		{{'23亿!增城中新镇霞迳村旧改招标!资产门槛需1000亿!'}}
+	</view>
+
+	<view class="imgbox">
+		<image src="https://img.yzcdn.cn/vant/cat.jpeg" class="img" mode="aspectFill"></image>
+	</view>
+
+	<view class="richtext">
+		<rich-text nodes='{{text}}' />
+	</view>
+
+	<view class="imgbox">
+		<image src="https://img.yzcdn.cn/vant/cat.jpeg" class="img" mode="aspectFill"></image>
+	</view>
+
+	<view class="richtext" style="margin-bottom:40px">
+		<rich-text nodes='{{text}}' />
+	</view>
+</view>

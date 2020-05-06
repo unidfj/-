@@ -1,0 +1,113 @@
+page {
+	padding: 0 20rpx;
+	font-family: PingFangSC-regular;
+}
+
+.swiper {
+	margin: 24rpx auto;
+}
+
+.info {
+	width: 100%;
+	height: 188rpx;
+	text-align: center;
+	border: 2rpx solid rgba(239, 239, 239, 1);
+}
+
+.infotop {
+
+	margin: 48rpx 0 14rpx 20rpx;
+	color: rgba(16, 16, 16, 1);
+	font-size: 36rpx;
+	text-align: left;
+	font-weight: 600;
+}
+
+.infobottom {
+	width: 90%;
+	margin: 0 20rpx;
+	justify-content: space-between;
+}
+
+.infobottom .jifen {
+	color: rgba(221, 50, 50, 1);
+	font-size: 36rpx;
+	font-weight: 600;
+}
+
+.infobottom .kucun {
+	color: rgba(16, 16, 16, 1);
+	font-size: 28rpx;
+	font-weight: 600;
+}
+
+.time {
+	padding-left: 28rpx;
+	margin: 16rpx 0;
+	height: 96rpx;
+	width: 100%;
+	border: 2rpx solid rgba(239, 239, 239, 1);
+	color: rgba(16, 16, 16, 1);
+	font-size: 28rpx;
+	text-align: left;
+	line-height: 96rpx;
+}
+
+.detail {
+	width: 100%;
+	height: 260rpx;
+	padding-left: 10px;
+	color: rgba(16, 16, 16, 1);
+	font-size: 28rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	font-family: Arial;
+	border: 2rpx solid rgba(239, 239, 239, 1);
+}
+
+.detail .van-icon {
+	margin-right: 14rpx;
+}
+
+.detail view:nth-last-child(1) {
+	color: rgba(221, 50, 50, 1);
+}
+
+.goodsdetail {
+	padding-bottom: 50px;
+}
+
+.goodsdetail .title {
+	margin: 22rpx auto;
+	color: rgba(16, 16, 16, 1);
+	text-align: center;
+	font-size: 36rpx;
+	text-align: left;
+	font-weight: 600;
+	font-family: PingFangSC-bold;
+}
+
+.goodsdetail .xiangqing {}
+
+.goodsdetail .goodsimg {
+	width: 710rpx;
+	height: 402rpx;
+}
+
+
+
+.btn {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 88rpx;
+	line-height: 88rpx;
+	font-size: 16px;
+	text-align: center;
+	font-family: Microsoft Yahei;
+	border: 2rpx solid rgba(255, 255, 255, 0);
+	background-color: rgba(221, 50, 50, 1);
+	color: rgba(254, 253, 253, 1);
+}

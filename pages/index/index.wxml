@@ -1,23 +1,39 @@
 <!-- banner轮播 -->
-<view class="diy-banner">
-	<swiper autoplay class="banner-box swiper-box dot-round" duration="{{duration}}" circular="{{800}}" interval="{{3000}}" indicator-dots indicator-color="{{wxapp.BackgroundColor}}" indicator-active-color="{{wxapp.TopTextColor}}">
-		<navigator hover-class="none" wx:for-item="banner" url="../news/index?id={{banner.id}}" wx:for="{{banner}}" wx:key="this">
-			<swiper-item item-id="{{index}}">
-				<image class="slide-image" mode="aspectFill" src="{{banner.image}}" data-id="{{index}}"></image>
-			</swiper-item>
-		</navigator>
+<view class="banner">
+	<swiper autoplay duration="{{duration}}" circular="{{800}}" interval="{{3000}}" indicator-dots>
+		<swiper-item>
+			<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+		</swiper-item>
 	</swiper>
 </view>
 
-
+<!-- nav导航栏 -->
 <view class="grid">
-	<van-grid column-num="5" gutter="{{ 13 }}">
-		<!--  -->
-		<van-grid-item wx:for='{{3}}' icon="photo-o" text="文字" />
 
-		<van-grid-item icon="photo-o" text="会员福利" />
-		<van-grid-item icon="photo-o" text="会员注册" />
-	</van-grid>
+	<navigator url="/pages/project/index?type={{0}}" class="griditem">
+		<icon></icon>
+		<text>项目推介</text>
+	</navigator>
+
+	<navigator url="/pages/project/index?type={{1}}" class="griditem">
+		<icon></icon>
+		<text>商家导览</text>
+	</navigator>
+
+	<navigator url="/pages/project/index?type={{2}}" class="griditem">
+		<icon></icon>
+		<text>怡福资讯</text>
+	</navigator>
+
+	<navigator class="griditem" url="/pages/benefits/index" open-type="switchTab">
+		<icon></icon>
+		<text>会员福利</text>
+	</navigator>
+
+	<navigator class="griditem" url="/pages/member/index" open-type="switchTab">
+		<icon></icon>
+		<text > 会员注册</text>
+	</navigator>
 </view>
 
 <!-- 广告 -->
@@ -25,22 +41,51 @@
 	<ad unit-id="adunit-2a1643b3e873e2a3"></ad>
 </view>
 
-<!-- 热门活动 -->
+<!-- 热门活动tabbar3 -->
+<view class="remen">
+	<view class="left">热门活动</view>
+	<navigator open-type="switchTab" url="/pages/activity/index" class="df">更多
+		<van-icon name="arrow" size="20" bindtap="" />
+	</navigator>
+</view>
 <block>
-	<view class="cell">
-		<van-cell is-link title="热门活动" value="更多" link-type="navigateTo" url="" />
-	</view>
-	<view class="remen">
-		<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
-	</view>
-	<view class="df m15 pl15">
-		<view class="remenleft">
-			<view>雅韵茶舍体验(1日)</view>
-			<button type="warn" size="mini">立即参与</button>
-		</view>
-		<view class="remenright">
-			<van-steps active-icon='circle' inactive-icon='circle' steps="{{ steps }}" active="{{ active }}" direction="vertical" active-color="green" inactive-color='red' custom-class='stepclass' />
-		</view>
-	</view>
-
+	<activityBlock />
 </block>
+
+<!-- 怡福资讯 -->
+<view class="remen">
+	<view class="left">怡福资讯</view>
+	<navigator class="df" url="/pages/project/index">更多
+		<van-icon name="arrow" size="20" bindtap="" />
+	</navigator>
+</view>
+<block wx:for='{{2}}' wx:key='index'>
+<!-- projectDetail id-->
+	<navigator url="/pages/project/projectDetail">
+		<zixunBlock props='{{item}}' />
+	</navigator>
+</block>
+
+
+<!-- 会员福利 -->
+<view class="remen">
+	<view class="left">会员福利</view>
+	<navigator class="df" open-type="switchTab" url="/pages/benefits/index" hover-class="none">更多
+		<van-icon name="arrow" size="20" bindtap="" />
+	</navigator>
+</view>
+<!-- benefits_goodsDetail -->
+<view class="card">
+	<block wx:for='{{2}}' wx:key='index'>
+		<navigator class="carditem" url="/pages/benefits/goodsDetail?goodsid={{item.id}}" hover-class="none">
+			<view class="itemimg">
+				<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"> </image>
+			</view>
+			<view class="itemchit"> V·型理发卡代金券 </view>
+			<view class="df itemjifen">
+				<view class="jifenleft">35 积分</view>
+				<view class="jifenright">兑换</view>
+			</view>
+		</navigator>
+	</block>
+</view>

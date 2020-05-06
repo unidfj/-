@@ -22,13 +22,13 @@
 	</view>
 </view>
 
-<van-overlay show="{{ show }}">
+<van-overlay show="{{ show }}" catchtap='onClickHide'>
 	<view class="overlay dfcenter">
-		<view class="overlayitem" bindtap="renzheng" data-type="0">
+		<navigator class="overlayitem" url="/pages/member/memberAbout/renzheng?type={{0}}">
 			<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
-		</view>
-		<view class="overlayitem" bindtap="renzheng" data-type='1'>
+		</navigator>
+		<navigator class="overlayitem" url="/pages/member/memberAbout/renzheng?type={{1}}">
 			<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
-		</view>
+		</navigator>
 	</view>
 </van-overlay>

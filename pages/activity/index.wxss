@@ -1,15 +1,15 @@
 .lottery {
-	margin: 12px 10px 0 16px;
-	width: 349px;
-	height: 160px;
+	margin: 24rpx 20rpx 0 32rpx;
+	width: 698rpx;
+	height: 320rpx;
 }
 
 .hot {
-	margin: 10px 0 4px 16px;
-	width: 72px;
-	height: 25px;
+	margin: 20rpx 0 8rpx 32rpx;
+	width: 144rpx;
+	height: 50rpx;
 	color: rgba(16, 16, 16, 1);
-	font-size: 18px;
+	font-size: 36rpx;
 	text-align: left;
 	font-family: PingFangSC-regular;
 }

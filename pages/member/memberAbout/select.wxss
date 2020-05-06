@@ -39,10 +39,8 @@
 .option-list {
 	position: absolute;
 	left: 0;
-	/* top: 76rpx; */
 	width: 100%;
 	text-align: center;
-	/* padding: 12rpx 20rpx 10rpx 20rpx; */
 	border-radius: 6rpx;
 	box-sizing: border-box;
 	z-index: 99;

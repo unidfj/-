@@ -1,0 +1,9 @@
+<view class="zixunbox">
+	<view class="zixunimg">
+		<image src="{{src}}" mode="aspectFill" class="img"></image>
+	</view>
+	<view class="zixuntext">
+		{{text}}
+	</view>
+	<view class="bg"></view>
+</view>
