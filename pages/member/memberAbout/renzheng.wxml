@@ -1,117 +1,132 @@
-<view class="renzheng" wx:if="{{type=='0'}}">
-	<form bindsubmit="submit0">
-		<!--  -->
-		<view class="margintb">
-			认证状态: <text class="tips">未认证</text>
+	<form bindsubmit='submit1'>
+		<view class="renzheng" wx:if="{{type==1}}">
+			<view>
+				认证状态: <text class="tips">未认证</text>
+			</view>
+			<!-- picker -->
+			<view class="adress margintb">
+				所在地区:
+				<!-- 省 -->
+				<picker class="dfcenter " bindchange="bindPickerProvince" range="{{province.arr}}" disabled="{{!province.arr.length}}">
+					<view class="picker dfcenter">
+						{{provincename}}
+						<van-icon class="arrowicon" name="arrow-down" size="10" />
+					</view>
+				</picker>
+				<!-- 市 -->
+				<picker class="dfcenter " bindchange="bindPickerCity" range="{{city.arr}}" disabled='{{!city.arr.length}}'>
+					<view class="picker dfcenter">
+						{{cityname}}
+						<van-icon class="arrowicon" name="arrow-down" size="10" />
+					</view>
+				</picker>
+				<!-- 区 aid-->
+				<picker name='aid' value="{{aid}}" class="dfcenter " bindchange="bindPickerDistrict"  range="{{district.arr}}" disabled='{{!district.arr.length}}'>
+					<view class="picker dfcenter">
+						{{districtname}}
+						<van-icon class="arrowicon" name="arrow-down" size="10" />
+					</view>
+				</picker>
+			</view>
+
+			<!-- picker2 -->
+			<view class="loupanbox">
+				业主楼盘:
+				<picker name='fid' value="{{fid}}" class="loupanitem" bindchange="bindPickerLoupan" range="{{loupan.arr}}" disabled='{{!loupan.arr.length}}'>
+					<view>{{loupanname||' '}}</view>
+					<van-icon class="arrowicon" name="arrow-down" size="10" />
+				</picker>
+			</view>
+			<view class="loupanbox">
+				业主楼号:
+				<picker name='lnum' value="{{lnum}}" class="loupanitem" bindchange="bindPickerLouhao" range="{{louhao.arr}}" disabled='{{!louhao.arr.length}}'>
+					<view>{{louhaoname}}</view>
+					<van-icon class="arrowicon" name="arrow-down" size="10" />
+				</picker>
+			</view>
+
+			<!-- 循环input -->
+			<block wx:for='{{wxfordata1}}' wx:key='index'>
+				<view class="inputbox margintb">
+					{{item.title}}
+					<input value="{{item.value}}" class="inputuitem lh40" placeholder="{{item.placeholder}}" type="{{item.type}}" confirm-type="{{item.confirmtype}}" name='{{item.name}}'></input>
+				</view>
+			</block>
+			<view class="tips"> *注意: 业主信息必须为购房者信息 </view>
+			<button class="btn" type="warn" form-type="submit">提交申请</button>
 		</view>
-		<!--  -->
-		<view class="df adress margintb">
-			所在地区:
-			<view class="adressitem">
-				<myselect options="{{options}}" />
-			</view>
-			省
-			<view class="adressitem">
-				<myselect />
-			</view>
-			市
-			<view class="adressitem">
-				<myselect />
-			</view>区
-		</view>
-		<!--  -->
-		<view class="df lh40 margintb">
-			业主楼盘:
-			<view class="loupanitem">
-				<myselect />
-			</view>
-		</view>
-		<!--  -->
-		<view class="df lh40 margintb">
-			业主楼号:
-			<view class="loupanitem">
-				<myselect />
-			</view>
-		</view>
-		<!--  -->
-		<block wx:for='{{wxfordata0}}' wx:key='index'>
-			<view class="df lh40 margintb">
-				{{item.title}}
-				<input class="inputuitem lh40" placeholder="{{item.placeholder}}" type="{{item.type}}"></input>
-			</view>
-		</block>
-		<view class="tips"> *注意: 业主信息必须为购房者信息 </view>
-		<button class="btn" type="warn" form-form-type="sumbit">提交申请</button>
 	</form>
-</view>
 
 
-<!-- 第二套 -->
-<view class="renzheng" wx:if="{{type=='1'}}">
-	<form bindsubmit="submit1">
-		<!--  -->
-		<view class="margintb">
-			认证状态: <text class="tips">未认证</text>
-		</view>
-		<!--  -->
-		<view class="df adress margintb">
-			所在地区:
-			<view class="adressitem">
-				<myselect options="{{options}}" />
-			</view>
-			省
-			<view class="adressitem">
-				<myselect />
-			</view>
-			市
-			<view class="adressitem">
-				<myselect />
-			</view>
-			区
-		</view>
-		<!--  -->
-		<view class="df lh40 margintb">
-			商家楼盘:
-			<view class="loupanitem">
-				<myselect />
-			</view>
-		</view>
-		<!--  -->
-		<block wx:for='{{wxfordata1}}' wx:key='index'>
-			<view class="df lh40 margintb">
-				{{item.title}}
-				<input class="inputuitem lh40" placeholder="{{item.placeholder}}" type="{{item.type}}"></input>
-			</view>
-		</block>
-		<!--  -->
-		<view class="df margintb">
-			<view>营业执照照片:
-				<view class="jpg">(只支持.jpg格式)</view>
-			</view>
+	<!-- 第二套 -->
+	<form bindsubmit="submit2">
+		<view class="renzheng2" wx:if="{{type==2}}">
 			<view>
-				<van-uploader use-before-read bind:before-read="beforeRead" accept='image'>
-					<view class="uploadview dfcol">
-						<van-icon name="plus" size="24px" />
-						上传照片
+				认证状态: <text class="tips">未认证</text>
+			</view>
+			<!-- picker 省市区-->
+			<view class="adress margintb">
+				所在地区:
+				<!-- 省 -->
+				<picker class="dfcenter " bindchange="bindPickerProvince" range="{{province.arr}}" disabled="{{province.arr.length==0}}">
+					<view class="picker dfcenter">
+						{{provincename}}
+						<van-icon class="arrowicon" name="arrow-down" size="8" />
 					</view>
-				</van-uploader>
-			</view>
-		</view>
-		<!--  -->
-		<view class="df margintb">
-			<view>门店照片:
-				<view class="jpg">(只支持.jpg格式)</view>
-			</view>
-			<view>
-				<van-uploader use-before-read bind:before-read="beforeRead" accept='image'>
-					<view class="uploadview dfcol">
-						<van-icon name="plus" size="24px" />
-						上传照片
+				</picker>
+				<!-- 市 -->
+				<picker class="dfcenter " bindchange="bindPickerCity" range="{{city.arr}}" disabled='{{city.arr.length==0}}'>
+					<view class="picker dfcenter">
+						{{cityname}}
+						<van-icon class="arrowicon" name="arrow-down" size="8" />
 					</view>
-				</van-uploader>
+				</picker>
+				<!-- 区 aid-->
+				<picker name='aid' value="{{aid}}" class="dfcenter " bindchange="bindPickerDistrict" range="{{district.arr}}" disabled='{{district.arr.length==0}}'>
+					<view class="picker dfcenter">
+						{{districtname}}
+						<van-icon class="arrowicon" name="arrow-down" size="8" />
+					</view>
+				</picker>
 			</view>
+
+			<!-- picker2 商家楼盘-->
+			<view class="loupanbox">
+				商家楼盘:
+				<picker name='fid' value="{{fid}}" class="loupanitem" bindchange="bindPickerLoupan" range="{{loupan.arr}}">
+					<view>{{loupanname}}</view>
+					<van-icon class="arrowicon" name="arrow-down" size="8" />
+				</picker>
+			</view>
+
+			<!-- 循环input -->
+			<block wx:for='{{wxfordata2}}' wx:key='index'>
+				<view class="inputbox margintb">
+					{{item.title}}
+					<input value="{{item.value}}" class="inputuitem lh40" placeholder="{{item.placeholder}}" type="{{item.type}}" confirm-type="{{item.confirmtype}}" name='{{item.name}}'></input>
+				</view>
+			</block>
+			<!-- 照片 -->
+			<view class="df margintb">
+				<view>营业执照照片:
+					<view class="jpg">(只支持.jpg格式)</view>
+				</view>
+				<view>
+					<van-uploader max-count='{{1}}' preview-size='100' file-list="{{ fileList }}" bind:after-read="afterRead" accept='image' upload-text='只限jpg' image-fit='aspectFill' use-before-read bind:before-read='beforeFn' bind:delete='deleteImg'>
+					</van-uploader>
+				</view>
+			</view>
+			<!-- 门店照片 -->
+			<view class="df margintb">
+				<view>门店照片:
+					<view class="jpg">(只支持.jpg格式)</view>
+				</view>
+				<view>
+					<van-uploader max-count='{{1}}' data-secend='{{2}}' preview-size='100' file-list="{{ fileList2 }}" bind:after-read="afterRead" accept='image' upload-text='只限jpg' image-fit='aspectFill' use-before-read bind:before-read='beforeFn' bind:delete='deleteImg'>
+					</van-uploader>
+				</view>
+			</view>
+			<view class="tips"> *注意: 业主信息必须为购房者信息 </view>
+			<button class="btn" type="warn" form-type="submit">提交申请</button>
 		</view>
-		<view class="tips"> *注意: 业主信息必须为购房者信息 </view>
-		<button class="btn" type="warn" form-type="submit">提交申请</button>
 	</form>
-</view>

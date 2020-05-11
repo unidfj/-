@@ -47,6 +47,11 @@
   overflow: hidden;
 }
 
+.adimgbox {
+  margin: 0 auto;
+  width: 742rpx;
+  height: 250rpx;
+}
 
 .remen {
   /* margin-top: 12px; */
@@ -84,14 +89,15 @@
   padding: 0 20rpx;
   border-radius: 8rpx;
   overflow: hidden;
+  column-count: 2;
 }
 
 .carditem {
   box-sizing: border-box;
   flex-shrink: 0;
   width: 334rpx;
-  height: 524rpx;
   margin-bottom: 32rpx;
+  padding-bottom: 20rpx;
   border-radius: 0px 0px 10rpx 10rpx;
   text-align: center;
   border: 2rpx solid rgba(239, 239, 239, 1);
@@ -105,27 +111,35 @@
   overflow: hidden;
 }
 
-.itemchit {
-  margin-left: 12rpx;
+.goods_name {
+  box-sizing: border-box;
+  padding-left: 12rpx;
   margin-top: 20rpx;
   color: rgba(16, 16, 16, 1);
   font-size: 28rpx;
   text-align: left;
-  font-family: PingFangSC-regular;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .itemjifen {
-  margin-top: 70rpx;
-  margin-right: 14rpx;
+  margin-top: 40rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
   justify-content: space-between;
 }
 
 .jifenleft {
-  margin-left: 20rpx;
+  flex: 1;
+  flex-shrink: 0;
   color: rgba(215, 89, 76, 1);
   font-size: 30rpx;
   text-align: left;
-
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .jifenright {

@@ -31,21 +31,23 @@
 </view>
 
 <van-overlay show="{{ showoverlay }}">
-	<view class="overlaybox">
-		<view class="info">填写信息
-			<van-icon bindtap="onClickHide" class="icon" name="cross" size="25" />
+	<form bindsubmit='submit'>
+		<view class="overlaybox">
+			<view class="info">填写信息
+				<van-icon bindtap="onClickHide" class="icon" name="cross" size="25" />
+			</view>
+
+			<view class="inpbox df">
+				姓名: <input class="inp" value="{{form.signup_name}}" name='signup_name' type="text" confirm-type="next" placeholder="请输入参与人姓名"></input>
+			</view>
+
+			<view class="inpbox df">
+				手机: <input class="inp" value="{{form.signup_mobile}}" name='signup_mobile' type="tnumber" confirm-type="done" placeholder="请输入参与人手机" bindconfirm="suresubmit"></input>
+			</view>
+
+
+			<view class="tips">*注意: 报名信息提交后不可修改</view>
+			<button class="sure" type="warn"  form-type="submit"> 确认提交 </button>
 		</view>
-
-		<view class="inpbox df">
-			姓名: <input class="inp" value="{{form.username}}" type="text" confirm-type="next" placeholder="请输入参与人姓名"></input>
-		</view>
-
-		<view class="inpbox df">
-			手机: <input class="inp" value="{{form.phone}}" type="tnumber" confirm-type="done" placeholder="请输入参与人手机" bindconfirm="suresubmit"></input>
-		</view>
-
-
-		<view class="tips">*注意: 报名信息提交后不可修改</view>
-		<button class="sure" type="warn" bindtap="suresubmit"> 确认提交 </button>
-	</view>
+	</form>
 </van-overlay>

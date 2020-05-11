@@ -1,11 +1,11 @@
-// pages/project/index.js
+const App = getApp()
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
-
+		list: []
 	},
 
 	/**
@@ -26,7 +26,12 @@ Page({
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow: function () {
-
+		App.post('/api/information/get_information_list', {}, res => {
+			console.log(res)
+			this.setData({
+				list: res.data.data
+			})
+		})
 	},
 
 	/**

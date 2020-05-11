@@ -1,10 +1,14 @@
 <view class="header dfcenter">
 	<view class="userimg">
-		<image class="img" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+		<!-- <image class="img" src="https://img.yzcdn.cn/vant/cat.jpeg"></image> -->
+		<open-data class="img" type='userAvatarUrl' default-avatar='https://img.yzcdn.cn/vant/cat.jpeg'></open-data>
 	</view>
 	<view class="userdata">
-		<view class="username">
-			James <text>未认证</text>
+		<view class="useruname">
+			<open-data type="userNickName" lang="zh_CN" default-text='未登录'></open-data>
+			<text style="color:rgba(253, 204, 8, 1)" wx:if='{{type==0}}'> 未认证 </text>
+			<text style="color:rgba(253, 204, 8, 1)" wx:if='{{type==1}}'> 业主会员 </text>
+			<text style="color:rgba(253, 204, 8, 1)" wx:if='{{type==2}}'> 商家会员 </text>
 		</view>
 		<view class="userBalance">
 			积分余额 : 99
@@ -22,12 +26,14 @@
 	</view>
 </view>
 
+
+<!-- 遮罩层  -->
 <van-overlay show="{{ show }}" catchtap='onClickHide'>
 	<view class="overlay dfcenter">
-		<navigator class="overlayitem" url="/pages/member/memberAbout/renzheng?type={{0}}">
+		<navigator class="overlayitem" url="/pages/member/memberAbout/renzheng?type={{1}}">
 			<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
 		</navigator>
-		<navigator class="overlayitem" url="/pages/member/memberAbout/renzheng?type={{1}}">
+		<navigator class="overlayitem" url="/pages/member/memberAbout/renzheng?type={{2}}">
 			<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
 		</navigator>
 	</view>

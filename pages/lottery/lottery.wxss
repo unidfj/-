@@ -65,6 +65,8 @@ page {
 }
 
 .code {
+	padding-top: 5rpx;
+	box-sizing: border-box;
 	margin: 12rpx 0;
 	width: 710rpx;
 	height: 208rpx;
@@ -118,10 +120,11 @@ page {
 	flex-wrap: wrap;
 	flex-direction: column;
 	padding-left: 226rpx;
-	 justify-content: center;
+	justify-content: center;
 	margin: 10rpx auto 74rpx;
 	color: rgba(221, 50, 50, 1);
 }
-.rules .prize view{
+
+.rules .prize view {
 	flex: 1;
 }

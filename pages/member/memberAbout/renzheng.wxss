@@ -1,11 +1,35 @@
 page {
-	padding: 0 20rpx 40rpx 20rpx;
 	font-style: Microsoft Yahei;
+}
+
+.renzheng {
+	position: relative;
+	box-sizing: border-box;
+	padding: 48rpx 20rpx;
+	width: 710rpx;
+	height: 1200rpx;
+	margin: 48rpx auto;
+	border-radius: 16rpx;
+	box-shadow: 0px 4rpx 12rpx 0px rgba(0, 0, 0, 0.4);
+	border: 2rpx solid rgba(255, 255, 255, 0);
+}
+
+.renzheng2 {
+	position: relative;
+	box-sizing: border-box;
+	padding: 48rpx 20rpx;
+	width: 710rpx;
+	margin: 48rpx auto;
+	border-radius: 16rpx;
+	box-shadow: 0px 4rpx 12rpx 0px rgba(0, 0, 0, 0.4);
+	border: 2rpx solid rgba(255, 255, 255, 0);
 }
 
 .adress {
 	height: 80rpx;
 	line-height: 80rpx;
+	display: flex;
+	align-items: center;
 }
 
 .adressitem {
@@ -15,15 +39,67 @@ page {
 	height: 66rpx;
 }
 
-.lh40 {
+.picker {
+	position: relative;
+	width: 144rpx;
 	height: 66rpx;
-	line-height: 66rpx;
+	box-sizing: border-box;
+	color: rgba(16, 16, 16, 1);
+	font-size: 26rpx;
+	font-family: Microsoft Yahei;
+	border: 2rpx solid rgba(187, 187, 187, 1);
+	border-radius: 12rpx;
+	overflow: hidden;
+	white-space: nowrap;
+	margin-left: 10rpx;
+}
+
+
+
+.loupanbox {
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+	margin: 40rpx 0;
 }
 
 .loupanitem {
-	width: 400rpx;
 	margin-left: 10rpx;
+	box-sizing: border-box;
+	position: relative;
+	width: 400rpx;
+	height: 66rpx;
+	color: rgba(16, 16, 16, 1);
+	font-size: 28rpx;
+	font-family: Microsoft Yahei;
+	border: 2rpx solid rgba(187, 187, 187, 1);
+	border-radius: 12rpx;
+	padding: 0 20rpx;
+	white-space: nowrap;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
+
+.loupanitem view {
+	width: 100%;
+	height: 100%;
+}
+
+.arrowicon {
+	position: absolute;
+	right: 10rpx;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.inputbox {
+	height: 66rpx;
+	display: flex;
+	align-items: center;
+}
+
 
 .inputuitem {
 	width: 400rpx;
@@ -31,7 +107,7 @@ page {
 	box-sizing: border-box;
 	margin-left: 10rpx;
 	border: 1px solid #BBBBBB;
-	border-radius: 6rpx;
+	border-radius: 12rpx;
 	padding-left: 10rpx;
 }
 
@@ -62,7 +138,7 @@ page {
 }
 
 .btn {
-	position: fixed;
+	position: absolute;
 	bottom: 0;
 	left: 0;
 	right: 0;

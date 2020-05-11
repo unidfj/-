@@ -1,3 +1,5 @@
 <view>
-	<zixunBlock />
+	<navigator wx:for='{{list}}' wx:key='index' url="/pages/project/projectDetail?id={{item.id}}">
+		<zixunBlock prop='{{item}}'/>
+	</navigator>
 </view>

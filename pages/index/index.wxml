@@ -1,8 +1,10 @@
 <!-- banner轮播 -->
 <view class="banner">
 	<swiper autoplay duration="{{duration}}" circular="{{800}}" interval="{{3000}}" indicator-dots>
-		<swiper-item>
-			<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+		<swiper-item wx:for='{{index.bannerlist}}' wx:key='index'>
+			<navigator url="/pages/benefits/goodsDetail?id={{item.id}}" hover-class="none">
+				<image class="img" mode="aspectFill" src="{{item.image}}" lazy-load></image>
+			</navigator>
 		</swiper-item>
 	</swiper>
 </view>
@@ -10,27 +12,27 @@
 <!-- nav导航栏 -->
 <view class="grid">
 
-	<navigator url="/pages/project/index?type={{0}}" class="griditem">
+	<navigator url="/pages/project/index?type={{0}}" class="griditem" hover-class="none">
 		<icon></icon>
 		<text>项目推介</text>
 	</navigator>
 
-	<navigator url="/pages/project/index?type={{1}}" class="griditem">
+	<navigator url="/pages/project/index?type={{1}}" class="griditem" hover-class="none">
 		<icon></icon>
 		<text>商家导览</text>
 	</navigator>
 
-	<navigator url="/pages/project/index?type={{2}}" class="griditem">
+	<navigator url="/pages/project/index?type={{2}}" class="griditem" hover-class="none">
 		<icon></icon>
 		<text>怡福资讯</text>
 	</navigator>
 
-	<navigator class="griditem" url="/pages/benefits/index" open-type="switchTab">
+	<navigator class="griditem" url="/pages/benefits/index" open-type="switchTab" hover-class="none">
 		<icon></icon>
 		<text>会员福利</text>
 	</navigator>
 
-	<navigator class="griditem" url="/pages/member/index" open-type="switchTab">
+	<navigator class="griditem" url="/pages/member/index" open-type="switchTab" hover-class="none">
 		<icon></icon>
 		<text > 会员注册</text>
 	</navigator>
@@ -38,31 +40,39 @@
 
 <!-- 广告 -->
 <view class="ad">
-	<ad unit-id="adunit-2a1643b3e873e2a3"></ad>
+	<view class="adimgbox">
+		<image mode="aspectFill" class="img" src='{{App.baseurl+index.show_img}}'></image>
+	</view>
 </view>
 
 <!-- 热门活动tabbar3 -->
 <view class="remen">
 	<view class="left">热门活动</view>
-	<navigator open-type="switchTab" url="/pages/activity/index" class="df">更多
+	<navigator open-type="switchTab" url="/pages/activity/index" class="dfcenter" hover-class="none">
+		<text>更多</text>
 		<van-icon name="arrow" size="20" bindtap="" />
 	</navigator>
 </view>
-<block>
-	<activityBlock />
-</block>
+<!-- <block wx:for='{{index.hot_activity}}' wx:key='index'> -->
+	<navigator url="/pages/activity/activitydetail?id={{index.hot_activity.id}}"  hover-class="none">
+		<activityBlock props='{{index.hot_activity}}' />
+	</navigator>
+<!-- </block> -->
+
 
 <!-- 怡福资讯 -->
 <view class="remen">
 	<view class="left">怡福资讯</view>
-	<navigator class="df" url="/pages/project/index">更多
+	<navigator class="dfcenter" url="/pages/project/index" hover-class="none">
+		<text>更多</text>
+
 		<van-icon name="arrow" size="20" bindtap="" />
 	</navigator>
 </view>
-<block wx:for='{{2}}' wx:key='index'>
-<!-- projectDetail id-->
-	<navigator url="/pages/project/projectDetail">
-		<zixunBlock props='{{item}}' />
+<block wx:for='{{index.information}}' wx:key='index'>
+	<!-- projectDetail id-->
+	<navigator url="/pages/project/projectDetail?id={{item.id}}" hover-class="none">
+		<zixunBlock prop='{{item}}' />
 	</navigator>
 </block>
 
@@ -70,20 +80,21 @@
 <!-- 会员福利 -->
 <view class="remen">
 	<view class="left">会员福利</view>
-	<navigator class="df" open-type="switchTab" url="/pages/benefits/index" hover-class="none">更多
+	<navigator class="dfcenter" open-type="switchTab" url="/pages/benefits/index" hover-class="none">
+		<text>更多</text>
 		<van-icon name="arrow" size="20" bindtap="" />
 	</navigator>
 </view>
 <!-- benefits_goodsDetail -->
 <view class="card">
-	<block wx:for='{{2}}' wx:key='index'>
-		<navigator class="carditem" url="/pages/benefits/goodsDetail?goodsid={{item.id}}" hover-class="none">
+	<block wx:for='{{index.NewList}}' wx:key='index'>
+		<navigator class="carditem" url="/pages/benefits/goodsDetail?goodsid={{item.goods_id}}" hover-class="none">
 			<view class="itemimg">
-				<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"> </image>
+				<image class="img" mode="aspectFill" src="{{item.ImageFrist}}"> </image>
 			</view>
-			<view class="itemchit"> V·型理发卡代金券 </view>
+			<view class="goods_name"> {{item.goods_name}}</view>
 			<view class="df itemjifen">
-				<view class="jifenleft">35 积分</view>
+				<view class="jifenleft">{{item.spec[0].goods_price}}积分</view>
 				<view class="jifenright">兑换</view>
 			</view>
 		</navigator>

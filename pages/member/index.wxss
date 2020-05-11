@@ -25,10 +25,10 @@
 	color: #fff;
 }
 
-.username text {
+/* .username text {
 	font-size: 28rpx;
 	color: rgba(253, 204, 8, 1);
-}
+} */
 
 .cellclass {
 	margin: 30rpx 20rpx;

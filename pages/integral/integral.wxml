@@ -9,6 +9,7 @@
 </view>
 <!-- 循环卡片 -->
 <block>
-	<cardblock props='{}'>
-	</cardblock>
+	<navigator url="../integral/detail?id={{12}}" hover-class="none">
+		<cardblock props='{{}}' />
+	</navigator>
 </block>

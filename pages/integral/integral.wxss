@@ -5,9 +5,11 @@
 	color: #fff;
 	font-family: PingFangSC-bold;
 	font-size: 14px;
-	padding: 48rpx;
+	padding-left: 48rpx;
+	padding-top: 40rpx;
+	box-sizing: border-box;
 	border-radius: 16rpx;
-	margin: 15rpx 10rpx;
+	margin: 15rpx auto;
 }
 
 .tab {
@@ -15,7 +17,7 @@
 	height: 100rpx;
 	border: 2rpx solid rgba(187, 187, 187, 1);
 	font-size: 28rpx;
-
+	box-sizing: border-box;
 }
 
 .tabitem {
@@ -33,9 +35,9 @@
 .active::after {
 	content: "";
 	position: absolute;
-	bottom: -4rpx;
-	display: block;
+	bottom: 0;
 	left: 90rpx;
+	display: block;
 	width: 62rpx;
 	height: 6rpx;
 	background: rgba(221, 50, 50, 1);

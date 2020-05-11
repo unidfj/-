@@ -5,14 +5,7 @@
 	</swiper-item>
 </swiper>
 
-<view class="inpbox">
-
-	<view class="df">
-		<icon class="searchicon" type="search" size="20"></icon>
-		<input value="{{value}}" class="inp" confirm-type="search" type="text" placeholder="搜索" maxlength='{{16}}'> </input>
-	</view>
-
-</view>
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" background='#eeeeee' />
 
 <!-- 广告 -->
 <view class="ad">
@@ -21,7 +14,7 @@
 
 <view class="card">
 	<block wx:for='{{4}}' wx:key='index'>
-		<navigator hover-class="none"  class="carditem" url="/pages/benefits/goodsDetail?id={{item.id}}">
+		<navigator hover-class="none" class="carditem" url="/pages/benefits/goodsDetail?id={{item.id}}">
 			<view class="itemimg">
 				<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"> </image>
 			</view>

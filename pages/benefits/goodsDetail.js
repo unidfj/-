@@ -22,7 +22,7 @@ Page({
 
 				// 不够
 				wx.showModal({
-					showCancel:false,
+					showCancel: false,
 					title: '兑换提示',
 					content: '积分不足,无法兑换!',
 
@@ -49,7 +49,7 @@ Page({
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow: function () {
-
+		console.log(this.data)
 	},
 
 	/**

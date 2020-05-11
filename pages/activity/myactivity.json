@@ -1,6 +1,8 @@
 {
   "navigationBarTitleText": "我的活动",
   "usingComponents": {
-    "activityBlock": "/pages/component/activityBlock"
+    "activityBlock": "/pages/component/activityBlock",
+    "van-uploader": "/res/vant/uploader/index",
+    "van-icon": "/res/vant/icon/index"
   }
 }

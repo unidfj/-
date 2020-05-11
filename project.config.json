@@ -80,14 +80,14 @@
 					"scene": null
 				},
 				{
-					"id": 6,
+					"id": 3,
 					"name": "tabbar4会员中心 menber index",
 					"pathName": "pages/member/index",
-					"query": "id=0001",
+					"query": "",
 					"scene": null
 				},
 				{
-					"id": 7,
+					"id": 4,
 					"name": "tabbar3参与活动",
 					"pathName": "pages/activity/index",
 					"query": "id=0001",
@@ -101,14 +101,14 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "我的订单activ/myactiv",
+					"id": 6,
+					"name": "tabbar3我的活动 activ/myactiv",
 					"pathName": "pages/activity/myactivity",
-					"query": "id=0001",
+					"query": "",
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 7,
 					"name": "商家活动商家activ",
 					"pathName": "pages/activity/shangjiaActivity",
 					"query": "id=16",
@@ -136,10 +136,17 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "project详情",
-					"pathName": "pages/project/projectDetail",
-					"query": "id=0001",
+					"id": 11,
+					"name": "咨询首页",
+					"pathName": "pages/project/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 14,
+					"name": "renzhengzhuangtai ",
+					"pathName": "pages/member/memberAbout/rezhengState",
+					"query": "",
 					"scene": null
 				}
 			]

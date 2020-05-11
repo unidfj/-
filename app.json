@@ -7,7 +7,6 @@
 		"pages/lottery/lottery",
 		"pages/integral/integral",
 		"pages/member/memberAbout/renzheng",
-		"pages/member/memberAbout/select",
 		"pages/integral/detail",
 		"pages/activity/index",
 		"pages/activity/myactivity",
@@ -15,7 +14,8 @@
 		"pages/activity/shangjiaActivity",
 		"pages/integral/integralDetail",
 		"pages/benefits/goodsDetail",
-		"pages/project/projectDetail"
+		"pages/project/projectDetail",
+		"pages/member/memberAbout/rezhengState"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

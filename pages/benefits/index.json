@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "activityBlock": "../component/activityBlock"
+    "activityBlock": "../component/activityBlock",
+    "van-search": "/res/vant/search/index"
   }
 }

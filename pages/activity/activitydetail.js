@@ -1,3 +1,4 @@
+const App = getApp()
 Page({
 
 	/**
@@ -10,18 +11,14 @@ Page({
 		type: '',
 		showoverlay: false,//遮罩层开关
 		form: {
-			username: '',
-			phone: '',
+			signup_name: null,
+			signup_mobile: null
 		}
 	},
 
 	onClickHide() {
 		this.setData({
 			showoverlay: false,
-			form: {
-				username: '',
-				phone: ''
-			}
 		})
 	},
 
@@ -40,17 +37,18 @@ Page({
 	},
 
 	// 参加活动的点击提交 http success
-	suresubmit() {
+	submit: function (e) {
+		const { value } = e.detail
+		value.aid = 8
+		App.post('/api/activity/do_activity_signup', { ...value },
+			res => {
+				console.log(res)
+				App.modal(res.data.msg, `您的活动报名码为 ${res.data.code}`, false, () => {
+					//跳转到哪里
+					wx.redirectTo({ url: '/pages/activity/myactivity', })
+				})
+			})
 
-		// 成功的回调
-		wx.showModal({
-			title: '报名成功',
-			content: `您的活动报名码为 ${'1234'} 
-				详情请到会员中心查询报名记录
-			` ,
-			showCancel: false,
-			confirmColor: '#7b76fe'
-		})
 	},
 	/**
 	 * 生命周期函数--监听页面加载

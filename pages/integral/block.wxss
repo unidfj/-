@@ -6,6 +6,7 @@
 	height: 330rpx;
 	box-shadow: 2rpx 2rpx 12rpx rgba(0, 0, 0, 0.4);
 	border-radius: 8rpx;
+	position: relative;
 }
 
 .itemleft {
@@ -66,3 +67,16 @@ page {
 	width: 100% !important;
 	height: 100% !important;
 }
+
+/* 
+.corner {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 120rpx;
+	height: 120rpx;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+} */

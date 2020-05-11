@@ -1,9 +1,9 @@
 <view class="zixunbox">
 	<view class="zixunimg">
-		<image src="{{src}}" mode="aspectFill" class="img"></image>
+		<image src="{{prop.shrink_img}}" mode="aspectFill" class="img"></image>
 	</view>
 	<view class="zixuntext">
-		{{text}}
+		{{prop.title}}
 	</view>
 	<view class="bg"></view>
 </view>
