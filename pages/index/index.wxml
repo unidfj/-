@@ -2,29 +2,18 @@
 <view class="banner">
 	<swiper autoplay duration="{{duration}}" circular="{{800}}" interval="{{3000}}" indicator-dots>
 		<swiper-item wx:for='{{index.bannerlist}}' wx:key='index'>
-			<navigator url="/pages/benefits/goodsDetail?id={{item.id}}" hover-class="none">
-				<image class="img" mode="aspectFill" src="{{item.image}}" lazy-load></image>
-			</navigator>
+			<!-- <navigator url="/pages/benefits/goodsDetail?id={{item.id}}" hover-class="none"> -->
+			<image class="img" mode="aspectFill" src="{{item.image}}" lazy-load></image>
+			<!-- </navigator> -->
 		</swiper-item>
 	</swiper>
 </view>
 
 <!-- nav导航栏 -->
 <view class="grid">
-
-	<navigator url="/pages/project/index?type={{0}}" class="griditem" hover-class="none">
+	<navigator wx:for='{{index.information_type}}' wx:key='index' url="/pages/project/index?text={{item.name}}" class="griditem" hover-class="none">
 		<icon></icon>
-		<text>项目推介</text>
-	</navigator>
-
-	<navigator url="/pages/project/index?type={{1}}" class="griditem" hover-class="none">
-		<icon></icon>
-		<text>商家导览</text>
-	</navigator>
-
-	<navigator url="/pages/project/index?type={{2}}" class="griditem" hover-class="none">
-		<icon></icon>
-		<text>怡福资讯</text>
+		<text>{{item.name}}</text>
 	</navigator>
 
 	<navigator class="griditem" url="/pages/benefits/index" open-type="switchTab" hover-class="none">
@@ -39,31 +28,30 @@
 </view>
 
 <!-- 广告 -->
-<view class="ad">
-	<view class="adimgbox">
-		<image mode="aspectFill" class="img" src='{{App.baseurl+index.show_img}}'></image>
-	</view>
+<view class="adimgbox">
+	<image mode="aspectFill" class="img" src='{{index.show_img}}'></image>
 </view>
+
 
 <!-- 热门活动tabbar3 -->
 <view class="remen">
 	<view class="left">热门活动</view>
-	<navigator open-type="switchTab" url="/pages/activity/index" class="dfcenter" hover-class="none">
+	<navigator open-type="switchTab" url="/pages/activity/index" class="dfcenter right" hover-class="none">
 		<text>更多</text>
-		<van-icon name="arrow" size="20" bindtap="" />
+		<van-icon name="arrow" size="18" bindtap="" />
 	</navigator>
 </view>
 <!-- <block wx:for='{{index.hot_activity}}' wx:key='index'> -->
-	<navigator url="/pages/activity/activitydetail?id={{index.hot_activity.id}}"  hover-class="none">
-		<activityBlock props='{{index.hot_activity}}' />
-	</navigator>
+<navigator url="/pages/activity/activitydetail?id={{index.hot_activity.id}}" hover-class="none">
+	<activityBlock aimg='{{index.hot_activity.aimg}}' signup_end='{{index.hot_activity.signup_end}}' title='{{index.hot_activity.title}}' text='立即参加' />
+</navigator>
 <!-- </block> -->
 
 
 <!-- 怡福资讯 -->
 <view class="remen">
 	<view class="left">怡福资讯</view>
-	<navigator class="dfcenter" url="/pages/project/index" hover-class="none">
+	<navigator class="dfcenter right" url="/pages/project/index" hover-class="none">
 		<text>更多</text>
 
 		<van-icon name="arrow" size="20" bindtap="" />
@@ -80,7 +68,7 @@
 <!-- 会员福利 -->
 <view class="remen">
 	<view class="left">会员福利</view>
-	<navigator class="dfcenter" open-type="switchTab" url="/pages/benefits/index" hover-class="none">
+	<navigator class="dfcenter right" open-type="switchTab" url="/pages/benefits/index" hover-class="none">
 		<text>更多</text>
 		<van-icon name="arrow" size="20" bindtap="" />
 	</navigator>

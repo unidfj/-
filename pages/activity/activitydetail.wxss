@@ -1,52 +1,46 @@
 page {
+	padding-top: 20rpx;
 	box-sizing: border-box;
-	padding: 0 20rpx 40rpx 20rpx;
 }
 
 .pic {
-	margin: 16rpx auto;
-	width: 710rpx;
-	height: 476rpx;
+	height: 440rpx;
 	border-radius: 8rpx;
 	overflow: hidden;
 }
 
 .text {
-	width: 100%;
-	height: 174rpx;
-	line-height: 174rpx;
-	border: 2rpx solid rgba(239, 239, 239, 1);
+	padding: 24rpx 30rpx;
 	justify-content: space-between;
 	font-weight: 600;
+	font-family: PingFangSC-Medium, PingFang SC;
+}
+
+.bg {
+	width: 750rpx;
+	height: 20rpx;
+	background: rgba(237, 237, 237, 1);
 }
 
 .left {
-	color: rgba(16, 16, 16, 1);
-	font-family: PingFangSC-bold;
-	font-size: 36rpx;
-	/* font-weight: 600; */
+	color: #333;
+	font-size: 28rpx;
 }
 
 .right {
-	color: rgba(221, 50, 50, 1);
-	font-size: 40rpx;
-	font-family: PingFangSC-bold;
+	color: rgba(251, 98, 84, 1);
 }
 
 
 .time {
-	margin-top: 16rpx;
-	width: 100%;
-	height: 154rpx;
-	padding-left: 4rpx;
+	padding: 20rpx 0 0 30rpx;
 	font-family: PingFangSC-regular;
-	font-size: 28rpx;
-	border: 2rpx solid rgba(239, 239, 239, 1);
+	font-size: 24rrpx;
 }
 
 .time1 {
-	margin: 26rpx 0 16rpx;
-	color: rgba(221, 50, 50, 1);
+	color: rgba(251, 98, 84, 1);
+	margin-bottom: 10rpx;
 }
 
 .time2 {
@@ -54,23 +48,20 @@ page {
 	line-height: 40rpx;
 	vertical-align: center;
 	color: rgba(16, 16, 16, 1);
+	margin-bottom: 28rpx;
 }
 
 .detail {
 	margin: 20rpx auto;
-	width: 156rpx;
-	height: 50rpx;
-	color: rgba(16, 16, 16, 1);
+	color: rgba(51, 51, 51, 1);
 	font-size: 36rpx;
-	text-align: left;
 	font-weight: 600;
-	font-family: PingFangSC-bold;
+	text-align: center;
+	font-family: PingFangSC-Medium, PingFang SC;
 }
 
 .detailtext {
-	color: rgba(16, 16, 16, 1);
-	font-size: 28rpx;
-	font-family: PingFangSC-regular;
+	margin: 0 30rpx;
 }
 
 .btn {
@@ -80,19 +71,18 @@ page {
 	right: 0;
 	height: 88rpx;
 	line-height: 88rpx;
-	background-color: rgba(221, 50, 50, 1);
-	color: rgba(254, 253, 253, 1);
-	font-size: 32rpx;
-	font-weight: 600;
+	background: linear-gradient(180deg, rgba(250, 125, 90, 1) 0%, rgba(251, 99, 84, 1) 100%);
+	color: rgba(255, 255, 255, 1);
 	text-align: center;
-	font-family: Microsoft Yahei;
-	border: 2rpx solid rgba(255, 255, 255, 0);
+	font-size: 36rpx;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
 }
 
 
 .overlaybox {
-	width: 644rpx;
-	height: 554rpx;
+	width: 660rpx;
+	height: 480rpx;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -105,41 +95,55 @@ page {
 }
 
 .overlaybox .info {
-	height: 120rpx;
-	line-height: 120rpx;
+	line-height: 50rpx;
 	text-align: center;
+	margin: 40rpx 0 20rpx;
 	position: relative;
 }
 
 .overlaybox .icon {
 	position: absolute;
 	right: 20rpx;
-	top: 30rpx;
 }
 
 .overlaybox .inpbox {
-	padding-left: 10rpx;
-	margin-left: 10rpx;
-	margin-bottom: 30rpx;
-	height: 56rpx;
-	line-height: 56rpx;
+	margin-left: 24rpx;
+	margin-bottom: 20rpx;
+	height: 78rpx;
+	line-height: 78rpx;
 }
 
 .overlaybox .inp {
-	width: 400rpx;
-	height: 52rpx;
+	width: 410rpx;
+	height: 78rpx;
 	border-radius: 8rpx;
 	margin-left: 12rpx;
 	border: #c1c1c1 solid 2rpx;
+	background: rgb(242, 242, 242);
+	box-sizing: border-box;
+	padding: 15rpx 25rpx;
+	color: rgb(153, 153, 153);
+	
 }
 
 .overlaybox .tips {
-	color: var(--basecolor);
+	font-size: 24rpx;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
+	color: rgba(251, 98, 84, 1);
 }
 
 .overlaybox .sure {
+	border-top: 1px solid rgb(229, 229, 229);
+	background: #ffffff;
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	right: 0;
+	height: 96rpx;
+	font-size: 36rpx;
+	font-family: PingFangSC-Semibold, PingFang SC;
+	font-weight: 600;
+	color: rgba(251, 98, 84, 1);
+
 }

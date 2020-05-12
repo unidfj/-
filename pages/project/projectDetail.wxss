@@ -15,7 +15,7 @@ page {
 
 .imgbox {
 	width: 710rpx;
-	height: 2420rpx;
+	height: 420rpx;
 	border-radius: 8rpx;
 	overflow: hidden;
 }

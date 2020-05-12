@@ -2,55 +2,30 @@ let App = getApp();
 Page({
   data: {
     index: {
-
       bannerlist: [],//轮播图
       NewList: [],
       showimg: '',
-    },
-    // 步骤条
-    steps: [
-      {
-        // text: '步骤一',
-        desc: '描述信息'
-      },
-      {
-        // text: '步骤二',
-        desc: '描述信息'
-      }
-    ]
+    }
   },
   onLoad: function (options) {
-    //页面启动后 调取首页的数据
-    let that = this;
 
   },
   onShow: function () {
     this.getIndexData()
   },
-  /** 获取轮播*/
+  /** 获取首页数据*/
   getIndexData() {
     App.post('/addons/litestore/api.index/index', {}, res => {
-      console.log(res.data.data)
       const { data } = res.data
-      data.hot_activity.signup_star = this.getNowTime(Number(data.hot_activity.signup_star) * 1000)
-      data.hot_activity.signup_end = this.getNowTime(Number(data.hot_activity.signup_end) * 1000)
+      console.log(data)
+      data.show_img=App.baseurl+data.show_img
+      data.hot_activity.aimg=App.baseurl+data.hot_activity.aimg
+      data.hot_activity.signup_star = App.getNowTime(Number(data.hot_activity.signup_star) * 1000)
+      data.hot_activity.signup_end = App.getNowTime(Number(data.hot_activity.signup_end) * 1000)
+      data.information.forEach(v=>{v.shrink_img=App.baseurl+v.shrink_img})
       this.setData({ index: { ...data } })
+      console.log(this.data.index)
     })
   },
-  // 时间戳转化时间
-  getNowTime(value) {
-    var date = new Date(value);
-    let year = date.getFullYear();
-    let month = date.getMonth() + 1;
-    let tian = date.getDate();
-    return year + '-' + month + '-' + tian
-
-  },
-  onShareAppMessage: function () {
-    return {
-      title: "小程序商城首页",
-      desc: "",
-      path: "/pages/index/index"
-    }
-  }
+ 
 })

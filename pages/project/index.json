@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "zixunBlock":"../component/zixunBlock"
-  }
+    "zixunBlock": "../component/zixunBlock"
+  },
+  "onReachBottomDistance": 200
 }

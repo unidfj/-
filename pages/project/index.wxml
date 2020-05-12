@@ -1,5 +1,6 @@
 <view>
 	<navigator wx:for='{{list}}' wx:key='index' url="/pages/project/projectDetail?id={{item.id}}">
-		<zixunBlock prop='{{item}}'/>
+		<zixunBlock prop='{{item}}' />
 	</navigator>
+	<view wx:if='{{nomore}}' class="!hsamore"> 没有更多了 </view>
 </view>

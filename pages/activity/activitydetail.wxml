@@ -1,33 +1,29 @@
 <view class="pic">
-	<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+	<image class="img" mode="aspectFill" src="{{detail.aimg}}"></image>
 </view>
-
 
 <view class="text df">
-	<view class="left"> 雅韵茶舍体验（1日）</view>
-	<view class="right"> 未开始
-		<!-- 已报名 -->
-		<!-- 已结束 -->
+	<view class="left"> {{detail.title}}</view>
+	<view class="right"> {{detail.statetext}}
 	</view>
 </view>
-
+<view class="bg"></view>
 <view class="time">
-	<view class="time1">{{'活动报名时间：2020.04.23 ~ 2020.04.30'}}</view>
+	<view class="time1">活动报名时间：{{detail.signup_star+' ~ '+detail.signup_end}}</view>
 	<view class="time2 df">
 		<van-icon name="wap-home" size="20" style="margin-right:7px" />
-		{{'柏莱雅精品公寓'}}
+		{{detail.realname}}
 	</view>
 </view>
+<view class="bg"></view>
 
 <view class="detail"> 活动详情 </view>
 <view class="detailtext">
-	<rich-text nodes='{{htmlText}}'></rich-text>
-
+	<rich-text nodes='{{detail.content}}'></rich-text>
 </view>
 
 <view class="btn" bindtap="btn">
 	立即参与
-	<!-- 报名码: 1234 -->
 </view>
 
 <van-overlay show="{{ showoverlay }}">
@@ -47,7 +43,7 @@
 
 
 			<view class="tips">*注意: 报名信息提交后不可修改</view>
-			<button class="sure" type="warn"  form-type="submit"> 确认提交 </button>
+			<button class="sure" type="warn" form-type="submit"> 确认提交 </button>
 		</view>
 	</form>
 </van-overlay>

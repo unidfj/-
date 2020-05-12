@@ -13,7 +13,8 @@ Page({
 		content: '',
 		maxnum: '',
 		fileList: [],//图片上传
-		imgsrc: ''
+		imgsrc: '',
+		list: []//我的活动列表 
 	},
 	changeTab(e) {
 		let { curren } = e.currentTarget.dataset
@@ -112,19 +113,8 @@ Page({
 		if (!val.content) return '请输入活动介绍'
 		return ''
 	},
-	/**
-	 * 生命周期函数--监听页面加载
-	 */
-	onLoad: function (options) {
 
-	},
 
-	/**
-	 * 生命周期函数--监听页面初次渲染完成
-	 */
-	onReady: function () {
-
-	},
 
 	/**
 	 * 生命周期函数--监听页面显示
@@ -132,40 +122,24 @@ Page({
 	onShow: function () {
 		let type = wx.getStorageSync('userInfo').level
 		this.setData({ type })
+		this.getData()
+	},
+	// 获取活动
+	getData() {
+		App.post('/api/activity/get_my_activity_list', {},
+			res => {
+				console.log(res)
+				let list = res.data.data.map(v => {
+					return {
+						...v,
+						aimg: App.baseurl + v.aimg,
+						signup_star: App.getNowTime(Number(v.signup_star) * 1000),
+						signup_end: App.getNowTime(Number(v.signup_end) * 1000),
+					}
+				})
+				console.log(list)
+				this.setData({ list })
+			})
 	},
 
-	/**
-	 * 生命周期函数--监听页面隐藏
-	 */
-	onHide: function () {
-
-	},
-
-	/**
-	 * 生命周期函数--监听页面卸载
-	 */
-	onUnload: function () {
-
-	},
-
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-	onPullDownRefresh: function () {
-
-	},
-
-	/**
-	 * 页面上拉触底事件的处理函数
-	 */
-	onReachBottom: function () {
-
-	},
-
-	/**
-	 * 用户点击右上角分享
-	 */
-	onShareAppMessage: function () {
-
-	}
 })

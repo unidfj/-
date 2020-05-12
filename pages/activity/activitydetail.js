@@ -5,6 +5,7 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
+		aid: null,//活动id
 		htmlText: `为答谢广大业主会员及新老顾客，在活动期间，凡所有参与活动的业主会员可享受连住3晚6折起的限时活动！活动名额有限，抓紧时间报名吧！
 		本次活动限定100个名额，先到先得！
 		* 本活动最终解释权归柏莱雅精品公寓所有`,
@@ -13,12 +14,14 @@ Page({
 		form: {
 			signup_name: null,
 			signup_mobile: null
-		}
+		},
+		detail: {}
 	},
 
 	onClickHide() {
 		this.setData({
 			showoverlay: false,
+			form:{}
 		})
 	},
 
@@ -48,41 +51,37 @@ Page({
 					wx.redirectTo({ url: '/pages/activity/myactivity', })
 				})
 			})
-
 	},
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-
+		this.setData({ aid: options.id })
 	},
 
-	/**
-	 * 生命周期函数--监听页面初次渲染完成
-	 */
-	onReady: function () {
-
-	},
 
 	/**
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow: function () {
-
+		this.getData()
 	},
 
-	/**
-	 * 生命周期函数--监听页面隐藏
-	 */
-	onHide: function () {
-
-	},
-
-	/**
-	 * 生命周期函数--监听页面卸载
-	 */
-	onUnload: function () {
-
+	getData() {
+		App.post('/api/activity/get_activity_detail', { aid: this.data.aid, type: 1 },
+			res => {
+				console.log(res)
+				const { data } = res.data
+				let detail = {
+					...data,
+					aimg: App.baseurl + data.aimg,
+					signup_star: App.getNowTime(Number(data.signup_star) * 1000),
+					signup_end: App.getNowTime(Number(data.signup_end) * 1000),
+					content:data.content.replace(new RegExp(/src="\//g), `src="${App.baseurl}/`)
+				}
+				console.log(detail)
+				this.setData({ detail })
+			})
 	},
 
 	/**

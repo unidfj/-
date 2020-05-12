@@ -2,10 +2,11 @@ const App = getApp()
 Page({
 	data: {
 		isplay: false,
-		cost: 5, //每次消耗5
-		total: 99,//总分
 		animationData: {},
 		interval: null,
+		cost: 0, //每次消耗5
+		total: 0,//总分
+		lucky_text: null
 	},
 
 	/**
@@ -14,9 +15,21 @@ Page({
 	onLoad: function (options) {
 
 	},
-	// http
-	http() {
-		return
+	onShow: function () {
+		App.post('/api/activity/get_luckdraw_detaile', {},
+			res => {
+				const { data } = res.data
+				console.log(data)
+				let lucky_text = data.lucky_text.replace(new RegExp(/img src="\//g), `img src="${App.baseurl}/`)
+				let uncomplete = data.uncomplete.split(',')
+				this.setData({
+					uncomplete,
+					lucky_text,
+					cost: data.price,
+					total: data.credit1
+				})
+				console.log(this.data)
+			})
 	},
 	luckDrawStart() {
 		if (this.data.isplay) return
@@ -54,22 +67,10 @@ Page({
 					兑换码: ${result.code}
 						`,
 						false)
-
 				}
 			}, 200)
 
 		})
-
-		// http success.停止定时器 -5积分 isplay 模态 初始化动画
-		// setTimeout(() => {
-
-		// }, 4000);
-		// wx.showModal({
-		// 	title: '提醒',
-		// 	content: `恭喜您获得一等奖!
-		// 		兑换码: 1234
-		// 		`,
-		// })
 	},
 	onUnload() {
 		if (this.interval)

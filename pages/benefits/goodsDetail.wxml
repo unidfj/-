@@ -1,36 +1,35 @@
-<swiper class="swiper" indicator-dots circular="{{800}}" interval="{{3000}}" autoplay>
-	<swiper-item>
-		<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
-		<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+<swiper class="swiper" interval="{{3000}}" indicator-dots circular="{{800}}" indicator-color='rgba(53, 52, 51)' indicator-active-color='rgb(221, 221, 221)' autoplay>
+	<swiper-item wx:for='{{detail.images}}' wx:key='index'>
+		<image class="img" mode="aspectFill" src="{{item}}"></image>
 	</swiper-item>
 </swiper>
 
 <view class="info">
-	<view class="infotop">{{' V·型理发卡代金券'}} </view>
+	<view class="infotop">{{detail.goods_name}} </view>
 	<view class="df infobottom">
 		<view class="jifen">
-			{{'35'}} 积分
+			{{detail.spec[0].goods_price}} 积分
 		</view>
 		<view class="kucun">
-			库存 {{'100'}} 张
+			库存 {{detail.spec[0].stock_num}} 张
 		</view>
 	</view>
 </view>
 
 
-<view class="time">
-	积分兑换时间：{{'2020.04.23 ~ 2020.04.30'}}
+<view class="time" >
+	积分兑换时间：{{detail.buy_star + '~'+ detail.buy_end}}
 </view>
 
 
-<view class="detail">
+<view class="detail" wx:if='{{detail.store}}'>
 	<view class="df">
-		<van-icon name="wap-home" size="20" color='#000' /> V·型时尚美业（光明路店） </view>
+		<van-icon name="wap-home" size="20" color='#000' /> {{detail.store.shop_name}} </view>
 	<view class="df">
-		<van-icon name="location" size="20" color='#000' />广东省广州市天河区光明新街123号</view>
+		<van-icon name="location" size="20" color='#000' />{{detail.store.shop_area }}</view>
 	<view class="df">
-		<van-icon name="phone-circle" size="20" color='#000' /> 020-6666666</view>
-	<view> 领取时间：2020.05.01 ~ 2020.05.07</view>
+		<van-icon name="phone-circle" size="20" color='#000' />{{detail.store.shop_mobile}}</view>
+	<view> 领取时间：{{detail.closure_star}} ~ {{detail.closure_end}}</view>
 </view>
 
 
@@ -39,15 +38,16 @@
 		商品详情
 	</view>
 	<view class="xiangqing">
-		<!-- <rich-text></rich-text> -->
-		这里显示商品的详情文本。这里显示商品的详情文本。这里显示商品的详情文本。这里显示商品的详情文本。这里显示商品的详情文本。这里显示商品的详情文本。这里显示商品的详情文本。这里显示商品的详情文本。
+		<rich-text nodes='{{detail.content}}'>
+		</rich-text>
 	</view>
 	<view class="goodsimg">
-		<image src="https://img.yzcdn.cn/vant/cat.jpeg" mode="aspectFill" class="img"></image>
+		<image src="{{detail.content}}" mode="aspectFill" class="img"></image>
+	</view>
+	<view class="goodsimg" wx:for='{{detail.content2_url}}' wx:key='index'>
+		<image src="{{item}}" mode="aspectFill" class="img"></image>
 	</view>
 </view>
-
-
 
 
 <view class="btn" bindtap="handleClick">

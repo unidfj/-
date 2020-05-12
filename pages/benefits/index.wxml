@@ -1,26 +1,28 @@
-<swiper class="swiper" indicator-dots circular="{{800}}" interval="{{3000}}" autoplay>
-	<swiper-item>
-		<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
-		<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+<swiper class="swiper" indicator-dots circular="{{800}}" indicator-color='rgba(53, 52, 51)' indicator-active-color='rgb(221, 221, 221)' interval="{{3000}}" autoplay>
+	<swiper-item class='swiperitem' wx:for='{{index.store_imgs}}' wx:key='index'>
+		<image class="img" mode="aspectFit" src="{{item}}"></image>
+		<!-- 长aspectFit 短aspectFill -->
 	</swiper-item>
 </swiper>
 
-<van-search value="{{ value }}" placeholder="请输入搜索关键词" background='#eeeeee' />
+
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" background='#eeeeee' bind:search='search' bind:blur='clearValue' bind:cancel='clearValue' />
 
 <!-- 广告 -->
-<view class="ad">
-	<ad unit-id="adunit-2a1643b3e873e2a3"></ad>
+<view class="adbox">
+	<image class="img" src="{{index.show_img}}" mode="aspectFit"></image>
 </view>
 
+
 <view class="card">
-	<block wx:for='{{4}}' wx:key='index'>
-		<navigator hover-class="none" class="carditem" url="/pages/benefits/goodsDetail?id={{item.id}}">
+	<block wx:for='{{index.Randomlist}}' wx:key='index'>
+		<navigator hover-class="none" class="carditem" url="/pages/benefits/goodsDetail?goods_id={{item.goods_id}}">
 			<view class="itemimg">
-				<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"> </image>
+				<image class="img" mode="aspectFill" src="{{item.ImageFrist}}"> </image>
 			</view>
-			<view class="itemchit"> V·型理发卡代金券 </view>
+			<view class="itemchit"> {{item.goods_name}}</view>
 			<view class="df itemjifen">
-				<view class="jifenleft">35 积分</view>
+				<view class="jifenleft">{{item.spec[0].goods_price}} 积分</view>
 				<view class="jifenright">兑换</view>
 			</view>
 		</navigator>
@@ -28,6 +30,6 @@
 </view>
 
 <!-- 活动块组件 id -->
-<navigator url="/pages/activity/activitydetail?id={{}}" hover-class="none">
-	<activityBlock props='{{ {value:"李狗蛋",text1:"hello",text2:"hekl"} }}' />
+<navigator url="/pages/activity/activitydetail?id={{index.hot_activity.id}}" hover-class="none">
+	<activityBlock signup_end='{{index.hot_activity.signup_end}}' title='{{index.hot_activity.title}}' aimg='{{index.hot_activity.aimg}}'  text='立即参加' />
 </navigator>

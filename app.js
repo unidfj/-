@@ -184,6 +184,15 @@ App({
         success && success()
       }
     })
+  },
+
+  // 时间戳转化时间
+  getNowTime(value) {
+    var date = new Date(value);
+    let year = date.getFullYear();
+    let month = date.getMonth() + 1;
+    let tian = date.getDate();
+    return year + '-' + month + '-' + tian
   }
 
 })

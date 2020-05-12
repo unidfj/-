@@ -1,4 +1,4 @@
-<view wx:if='{{type===1}}'>
+<!-- <view wx:if='{{type===1}}'>
 	<view class='title'>
 		{{'23亿!增城中新镇霞迳村旧改招标!资产门槛需1000亿!'}}
 	</view>
@@ -29,26 +29,15 @@
 	<view class="imgbox" style="margin-bottom:40px;border-radius: 4px;overflow: hidden;">
 		<image src="https://img.yzcdn.cn/vant/cat.jpeg" class="img" mode="aspectFill"></image>
 	</view>
-</view>
+</view> -->
 
-<view wx:else>
+<view >
 	<view class='title'>
-		{{'23亿!增城中新镇霞迳村旧改招标!资产门槛需1000亿!'}}
-	</view>
-
-	<view class="imgbox">
-		<image src="https://img.yzcdn.cn/vant/cat.jpeg" class="img" mode="aspectFill"></image>
+		{{detail.title}}
 	</view>
 
 	<view class="richtext">
-		<rich-text nodes='{{text}}' />
+		<rich-text nodes='{{detail.content}}' />
 	</view>
 
-	<view class="imgbox">
-		<image src="https://img.yzcdn.cn/vant/cat.jpeg" class="img" mode="aspectFill"></image>
-	</view>
-
-	<view class="richtext" style="margin-bottom:40px">
-		<rich-text nodes='{{text}}' />
-	</view>
 </view>

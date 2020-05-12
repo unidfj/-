@@ -4,11 +4,10 @@ Component({
 	 * 组件的属性列表
 	 */
 	properties: {
-		// title:String,
-		// aimg:String,
-		// signup_end:String,
-		// signup_star:String,
-		props: Object,
+		aimg:String,
+		title:String,
+		text:String,
+		signup_end:String,
 		type2: Number,
 		type2props: Object
 	},
@@ -17,24 +16,6 @@ Component({
 	 * 组件的初始数据
 	 */
 	data: {
-		steps: [
-			{
-				text: '步骤一',
-				desc: '描述信息'
-			},
-			{
-				text: '步骤二',
-				desc: '描述信息'
-			},
-			{
-				text: '步骤三',
-				desc: '描述信息'
-			},
-			{
-				text: '步骤四',
-				desc: '描述信息'
-			}
-		]
 	},
 
 	/**

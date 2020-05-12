@@ -1,62 +1,51 @@
-// pages/activity/index.js
+const App = getApp()
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
-
+		page: 1,     //页数
+		show_img: '',//抽奖图片
+		list: [],     //循环体
+		isloading: false,
+		hasmore: true
 	},
 
-	/**
-	 * 生命周期函数--监听页面加载
-	 */
-	onLoad: function (options) {
 
-	},
-
-	/**
-	 * 生命周期函数--监听页面初次渲染完成
-	 */
-	onReady: function () {
-
-	},
-
-	/**
-	 * 生命周期函数--监听页面显示
-	 */
 	onShow: function () {
-
+		this.setData({ list: [], page: 1 })
+		this.getData()
+	},
+	getData() {
+		if (this.data.isloading) return
+		this.setData({ isloading: true })
+		console.log('第'+this.data.page)
+		App.post('/addons/litestore/api.index/get_activity_list', { page: this.data.page },
+			res => {
+				const { data } = res.data
+				let show_img = App.baseurl + data.show_img
+				let list = data.activity_list.data.map(v => {
+					return {
+						...v,
+						aimg:App.baseurl+v.aimg,
+						signup_star: App.getNowTime(Number(v.signup_star) * 1000),
+						signup_end: App.getNowTime(Number(v.signup_end) * 1000)
+					}
+				})
+				list = [...this.data.list, ...list]
+				// 没有更多了
+				let hasmore = data.activity_list.page < data.activity_list.totalpage
+				let page = hasmore ? this.data.page + 1 : this.data.page
+				this.setData({ show_img, list, hasmore, page, isloading: false })
+				console.log(this.data)
+			})
 	},
 
-	/**
-	 * 生命周期函数--监听页面隐藏
-	 */
-	onHide: function () {
-
-	},
-
-	/**
-	 * 生命周期函数--监听页面卸载
-	 */
-	onUnload: function () {
-
-	},
-
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-	onPullDownRefresh: function () {
-
-	},
-
-	/**
-	 * 页面上拉触底事件的处理函数
-	 */
 	onReachBottom: function () {
-
+		console.log('chudi')
+		!this.data.isloading && this.data.hasmore && this.getData()
 	},
-
 	/**
 	 * 用户点击右上角分享
 	 */

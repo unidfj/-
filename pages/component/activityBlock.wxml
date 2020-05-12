@@ -1,34 +1,17 @@
 <view class="block">
-
 	<view class="pic">
-		<image class="picimg" src="https://img.yzcdn.cn/vant/cat.jpeg" mode="asaspectFill"></image>
+		<image class="picimg" src="{{aimg}}" mode="asaspectFill"></image>
 	</view>
-
 	<view class="blockitem">
 		<view class="left">
 			<view class="name">
-				{{props.title}}（1日）
+				{{title}}（1日）
 			</view>
-			<view class="type2">
-				<view class="isstart">
-					{{'立即参与'}}
-				</view>
-				<view  class="canyu" wx:if='{{props.type2}}'>{{type2props}}人参与</view>
-			</view>
+			<view class="jiezhi">报名截止时间{{signup_end}}</view>
 		</view>
-
 		<view class="right">
-			<view class="text">
-				<van-icon class="texticon" name="circle" size="10" color="#55D940" /> {{props.signup_star}}
-			</view>
-			<view class="text">
-				<van-icon class="texticon" name="circle" size="10" color="#DD3232" /> {{props.signup_end}}
-			</view>
+			<view wx:if='{{type2}}' class="canyu">{{'68/100人参与'}}</view>
+			<view class="btn">{{text}}</view>
 		</view>
-
-		<!-- <view>
-			<van-steps steps="{{ steps }}" active="{{1}}" direction="vertical" active-color="#ee0a24" />
-		</view> -->
 	</view>
-
 </view>

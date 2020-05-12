@@ -1,1 +1,4 @@
-/* pages/project/index.wxss */
+.nomore {
+	margin: 40rpx auto;
+	text-align: center;
+}

@@ -1,6 +1,6 @@
-<view id="luckdraw_box">
-	<view id="luckdraw_back">
-		<image  animation="{{animationData}}" mode="scaleToFill" src="./bg.jpg"></image>
+<view class="luckdraw_box">
+	<view class="luckdraw_back">
+		<image animation="{{animationData}}" mode="scaleToFill" src="./bg.jpg"></image>
 	</view>
 	<view id="luckdraw_pointer" bindtap='luckDrawStart'>
 		<image mode="scaleToFill" src="./zhizhen.jpg"></image>
@@ -15,23 +15,14 @@
 <view class="code">
 	<view class="left">我的兑奖码：</view>
 	<view class="right">
-		<text>一等奖（2132）</text>
-		<text>二等奖（6666）</text>
-		<text>一等奖（1234）</text>
-		<text>三等奖（7894）</text>
-		<text>二等奖（5412）</text>
+		<text wx:for='{{uncomplete}}' wx:key='index'>{{item}}</text>
 	</view>
 </view>
 
 <view class="rules">
 	<view class="title">抽奖规则</view>
-	<view class="main"> 单次抽奖消耗积分 n 积分，中奖后会生成兑奖码，中奖码无重复。会员兑奖时凭兑奖码至线下门店出示兑换奖品，若中奖码错误则无法兑换奖品，请妥善保管！
-
-	</view>
-	<view class="prize">
-		<view>一等奖：积分 * 10</view>
-		<view>二等奖：商家优惠券</view>
-		<view>三等奖：现金 * 5元</view>
+	<view class="text">
+		<rich-text nodes='{{lucky_text}}'></rich-text>
 	</view>
 	<view>* 活动解释权归本平台所有</view>
 </view>

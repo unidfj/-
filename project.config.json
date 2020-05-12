@@ -88,16 +88,16 @@
 				},
 				{
 					"id": 4,
-					"name": "tabbar3参与活动",
+					"name": "tabbar3参与活动 活动管理",
 					"pathName": "pages/activity/index",
-					"query": "id=0001",
+					"query": "",
 					"scene": null
 				},
 				{
-					"id": 8,
+					"id": 5,
 					"name": "活动详情 activitydetail",
 					"pathName": "pages/activity/activitydetail",
-					"query": "id=0001",
+					"query": "id=8",
 					"scene": null
 				},
 				{

@@ -5,61 +5,42 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-		list: []
+		list: [],
+		tid: 1,//类型id
+		page: 1,//页数
+		isloading: false,
+		hasmore: true
 	},
-
-	/**
-	 * 生命周期函数--监听页面加载
-	 */
-	onLoad: function (options) {
-
-	},
-
-	/**
-	 * 生命周期函数--监听页面初次渲染完成
-	 */
-	onReady: function () {
-
-	},
-
-	/**
-	 * 生命周期函数--监听页面显示
-	 */
-	onShow: function () {
-		App.post('/api/information/get_information_list', {}, res => {
-			console.log(res)
-			this.setData({
-				list: res.data.data
-			})
+	onLoad: function (opt) {
+		// console.log(opt)
+		wx.setNavigationBarTitle({
+			title: opt.text,
 		})
 	},
-
-	/**
-	 * 生命周期函数--监听页面隐藏
-	 */
-	onHide: function () {
-
+	onShow: function () {
+		this.setData({ list: [], page: 1 })
+		this.getData()
 	},
-
-	/**
-	 * 生命周期函数--监听页面卸载
-	 */
-	onUnload: function () {
-
+	getData() {
+		if (this.data.isloading) return
+		this.setData({ isloading: true })
+		let { tid, page, list } = this.data
+		App.post('/api/information/get_information_list', { tid, page },
+			res => {
+				console.log(res)
+				res.data.data.forEach(v => {
+					v.shrink_img = App.baseurl + v.shrink_img
+				})
+				// 没有更多了
+				let hasmore = res.data.page < res.data.totalpage
+				page = hasmore ? page + 1 : page
+				list = [...list, ...res.data.data]
+				this.setData({ page, list, hasmore, isloading: false })
+				// console.log(this.data)
+			})
 	},
-
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-	onPullDownRefresh: function () {
-
-	},
-
-	/**
-	 * 页面上拉触底事件的处理函数
-	 */
 	onReachBottom: function () {
-
+		!this.data.isloading && this.data.hasmore && this.getData()
 	},
 
 	/**
