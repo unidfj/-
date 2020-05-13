@@ -1,66 +1,41 @@
-// pages/integral/detail.js
+const App = getApp()
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
-
+		order_no: null,
+		detail: {}
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-		console.log(options.id) //0001
-	},
-
-	/**
-	 * 生命周期函数--监听页面初次渲染完成
-	 */
-	onReady: function () {
-
+		console.log(options) //0001
+		this.setData({ order_no: options.order_no })
 	},
 
 	/**
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow: function () {
-
+		this.getData()
 	},
-
-	/**
-	 * 生命周期函数--监听页面隐藏
-	 */
-	onHide: function () {
-
-	},
-
-	/**
-	 * 生命周期函数--监听页面卸载
-	 */
-	onUnload: function () {
-
-	},
-
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-	onPullDownRefresh: function () {
-
-	},
-
-	/**
-	 * 页面上拉触底事件的处理函数
-	 */
-	onReachBottom: function () {
-
-	},
-
-	/**
-	 * 用户点击右上角分享
-	 */
-	onShareAppMessage: function () {
-
+	getData() {
+		App.post('/addons/litestore/api.order/detail', { order_no: this.data.order_no },
+			res => {
+				const { data } = res.data
+				let detail = {
+					...data,
+					// 组件title
+					title: data.goods_name,
+					images: App.bgaseurl + data.images
+				}
+				this.setData({ detail })
+				console.log(detail)
+			})
 	}
+
 })

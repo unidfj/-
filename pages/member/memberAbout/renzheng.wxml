@@ -1,4 +1,5 @@
-	<form bindsubmit='submit1'>
+<wxs module='replace' src='./replace.wxs' />
+<form bindsubmit='submit1'>
 		<view class="renzheng" wx:if="{{type==1}}">
 			<view>
 				认证状态: <text class="tips">未认证</text>
@@ -8,39 +9,39 @@
 				所在地区:
 				<!-- 省 -->
 				<picker class="dfcenter " bindchange="bindPickerProvince" range="{{province.arr}}" disabled="{{!province.arr.length}}">
-					<view class="picker dfcenter">
-						{{provincename}}
+					<view class="picker ">
+						{{replace.replace(provincename,'省')}}
 						<van-icon class="arrowicon" name="arrow-down" size="10" />
 					</view>
-				</picker>
+				</picker>省
 				<!-- 市 -->
 				<picker class="dfcenter " bindchange="bindPickerCity" range="{{city.arr}}" disabled='{{!city.arr.length}}'>
-					<view class="picker dfcenter">
-						{{cityname}}
+					<view class="picker ">
+						{{replace.replace(cityname,'市')}}
 						<van-icon class="arrowicon" name="arrow-down" size="10" />
 					</view>
-				</picker>
+				</picker>市
 				<!-- 区 aid-->
-				<picker name='aid' value="{{aid}}" class="dfcenter " bindchange="bindPickerDistrict"  range="{{district.arr}}" disabled='{{!district.arr.length}}'>
-					<view class="picker dfcenter">
-						{{districtname}}
+				<picker name='aid' value="{{aid}}" class="dfcenter " bindchange="bindPickerDistrict" range="{{district.arr}}" disabled='{{!district.arr.length}}'>
+					<view class="picker ">
+						{{replace.replace(districtname,'区')}}
 						<van-icon class="arrowicon" name="arrow-down" size="10" />
 					</view>
-				</picker>
+				</picker>区
 			</view>
 
 			<!-- picker2 -->
 			<view class="loupanbox">
 				业主楼盘:
 				<picker name='fid' value="{{fid}}" class="loupanitem" bindchange="bindPickerLoupan" range="{{loupan.arr}}" disabled='{{!loupan.arr.length}}'>
-					<view>{{loupanname||' '}}</view>
+					<view>{{loupanname||'请选择楼盘'}}</view>
 					<van-icon class="arrowicon" name="arrow-down" size="10" />
 				</picker>
 			</view>
 			<view class="loupanbox">
 				业主楼号:
 				<picker name='lnum' value="{{lnum}}" class="loupanitem" bindchange="bindPickerLouhao" range="{{louhao.arr}}" disabled='{{!louhao.arr.length}}'>
-					<view>{{louhaoname}}</view>
+					<view>{{louhaoname||'请选择楼号'}}</view>
 					<van-icon class="arrowicon" name="arrow-down" size="10" />
 				</picker>
 			</view>
@@ -70,21 +71,21 @@
 				<!-- 省 -->
 				<picker class="dfcenter " bindchange="bindPickerProvince" range="{{province.arr}}" disabled="{{province.arr.length==0}}">
 					<view class="picker dfcenter">
-						{{provincename}}
+						{{replace.replace(provincename,'省')}}
 						<van-icon class="arrowicon" name="arrow-down" size="8" />
 					</view>
 				</picker>
 				<!-- 市 -->
 				<picker class="dfcenter " bindchange="bindPickerCity" range="{{city.arr}}" disabled='{{city.arr.length==0}}'>
 					<view class="picker dfcenter">
-						{{cityname}}
+					{{replace.replace(cityname,'市')}}
 						<van-icon class="arrowicon" name="arrow-down" size="8" />
 					</view>
 				</picker>
 				<!-- 区 aid-->
 				<picker name='aid' value="{{aid}}" class="dfcenter " bindchange="bindPickerDistrict" range="{{district.arr}}" disabled='{{district.arr.length==0}}'>
 					<view class="picker dfcenter">
-						{{districtname}}
+						{{replace.replace(districtname,'区')}}
 						<van-icon class="arrowicon" name="arrow-down" size="8" />
 					</view>
 				</picker>

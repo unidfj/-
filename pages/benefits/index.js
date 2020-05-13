@@ -34,10 +34,11 @@ Page({
 	getData(keyword = '') {
 		App.post('/addons/litestore/api.index/get_store_list', { keyword },
 			({ data }) => {
+				console.log(data)
 				let index = {
 					...data.data,
 					store_imgs: data.data.store_imgs.split(',').map(v => App.baseurl + v),
-					show_img: App.baseurl + data.show_img,
+					show_img: App.baseurl + data.data.show_img,
 					hot_activity: {
 						...data.data.hot_activity,
 						aimg: App.baseurl + data.data.hot_activity.aimg,

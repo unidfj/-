@@ -1,15 +1,23 @@
+page {
+	padding: 30rpx;
+	box-sizing: border-box;
+	background: #fff;
+	white-space: nowrap;
+	font-size: 30rpx;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
+	color: rgba(51, 51, 51, 1);
+
+}
+
 .renzhengState {
 	position: relative;
 	width: 710rpx;
-	height: 1200rpx;
 	margin: 0 auto;
 	padding: 48rpx 24rpx 0 24rpx;
 	box-sizing: border-box;
-	border-radius: 16repx;
-	box-shadow: 0px 4rpx 12rpx 0px rgba(0, 0, 0, 0.4);
 	border: 2rpx solid rgba(255, 255, 255, 0);
 	font-family: PingFangSC-regular;
-
 }
 
 .state text {
@@ -91,6 +99,7 @@
 	border-radius: 8rpx;
 	overflow: hidden;
 }
-.type1btn{
+
+.type1btn {
 	margin-top: 40rpx;
 }

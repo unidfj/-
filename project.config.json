@@ -69,7 +69,7 @@
 					"id": 1,
 					"name": "积分商城intergral",
 					"pathName": "pages/integral/integral",
-					"query": "id=16",
+					"query": "",
 					"scene": null
 				},
 				{
@@ -97,7 +97,7 @@
 					"id": 5,
 					"name": "活动详情 activitydetail",
 					"pathName": "pages/activity/activitydetail",
-					"query": "id=8",
+					"query": "",
 					"scene": null
 				},
 				{
@@ -143,10 +143,10 @@
 					"scene": null
 				},
 				{
-					"id": 14,
-					"name": "renzhengzhuangtai ",
-					"pathName": "pages/member/memberAbout/rezhengState",
-					"query": "",
+					"id": -1,
+					"name": "renzheng ",
+					"pathName": "pages/member/memberAbout/renzheng",
+					"query": "type=1",
 					"scene": null
 				}
 			]

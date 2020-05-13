@@ -1,28 +1,31 @@
 <view class="tabitem df">
 	<view class="itemleft">
-		<image mode="aspectFill" class="img" src="https://img.yzcdn.cn/vant/cat.jpeg">
+		<image class="image" mode="aspectFill" class="img" src="{{props.ImageFrist}}">
 		</image>
 	</view>
 	<view class="itemright">
-		{{props.title||'vxinglifadaijinquan'}}
-		<view class="xiaohao df">
-			消耗积分：
-			<view>
-				{{'45积分'}}
-			</view>
+		<view class="title">
+			{{props.title}}
 		</view>
-		<view class="df">
-			<view class="mendian">兑换门店:</view>
-			<text class="text">{{'V·型时尚美业（光明路店）'}}</text>
+
+		<view class="xiaohao">
+			消耗积分: {{props.pay_price}}积分
 		</view>
-		<view class="df">
-			<view>兑换时间:</view>
-			<text class="text">{{'2020-04-23'}}</text>
+		<view class="mendian">
+			<text class="text">兑换门店:</text>
+			<view class="view">{{props.shop_name}}</view>
 		</view>
-		<view class="df">
-			<view>领取时间:</view>
-			<text class="text">{{'2020-04-23'}}</text>
+		<view class="mendian">
+			<text class="text">兑换时间: </text>
+			<view class="view">{{props.pay_time}}</view>
+		</view>
+		<view class="mendian">
+			<text class="text">领取时间: </text>
+			<view class="view">{{props.freight_time}}</view>
 		</view>
 	</view>
-	<!-- <view class='corner'> 未领取 </view>  -->
+	<!-- freight_status -->
+	<view class="icon {{props.freight_status==10?'':'lingqu'}}">
+		<text>{{props.freight_status==10?'未领取':'已领取'}}</text>
+	</view>
 </view>

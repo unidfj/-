@@ -16,6 +16,13 @@ page {
 	font-family: PingFangSC-Medium, PingFang SC;
 }
 
+.canyu {
+	padding-left: 30rpx;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
+	color: rgba(251, 98, 84, 1);
+}
+
 .bg {
 	width: 750rpx;
 	height: 20rpx;
@@ -79,6 +86,41 @@ page {
 	font-weight: 400;
 }
 
+/* 只有商家才有的 */
+.signuptitle {
+	padding: 25rpx 30rpx 12rpx 30rpx;
+	font-size: 28rpx;
+	font-family: PingFangSC-Regular, PingFang SC;
+	color: rgba(251, 98, 84, 1);
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+}
+
+.signuptitle view {
+	flex: 1;
+}
+
+.people {
+	justify-content: space-between;
+	margin: 0 33rpx 23rpx 30rpx;
+	font-size: 24rpx;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
+	color: rgba(102, 102, 102, 1);
+	white-space: nowrap;
+	overflow: auto;
+}
+
+.nomore {
+	padding-top: 5rpx;
+	color: rgb(170, 170, 170);
+	font-weight: 400;
+	font-size: 24rpx;
+	text-align: center;
+}
+
+
 
 .overlaybox {
 	width: 660rpx;
@@ -123,7 +165,7 @@ page {
 	box-sizing: border-box;
 	padding: 15rpx 25rpx;
 	color: rgb(153, 153, 153);
-	
+
 }
 
 .overlaybox .tips {

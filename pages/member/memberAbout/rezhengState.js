@@ -36,12 +36,6 @@ Page({
 			url: `/pages/member/memberAbout/renzheng?type=${this.data.type}`,
 		})
 	},
-	/**
-	 * 生命周期函数--监听页面加载
-	 */
-	onLoad: function (options) {
-
-	},
 
 
 	info(type) {
@@ -49,7 +43,7 @@ Page({
 			{ type },
 			(res) => {
 				let { data } = res.data
-				// console.log(data)
+				console.log(data)
 				this.setData({
 					state: data.state,
 					status: data.status,
@@ -88,49 +82,13 @@ Page({
 			}
 		)
 	},
-	/**
-	 * 生命周期函数--监听页面显示
-	 */
+	onLoad: function (opt) {
+		console.log(opt)
+		this.setData({ type: opt.type })
+	},
 	onShow: function () {
 		// 拿到业主/商家
-		let userInfo = wx.getStorageSync('userInfo')
-		this.setData({ type: userInfo.level })
-		
+
 		this.info(this.data.type)
 	},
-
-	/**
-	 * 生命周期函数--监听页面隐藏
-	 */
-	onHide: function () {
-
-	},
-
-	/**
-	 * 生命周期函数--监听页面卸载
-	 */
-	onUnload: function () {
-
-	},
-
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-	onPullDownRefresh: function () {
-
-	},
-
-	/**
-	 * 页面上拉触底事件的处理函数
-	 */
-	onReachBottom: function () {
-
-	},
-
-	/**
-	 * 用户点击右上角分享
-	 */
-	onShareAppMessage: function () {
-
-	}
 })

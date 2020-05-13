@@ -1,4 +1,4 @@
-// pages/integral/integral.js
+const App = getApp()
 Page({
 
 	/**
@@ -10,7 +10,8 @@ Page({
 			{ title: '全部', data: [123] },
 			{ title: '未领取', data: [234] },
 			{ title: '已领取', data: [345] }
-		]
+		],
+		credit1: null//积分余额
 
 	},
 	toogleCurren(e) {
@@ -35,41 +36,18 @@ Page({
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow: function () {
-
+		// const userInfo = wx.getStorageSync('userInfo')
+		// console.log(userInfo.credit1)
+		// this.setData({ credit1: userInfo.credit1 })
+		this.getData()
 	},
-
-	/**
-	 * 生命周期函数--监听页面隐藏
-	 */
-	onHide: function () {
-
-	},
-
-	/**
-	 * 生命周期函数--监听页面卸载
-	 */
-	onUnload: function () {
-
-	},
-
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-	onPullDownRefresh: function () {
-
-	},
-
-	/**
-	 * 页面上拉触底事件的处理函数
-	 */
-	onReachBottom: function () {
-
-	},
-
-	/**
-	 * 用户点击右上角分享
-	 */
-	onShareAppMessage: function () {
-
+	getData(type = 0) {
+		App.post('/addons/litestore/api.order/my', { type },
+			res => {
+				let { credit1, list } = res.data.data
+				list =
+				this.setData({ credit1, list })
+			})
 	}
+
 })

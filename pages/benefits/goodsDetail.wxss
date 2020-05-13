@@ -93,7 +93,7 @@ page {
 }
 
 .goodsdetail .xiangqing {
-	width: 719rpx;
+	padding: 0 30rpx;
 }
 
 .goodsdetail .goodsimg {
@@ -108,12 +108,17 @@ page {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	height: 88rpx;
-	line-height: 88rpx;
-	font-size: 16px;
+	height: 95rpx;
+	line-height: 95rpx;
 	text-align: center;
-	font-family: Microsoft Yahei;
-	border: 2rpx solid rgba(255, 255, 255, 0);
-	background-color: rgba(221, 50, 50, 1);
-	color: rgba(254, 253, 253, 1);
+	font-size: 36rpx;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+	background: linear-gradient(180deg, rgba(250, 125, 90, 1) 0%, rgba(251, 99, 84, 1) 100%);
+}
+
+.contentimg {
+
+	width: 690rpx;
 }

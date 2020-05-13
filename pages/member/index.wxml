@@ -1,40 +1,44 @@
 <view class="header dfcenter">
 	<view class="userimg">
-		<!-- <image class="img" src="https://img.yzcdn.cn/vant/cat.jpeg"></image> -->
 		<open-data class="img" type='userAvatarUrl' default-avatar='https://img.yzcdn.cn/vant/cat.jpeg'></open-data>
 	</view>
 	<view class="userdata">
 		<view class="useruname">
 			<open-data type="userNickName" lang="zh_CN" default-text='未登录'></open-data>
-			<text style="color:rgba(253, 204, 8, 1)" wx:if='{{type==0}}'> 未认证 </text>
-			<text style="color:rgba(253, 204, 8, 1)" wx:if='{{type==1}}'> 业主会员 </text>
-			<text style="color:rgba(253, 204, 8, 1)" wx:if='{{type==2}}'> 商家会员 </text>
+			<text class="norenzheng dfcenter"> {{type==0?'未认证':type==1?'业主会员':'商家会员'}} </text>
 		</view>
 		<view class="userBalance">
-			积分余额 : 99
+			积分余额 : {{credit1}}
 		</view>
 	</view>
 </view>
 
 <!-- bind:click cell点击事件 -->
-<view class="cellclass" wx:for='{{member}}' wx:key='index'>
-	<view class="dfcenter cellitem" data-index="{{index}}" bindtap="handleClick">
+<view class="cellclass">
+	<view wx:for='{{member}}' wx:key='index' class="dfcenter cellitem" data-index="{{index}}" bindtap="handleClick">
 		<view class="icon">
 			<image class="img" mode="aspectFill" src="{{item.src}}"></image>
 		</view>
-		<text>{{item.title}}</text>
+		<view class="title">{{item.title}}</view>
+		<van-icon name="arrow" color='' size="20" />
 	</view>
 </view>
 
 
 <!-- 遮罩层  -->
 <van-overlay show="{{ show }}" catchtap='onClickHide'>
-	<view class="overlay dfcenter">
+	<view class="overlay">
 		<navigator class="overlayitem" url="/pages/member/memberAbout/renzheng?type={{1}}">
-			<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+			<view class="imgbox">
+				<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+			</view>
+			我是业主
 		</navigator>
 		<navigator class="overlayitem" url="/pages/member/memberAbout/renzheng?type={{2}}">
-			<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+			<view class="imgbox">
+				<image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+			</view>
+			我是商家
 		</navigator>
 	</view>
 </van-overlay>

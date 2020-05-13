@@ -20,45 +20,50 @@ Page({
       icon: '',
       src: ''
     }],
-    // 积分
-    jifen: 0,
-    type: null,      //业主 商家
-    // 遮罩层
-    show: false
-  },
-
-  onLoad: function (options) {
-
+    credit1: 0,    // 积分
+    type: null,    //业主 商家
+    show: false,   // 遮罩层
+    isSubmit: null //有没有提交
   },
 
   onShow: function () {
-    let type = wx.getStorageSync('userInfo').level
-    this.setData({ type })
+    const userInfo = wx.getStorageSync('userInfo')
+    let { credit1 } = userInfo
+    let type = userInfo.level
+    this.setData({ type, credit1 })
+    this.isSubmit()
     // 遮罩层优化
     if (this.data.show)
       this.setData({ show: false })
   },
-
+  // 检测用户有没提交
+  isSubmit() {
+    App.post('/api/user/check_apply', {},
+      res => {
+        this.setData({ isSubmit: res.data.data.state })
+        // 之前审核身份(0未申请审核 1业主 2商家)
+        console.log(this.data.isSubmit)
+      })
+  },
   // 点击空白隐藏遮罩
   onClickHide(e) {
     setTimeout(() => {
       this.setData({ show: false })
     }, 100);
-
   },
   // 4
   handleClick: function (e) {
     // 获取type
     let { type } = this.data
     let { index } = e.currentTarget.dataset
-    console.log('点击事件+', index, this.data.type)
-    // 1身份认证 判断是否已认证,未认证遮罩层,已认证renzhengstate
+    // 1身份认证
     if (index === 0) {
-      type == 0
-        ? this.setData({ show: true })  //未验证
-        : wx.navigateTo({               // 已认证 
-          url: `/pages/member/memberAbout/rezhengState?type=${this.data.type}`,
+      // 是否已提交
+      this.data.isSubmit !== 0
+        ? wx.navigateTo({
+          url: `/pages/member/memberAbout/rezhengState?type=${this.data.isSubmit}`,
         })
+        : this.setData({ show: true })
     }
     // 2积分订单
     if (index === 1) {

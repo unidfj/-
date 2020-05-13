@@ -42,7 +42,7 @@
 	</navigator>
 </view>
 <!-- <block wx:for='{{index.hot_activity}}' wx:key='index'> -->
-<navigator url="/pages/activity/activitydetail?id={{index.hot_activity.id}}" hover-class="none">
+<navigator url="/pages/activity/activitydetail?id={{index.hot_activity.id}}&type={{0}}" hover-class="none">
 	<activityBlock aimg='{{index.hot_activity.aimg}}' signup_end='{{index.hot_activity.signup_end}}' title='{{index.hot_activity.title}}' text='立即参加' />
 </navigator>
 <!-- </block> -->
@@ -76,7 +76,7 @@
 <!-- benefits_goodsDetail -->
 <view class="card">
 	<block wx:for='{{index.NewList}}' wx:key='index'>
-		<navigator class="carditem" url="/pages/benefits/goodsDetail?goodsid={{item.goods_id}}" hover-class="none">
+		<navigator class="carditem" url="/pages/benefits/goodsDetail?goods_id={{item.goods_id}}" hover-class="none">
 			<view class="itemimg">
 				<image class="img" mode="aspectFill" src="{{item.ImageFrist}}"> </image>
 			</view>

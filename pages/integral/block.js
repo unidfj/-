@@ -1,8 +1,7 @@
 Component({
 	properties: {
-		props: { // 属性名
-			type: Object,
-		}
+		props: Object,
+
 	}, options: {
 		styleIsolation: 'isolated'
 	}

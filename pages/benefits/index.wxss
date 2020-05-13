@@ -6,9 +6,8 @@
 
 .adbox {
 	margin: 20rpx auto;
-	width: 710rpx;
+	max-width: 710rpx;
 	height: 250rpx;
-	background: pink;
 }
 
 .inpbox {

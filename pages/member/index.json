@@ -2,6 +2,7 @@
   "enablePullDownRefresh": false,
   "navigationBarTitleText": "会员中心",
   "usingComponents": {
-    "van-overlay": "/res/vant/overlay/index"
+    "van-overlay": "/res/vant/overlay/index",
+    "van-icon": "/res/vant/icon/index"
   }
 }

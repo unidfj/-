@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "活动详情",
-  "usingComponents": {
-    "van-icon": "/res/vant/icon/index"
-
-  }
-}

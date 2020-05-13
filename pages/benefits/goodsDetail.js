@@ -16,15 +16,17 @@ Page({
 				App.post('/addons/litestore/api.order/buyNow_pay', { goods_id: this.data.goods_id },
 					res => {
 						console.log(res)
-						let { order_no } = res.data
-						order_no && App.psot('/addons/litestore/api.order/yuepay', { order_no },
+						let { order_no } = res.data.data
+						order_no && App.post('/addons/litestore/api.order/yuepay', { order_no },
 							res2 => {
-								console.log(res2)
-								App.modal(res2.data.msg, `兑换码为${res2.data.data.code}`,false)
+								App.modal(res2.data.msg, `
+								您的兑换码为${res2.data.data.code}
+								详情请到会员中心查看兑换记录`, false)
 							}
 						)
 					})
-			})
+			},
+			'#FB6254', '#999999')
 
 	},
 	/**
@@ -39,8 +41,8 @@ Page({
 	onShow: function () {
 		this.getData()
 	},
-	getData(goods_id = this.data.goods_id) {
-		App.post('/addons/litestore/api.goods/detail', { goods_id },
+	getData() {
+		App.post('/addons/litestore/api.goods/detail', { goods_id: this.data.goods_id },
 			res => {
 				let { detail } = res.data.data
 				this.setData({
@@ -49,47 +51,12 @@ Page({
 						// 轮播图图片
 						images: detail.images.split(',').map(v => App.baseurl + v),
 						content2: App.baseurl + detail.content2,
-						buy_star: this.getNowTime(Number(detail.buy_star) * 1000),
-						buy_end: this.getNowTime(Number(detail.buy_endthis) * 1000)
+						buy_star: App.getNowTime(Number(detail.buy_star) * 1000),
+						buy_end: App.getNowTime(Number(detail.buy_end) * 1000),
+						content: detail.content.replace(new RegExp(/src="/g), `class='contentimg' mode="aspectFit" src="`)
 					}
 				})
 				console.log(this.data.detail)
 			})
 	},
-	getNowTime(value) {
-		console.log(value)
-		var date = new Date(value);
-		let year = date.getFullYear();
-		let month = date.getMonth() + 1;
-		let tian = date.getDate();
-		return year + '-' + month + '-' + tian
-	},
-
-	/**
-	 * 生命周期函数--监听页面卸载
-	 */
-	onUnload: function () {
-
-	},
-
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-	onPullDownRefresh: function () {
-
-	},
-
-	/**
-	 * 页面上拉触底事件的处理函数
-	 */
-	onReachBottom: function () {
-
-	},
-
-	/**
-	 * 用户点击右上角分享
-	 */
-	onShareAppMessage: function () {
-
-	}
 })

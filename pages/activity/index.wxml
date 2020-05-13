@@ -9,6 +9,6 @@
 </view>
 <!-- 活动块组件 id-->
 
-<navigator url="/pages/activity/activitydetail?id={{item.id}}" hover-class="none" wx:for='{{list}}' wx:key='index'>
+<navigator url="/pages/activity/activitydetail?id={{item.id}}&type=0" hover-class="none" wx:for='{{list}}' wx:key='index'>
 	<activityBlock aimg='{{item.aimg}}' title='{{item.title}}' signup_end='{{item.signup_end}}' text='{{item.statetext}}' />
 </navigator>

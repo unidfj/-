@@ -1,15 +1,15 @@
-<view class="jifen">
-	积分余额 : {{'99'}}
+<view class="jifen dfcenter">
+	积分余额 : {{credit1}}
 </view>
 
 
-<view class="tab dfcenter">
+<view class="tab">
 	<view wx:for='{{tab}}' wx:key='index' class="tabitem {{active==index?'active':''}}" bindtap="toogleCurren" data-index="{{index}}"> {{item.title}}
 	</view>
 </view>
 <!-- 循环卡片 -->
 <block>
-	<navigator url="../integral/detail?id={{12}}" hover-class="none">
-		<cardblock props='{{}}' />
+	<navigator wx:for='{{list}}' wx:key='index' hover-class="none" url="/pages/integral/detail?order_no={{item.order_no}}">
+		<cardblock props='{{item}}' />
 	</navigator>
 </block>

@@ -1,18 +1,17 @@
 <!-- 卡片详情页面 -->
 <navigator url="../integral/detail?id={{12}}" hover-class="none">
-	<cardblock props='{{}}' />
+	<cardblock props='{{detail}}' />
 </navigator>
 
 
 <view class="userinfo">
 	<view>
-		兑换人姓名：{{'詹姆斯'}}
+		兑换人姓名：{{detail.realname}}
 	</view>
 	<view>
-		兑换人手机：{{'13213213213'}}
+		兑换人手机：{{detail.mobile}}
 	</view>
-</view>
-
-<view class="code">
-	兑换码：{{'1234 5678 9012'}}
+	<view>
+		兑换码：<text class="color">{{detail.pay_code}}</text>
+	</view>
 </view>

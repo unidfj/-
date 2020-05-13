@@ -175,14 +175,16 @@ App({
   },
 
   // 模态框
-  modal(title = '提示', content, showCancel = true, success) {
+  modal(title = '提示', content, showCancel = true, success, confirmColor='#576B95', cancelColor='#000000') {
     wx.showModal({
       title,
       content,
       showCancel,
       success() {
         success && success()
-      }
+      },
+      confirmColor,
+      cancelColor
     })
   },
 

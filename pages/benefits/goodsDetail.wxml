@@ -17,7 +17,7 @@
 </view>
 
 
-<view class="time" >
+<view class="time" wx:if='{{detail.buy_star&&detail.buy_end}}'>
 	积分兑换时间：{{detail.buy_star + '~'+ detail.buy_end}}
 </view>
 

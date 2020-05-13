@@ -1,66 +1,38 @@
-// pages/integral/integralDetail.js
+const App = getApp()
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
-		
+		page: 1,
+		list: [],
+		credit1: null,
+		hasmore: true,
+		isloading: false
 	},
-
-	/**
-	 * 生命周期函数--监听页面加载
-	 */
-	onLoad: function (options) {
-
-	},
-
-	/**
-	 * 生命周期函数--监听页面初次渲染完成
-	 */
-	onReady: function () {
-
-	},
-
-	/**
-	 * 生命周期函数--监听页面显示
-	 */
 	onShow: function () {
-
+		this.getData()
 	},
-
-	/**
-	 * 生命周期函数--监听页面隐藏
-	 */
-	onHide: function () {
-
+	getData() {
+		if (this.data.isloading) return
+		console.log('faqomgqoi', this.data.page)
+		this.setData({ isloading: true })
+		App.post('/api/user/get_credit_log', { page: this.data.page },
+			res => {
+				let { page, list } = this.data
+				let credit1 = res.data.credit1//余额
+				res.data.data.forEach(v => {
+					v.createtime = App.getNowTime(Number(v.createtime) * 1000)
+				})
+				list = [...list, ...res.data.data] //循环体
+				const hasmore = res.data.page < res.data.totalpage//更多
+				page = hasmore ? page + 1 : page
+				this.setData({ list, page, hasmore, credit1, isloading: false })
+				console.log(this.data)
+			})
 	},
-
-	/**
-	 * 生命周期函数--监听页面卸载
-	 */
-	onUnload: function () {
-
-	},
-
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-	onPullDownRefresh: function () {
-
-	},
-
-	/**
-	 * 页面上拉触底事件的处理函数
-	 */
-	onReachBottom: function () {
-
-	},
-
-	/**
-	 * 用户点击右上角分享
-	 */
-	onShareAppMessage: function () {
-
+	scrolltolower() {
+		!this.data.isloading && this.data.hasmore && this.getData()
 	}
 })

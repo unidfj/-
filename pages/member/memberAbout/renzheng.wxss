@@ -1,5 +1,8 @@
 page {
-	font-style: Microsoft Yahei;
+	font-size: 30rpx;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
+	color: rgba(51, 51, 51, 1);
 }
 
 .renzheng {
@@ -41,17 +44,18 @@ page {
 
 .picker {
 	position: relative;
-	width: 144rpx;
-	height: 66rpx;
+	width: 130rpx;
+	height: 78rpx;
 	box-sizing: border-box;
-	color: rgba(16, 16, 16, 1);
-	font-size: 26rpx;
-	font-family: Microsoft Yahei;
-	border: 2rpx solid rgba(187, 187, 187, 1);
-	border-radius: 12rpx;
+	color: rgba(153, 153, 153, 1);
+	background: rgba(242, 242, 242, 1);
+	border-radius: 8rpx;
 	overflow: hidden;
 	white-space: nowrap;
 	margin-left: 10rpx;
+	line-height: 78rpx;
+	text-align: center;
+	padding-left: 5rpx;
 }
 
 
@@ -61,31 +65,31 @@ page {
 	flex-shrink: 0;
 	align-items: center;
 	margin: 40rpx 0;
+	white-space: nowrap;
+}
+
+.loupanitem>view {
+	width: 100%;
+	height: 100%;
 }
 
 .loupanitem {
+	width: 540rpx;
+	height: 78rpx;
+	background: rgba(242, 242, 242, 1);
+	border-radius: 8rpx;
 	margin-left: 10rpx;
 	box-sizing: border-box;
 	position: relative;
-	width: 400rpx;
-	height: 66rpx;
-	color: rgba(16, 16, 16, 1);
-	font-size: 28rpx;
-	font-family: Microsoft Yahei;
-	border: 2rpx solid rgba(187, 187, 187, 1);
-	border-radius: 12rpx;
-	padding: 0 20rpx;
+	color: rgba(153, 153, 153, 1);
 	white-space: nowrap;
 	overflow: hidden;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	padding-left: 20rpx;
 }
 
-.loupanitem view {
-	width: 100%;
-	height: 100%;
-}
 
 .arrowicon {
 	position: absolute;
@@ -98,23 +102,23 @@ page {
 	height: 66rpx;
 	display: flex;
 	align-items: center;
+	white-space: nowrap;
 }
 
-
 .inputuitem {
-	width: 400rpx;
-	font-size: 28rpx;
 	box-sizing: border-box;
 	margin-left: 10rpx;
-	border: 1px solid #BBBBBB;
-	border-radius: 12rpx;
-	padding-left: 10rpx;
+	padding-left: 20rpx;
+	width: 540rpx;
+	height: 78rpx;
+	background: rgba(242, 242, 242, 1);
+	border-radius: 8px;
 }
 
 .tips {
-	font-family: PingFangSC-regular;
-	font-size: 28rpx;
-	color: var(--basecolor)
+	font-weight: 400;
+	font-family: PingFangSC-Regular, PingFang SC;
+	color: #FB6254;
 }
 
 .margintb {

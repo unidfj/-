@@ -7,6 +7,7 @@
 	<view class="right"> {{detail.statetext}}
 	</view>
 </view>
+<view class="canyu" wx:if='{{type==1}}'>已参与{{detail.snum}}/{{detail.maxnum}}人</view>
 <view class="bg"></view>
 <view class="time">
 	<view class="time1">活动报名时间：{{detail.signup_star+' ~ '+detail.signup_end}}</view>
@@ -22,8 +23,24 @@
 	<rich-text nodes='{{detail.content}}'></rich-text>
 </view>
 
+<!-- 只有商家才有的 -->
+<view class="signup_log" wx:if='{{idstate==2}}'>
+	<view class="bg"></view>
+	<view class="signuptitle df">
+		<text>参与人</text>
+		<view>报名码</view>
+		<text>报名时间</text>
+	</view>
+	<view class="people df" wx:for='{{signup_log}}' wx:key='index'>
+		<text>{{item.signup_name}}</text>
+		<view>{{item.code}}</view>
+		<text>{{item.signtime}}</text>
+	</view>
+	<view class="nomore">没有更多了</view>
+</view>
+
 <view class="btn" bindtap="btn">
-	立即参与
+	{{detail.scode?'报名码'+detail.scode:'立即参与'}}
 </view>
 
 <van-overlay show="{{ showoverlay }}">

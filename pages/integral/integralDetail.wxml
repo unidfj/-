@@ -1,18 +1,19 @@
-<view class='yue'> 积分余额: <text class="num">{{'123'}} </text></view>
+<view class='yue dfcenter'> 积分余额:{{credit1}} </view>
 
 <view class="dfcenter tab">
 	<view class="tabitem" wx:for="{{['明细','数额','时间']}}" wx:key='index'> {{item}} </view>
 </view>
 
-<block wx:for='{{5}}' wx:key='index'>
-	<view class="dfcenter detail">
-		<view class="detailitem">{{item.mingxi||'后台充值200积分'}}</view>
-		<view class="detailitem">{{item.shue||'+ 200'}}</view>
-		<view class="detailitem">{{item.shijian||'2020-04-24 12:12:12'}}</view>
+
+<scroll-view scroll-y='{{true}}' class="scorlly" lower-threshold='{{100}}' bindscrolltolower='scrolltolower'>
+	<block wx:for='{{list}}' wx:key='index'>
+		<view class="dfcenter detail">
+			<view class="detailitem">{{item.remark}}</view>
+			<view class="detailitem">{{item.num}}</view>
+			<view class="detailitem">{{item.createtime}}</view>
+		</view>
+	</block>
+	<view wx-if='{{!hasmore}}' class="nomore">
+		没有更多记录了
 	</view>
-</block>
-
-
-<view wx-if='{{true}}' class="nomore">
-	没有更多记录了
-</view>
+</scroll-view>

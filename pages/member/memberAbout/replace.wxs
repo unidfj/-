@@ -1,0 +1,4 @@
+var replace = function (data, str) {
+	return data.replace(str, '')
+}
+module.exports.replace = replace
