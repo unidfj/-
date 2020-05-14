@@ -20,7 +20,7 @@ Page({
 	getData() {
 		if (this.data.isloading) return
 		this.setData({ isloading: true })
-		console.log('第'+this.data.page)
+		console.log('第' + this.data.page)
 		App.post('/addons/litestore/api.index/get_activity_list', { page: this.data.page },
 			res => {
 				const { data } = res.data
@@ -28,9 +28,10 @@ Page({
 				let list = data.activity_list.data.map(v => {
 					return {
 						...v,
-						aimg:App.baseurl+v.aimg,
+						aimg: App.baseurl + v.aimg,
 						signup_star: App.getNowTime(Number(v.signup_star) * 1000),
-						signup_end: App.getNowTime(Number(v.signup_end) * 1000)
+						signup_end: App.getNowTime(Number(v.signup_end) * 1000),
+						isEnd: v.statetext == '已结束'
 					}
 				})
 				list = [...this.data.list, ...list]
@@ -43,13 +44,7 @@ Page({
 	},
 
 	onReachBottom: function () {
-		console.log('chudi')
 		!this.data.isloading && this.data.hasmore && this.getData()
 	},
-	/**
-	 * 用户点击右上角分享
-	 */
-	onShareAppMessage: function () {
 
-	}
 })

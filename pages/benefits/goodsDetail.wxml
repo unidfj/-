@@ -16,23 +16,34 @@
 	</view>
 </view>
 
-
+<view class="bg"></view>
 <view class="time" wx:if='{{detail.buy_star&&detail.buy_end}}'>
 	积分兑换时间：{{detail.buy_star + '~'+ detail.buy_end}}
 </view>
 
-
+<view class="bg"></view>
 <view class="detail" wx:if='{{detail.store}}'>
 	<view class="df">
-		<van-icon name="wap-home" size="20" color='#000' /> {{detail.store.shop_name}} </view>
+		<view class="iconbox">
+			<image src="/res/imgs/goods/shouye.png" class="img" mode="aspectFill"></image>
+		</view>
+		{{detail.store.shop_name}}
+	</view>
 	<view class="df">
-		<van-icon name="location" size="20" color='#000' />{{detail.store.shop_area }}</view>
+		<view class="iconbox">
+			<image src="/res/imgs/goods/dizhi.png" class="img" mode="aspectFill"></image>
+		</view>{{detail.store.shop_area }}
+	</view>
 	<view class="df">
-		<van-icon name="phone-circle" size="20" color='#000' />{{detail.store.shop_mobile}}</view>
+		<view class="iconbox">
+			<image src="/res/imgs/goods/dianhua.png" class="img" mode="aspectFill"></image>
+		</view>{{detail.store.shop_mobile}}
+	</view>
 	<view> 领取时间：{{detail.closure_star}} ~ {{detail.closure_end}}</view>
 </view>
 
-
+<!--商品详情  -->
+<view class="bg"></view>
 <view class="goodsdetail">
 	<view class="title dfcenter">
 		商品详情

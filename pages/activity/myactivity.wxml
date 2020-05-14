@@ -7,13 +7,13 @@
 <view wx:if='{{curren==1}}'>
 	<block wx:for='{{list}}' wx:key='index'>
 		<navigator url="/pages/activity/activitydetail?id={{item.id}}&type=1" hover-class="none">
-			<activityBlock title='{{item.title}}' text='{{item.applytext}}' aimg='{{item.aimg}}' signup_end='{{item.signup_end}}' />
+			<activityBlock  snum='{{item.snum}}' maxnum='{{item.maxnum}}' title='{{item.title}}' text='{{item.applytext}}' aimg='{{item.aimg}}' signup_end='{{item.signup_end}}' />
 		</navigator>
 	</block>
 </view>
 
-<!--  -->
 
+<!--  -->
 <form wx:if='{{curren==2}}' bindsubmit="formSubmit">
 	<view class="add">
 		<view class="title m20"> 活动标题:
@@ -26,8 +26,8 @@
 					{{signup_star}}
 				</view>
 			</picker>
-			<view class="middle">~</view>
-			<picker value="{{signup_end}}" name='signup_end' class="inp83" mode="date" start="{{signup_star}}"  bindchange="bindDateChangeEnd">
+			-
+			<picker value="{{signup_end}}" name='signup_end' class="inp83" mode="date" start="{{signup_star}}" bindchange="bindDateChangeEnd">
 				<view class="timeitem">
 					{{signup_end}}
 				</view>
@@ -41,8 +41,9 @@
 		</view>
 		<view class="imgbox">活动图片：
 			<van-uploader max-count="1" file-list="{{ fileList }}" sizeType='{{[630,300]}}' image-fit='aspectFill' use-before-read bind:before-read="beforeRead" bind:after-read="afterRead" bind:delete='deleteImg'>
-				<view class="activityImg">
-					<van-icon class="plusicon" name="plus" size="30" />
+				<view class="myuploader">
+					<van-icon name="plus" size="30px" color="#999999" />
+					上传照片
 				</view>
 			</van-uploader>
 		</view>

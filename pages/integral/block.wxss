@@ -45,7 +45,9 @@
 	font-weight: 600;
 	margin-right: 30rpx;
 	color: rgba(51, 51, 51, 1);
-	white-space: nowrap;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
 	overflow: hidden;
 }
 

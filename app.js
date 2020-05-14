@@ -111,6 +111,7 @@ App({
       title: '温馨提示',
       content: msg,
       showCancel: false,
+      confirmColor:'#576B95',
       success: function (res) {
         callback && callback();
       }
@@ -175,7 +176,7 @@ App({
   },
 
   // 模态框
-  modal(title = '提示', content, showCancel = true, success, confirmColor='#576B95', cancelColor='#000000') {
+  modal(title = '提示', content, showCancel = true, success, confirmColor='#fb6355', cancelColor='#a2a2a2') {
     wx.showModal({
       title,
       content,

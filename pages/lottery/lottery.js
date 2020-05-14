@@ -1,4 +1,8 @@
 const App = getApp()
+let animation = wx.createAnimation({
+	duration: 200,
+	timingFunction: 'linear'
+})
 Page({
 	data: {
 		isplay: false,
@@ -6,15 +10,9 @@ Page({
 		interval: null,
 		cost: 0, //每次消耗5
 		total: 0,//总分
-		lucky_text: null
+		lucky_text: null,
 	},
 
-	/**
-	 * 生命周期函数--监听页面加载
-	 */
-	onLoad: function (options) {
-
-	},
 	onShow: function () {
 		App.post('/api/activity/get_luckdraw_detaile', {},
 			res => {
@@ -31,36 +29,31 @@ Page({
 				console.log(this.data)
 			})
 	},
+	// 转
 	luckDrawStart() {
 		if (this.data.isplay) return
 
 		App.post('/api/activity/do_luckdraw', {}, res => {
 			let result = res.data.data
-			// 动画
-			let animation = wx.createAnimation({
-				duration: 200,
-				timingFunction: 'linear'
-			})
+			let { prize } = result //1 2 3 4 
 			this.setData({
 				isplay: true,
-				animationData: animation.export()
+				// animationData: animation.export()
 			})
 			let n = 0;
 			this.interval = setInterval(() => {
-				console.log(n)
 				animation.rotate(180 * (++n)).step()
 				this.setData({
 					animationData: animation.export()
 				})
-				// 200++  1秒+4  20是旋转5秒 12是旋转3秒
 				if (n == 12) {
-					// 初始化动画
-					animation.rotate(0).step({ duration: 0, timingFunction: 'linear' })
+					// 转三秒后// 停止在当前角度 
+					animation.rotate(this.angle(prize)).step({ duration: 0, timingFunction: 'linear' })
 					clearInterval(this.interval)
 					this.setData({
 						animationData: animation.export(),
 						isplay: false,
-						total: this.data.total - this.data.cost
+						total: (this.data.total - this.data.cost).toFixed(2)
 					})
 					App.modal('提醒',
 						`恭喜您获得${result.lrank}!
@@ -73,7 +66,12 @@ Page({
 		})
 	},
 	onUnload() {
-		if (this.interval)
-			clearInterval(this.interval)
+		if (this.interval) clearInterval(this.interval)
+	},
+	angle(num) {
+		if (num == 4) return 315
+		if (num == 3) return 225
+		if (num == 2) return 135
+		if (num == 1) return 45
 	}
 })

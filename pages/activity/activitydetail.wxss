@@ -29,9 +29,15 @@ page {
 	background: rgba(237, 237, 237, 1);
 }
 
+.contentimg {
+	max-width: 690rpx;
+	width: 100%;
+}
+
 .left {
 	color: #333;
 	font-size: 28rpx;
+	font-weight: 500;
 }
 
 .right {
@@ -54,8 +60,15 @@ page {
 	height: 40rpx;
 	line-height: 40rpx;
 	vertical-align: center;
-	color: rgba(16, 16, 16, 1);
+	color: #666;
 	margin-bottom: 28rpx;
+	align-items: center;
+}
+
+.iconbox {
+	width: 30rpx;
+	height: 30rpx;
+	margin-right: 20rpx;
 }
 
 .detail {

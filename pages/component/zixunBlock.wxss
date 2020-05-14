@@ -1,12 +1,13 @@
 .zixunbox {
-	width: 100%;
-	margin-top: 32rpx;
+	width: 690rpx;
+	margin: 32px auto;
+	padding-bottom: 20rpx;
+	background: #fff;
 }
 
 .zixunimg {
-	margin: 0 auto 16rpx;
-	width: 638rpx;
-	height: 302rpx;
+	width: 690rpx;
+	height: 300rpx;
 	border-radius: 8rpx;
 	overflow: hidden;
 }
@@ -17,18 +18,15 @@
 }
 
 .zixuntext {
-	padding-left: 64rpx;
-	padding-right: 42rpx;
-	margin-bottom: 56rpx;
-	color: rgba(16, 16, 16, 1);
-	font-size: 32rpx;
-	font-family: PingFangSC-regular;
-}
-
-.bg {
-	margin: 0 auto;
-	width: 720rpx;
-	height: 6rpx;
-	opacity: 0.3;
-	background: rgba(187, 187, 187, 1);
+	margin-top: 20rpx;
+	padding: 0 30rpx;
+	margin-bottom: 20rpx;
+	font-size: 24rpx;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
+	color: rgba(51, 51, 51, 1);
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
 }

@@ -30,6 +30,6 @@
 </view>
 
 <!-- 活动块组件 id -->
-<navigator url="/pages/activity/activitydetail?id={{index.hot_activity.id}}&tyoe=0" hover-class="none">
-	<activityBlock signup_end='{{index.hot_activity.signup_end}}' title='{{index.hot_activity.title}}' aimg='{{index.hot_activity.aimg}}'  text='立即参加' />
+<navigator url="/pages/activity/activitydetail?id={{index.hot_activity.id}}&type=0" hover-class="none">
+	<activityBlock  signup_end='{{index.hot_activity.signup_end}}' title='{{index.hot_activity.title}}' aimg='{{index.hot_activity.aimg}}'  text='立即参加' />
 </navigator>

@@ -2,5 +2,6 @@
   "usingComponents": {
     "activityBlock": "../component/activityBlock",
     "van-search": "/res/vant/search/index"
-  }
+  },
+  "enablePullDownRefresh": true
 }

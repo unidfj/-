@@ -37,7 +37,7 @@ Page({
 		App.post('/api/information/get_information_detail', { aid },
 			res => {
 				console.log(res)
-				res.data.data.content = res.data.data.content.replace(new RegExp(/src="\//g), `src="${App.baseurl}/`)
+				res.data.data.content = res.data.data.content.replace(new RegExp(/src="\//g), `mode='aspectFill' src="${App.baseurl}/`)
 				this.setData({ detail: res.data.data })
 				console.log(this.data)
 			})

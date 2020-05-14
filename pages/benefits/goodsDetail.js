@@ -19,8 +19,8 @@ Page({
 						let { order_no } = res.data.data
 						order_no && App.post('/addons/litestore/api.order/yuepay', { order_no },
 							res2 => {
-								App.modal(res2.data.msg, `
-								您的兑换码为${res2.data.data.code}
+								App.modal(res2.data.msg,
+									`您的兑换码为${res2.data.data.code}
 								详情请到会员中心查看兑换记录`, false)
 							}
 						)
@@ -45,6 +45,7 @@ Page({
 		App.post('/addons/litestore/api.goods/detail', { goods_id: this.data.goods_id },
 			res => {
 				let { detail } = res.data.data
+				console.log(detail)
 				this.setData({
 					detail: {
 						...detail,
@@ -53,7 +54,9 @@ Page({
 						content2: App.baseurl + detail.content2,
 						buy_star: App.getNowTime(Number(detail.buy_star) * 1000),
 						buy_end: App.getNowTime(Number(detail.buy_end) * 1000),
-						content: detail.content.replace(new RegExp(/src="/g), `class='contentimg' mode="aspectFit" src="`)
+						closure_star: App.getNowTime(Number(detail.closure_star) * 1000),
+						closure_end: App.getNowTime(Number(detail.closure_end) * 1000),
+						content: detail.content.replace(new RegExp(/src="/g), `class='contentimg' mode="center" src="`)
 					}
 				})
 				console.log(this.data.detail)

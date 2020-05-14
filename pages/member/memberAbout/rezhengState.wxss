@@ -7,17 +7,13 @@ page {
 	font-family: PingFangSC-Regular, PingFang SC;
 	font-weight: 400;
 	color: rgba(51, 51, 51, 1);
-
 }
 
 .renzhengState {
-	position: relative;
-	width: 710rpx;
 	margin: 0 auto;
 	padding: 48rpx 24rpx 0 24rpx;
 	box-sizing: border-box;
 	border: 2rpx solid rgba(255, 255, 255, 0);
-	font-family: PingFangSC-regular;
 }
 
 .state text {
@@ -29,23 +25,22 @@ page {
 }
 
 .left {
-	/* width: 140rpx; */
-	margin-right: 10rpx;
+	margin-right: 20rpx;
 	height: 40rpx;
 	white-space: nowrap;
 	overflow: hidden;
 }
 
 .fankuibox {
-	width: 506rpx;
-	height: 170rpx;
-	box-sizing: border-box;
-	padding: 5px;
+	width: 540rpx;
+	min-height: 176rpx;
+	background: rgba(242, 242, 242, 1);
 	border-radius: 8rpx;
-	color: rgba(16, 16, 16, 1);
-	font-family: Arial;
-	border: 2rpx solid rgba(140, 132, 132, 0.3);
-	margin-bottom: 50rpx;
+	box-sizing: border-box;
+	padding: 18rpx 40rpx 18rpx 20rpx;
+	border-radius: 8rpx;
+	color: #999;
+	margin-bottom: 38rpx;
 }
 
 .boxitem {
@@ -53,34 +48,20 @@ page {
 }
 
 .btn {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-	width: 710rpx;
-	height: 82rpx;
+	margin: 40rpx auto;
+	height: 88rpx;
 	border-radius: 8rpx;
-	background-color: rgba(221, 50, 50, 1);
-	color: rgba(254, 253, 253, 1);
+	background: linear-gradient(180deg, rgba(250, 125, 90, 1) 0%, rgba(251, 99, 84, 1) 100%);
+	color: #fff;
 	box-sizing: border-box;
-	font-size: 28rpx;
+	font-size: 36rpx;
 	text-align: center;
-	line-height: 82rpx;
-	font-family: Microsoft Yahei;
-	border: 2rpx solid rgba(255, 255, 255, 0);
+	line-height: 88rpx;
 }
 
 .shangjiaState {
-	position: relative;
 	box-sizing: border-box;
-	margin: 0 auto;
-	padding: 48rpx 24rpx 0 24rpx;
-	width: 710rpx;
-	height: 1536rpx;
-	border-radius: 16rpx;
-	box-shadow: 0px 4rpx 12rpx 0px rgba(0, 0, 0, 0.4);
-	border: 2rpx solid rgba(255, 255, 255, 0);
+	padding:30rpx;
 }
 
 .itemname {
@@ -88,18 +69,14 @@ page {
 }
 
 .itemname .jpg {
-	color: rgba(0, 0, 0, 0.45);
-	font-size: 11px;
-	font-family: PingFangSC-regular;
+	color: #999999;
+	font-size: 24rpx;
+	width: 220rpx;
 }
 
 .imgbox {
-	width: 208rpx;
-	height: 208rpx;
+	width: 210rpx;
+	height: 240rpx;
 	border-radius: 8rpx;
 	overflow: hidden;
-}
-
-.type1btn {
-	margin-top: 40rpx;
 }

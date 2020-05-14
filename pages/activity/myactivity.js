@@ -5,15 +5,17 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-		curren: 1,
+		curren: 1,//tab.index
 		type: null,//业主商家
+		//val6个参数
 		title: '',
 		signup_star: '开始时间',
 		signup_end: '结束时间',
 		content: '',
 		maxnum: '',
-		fileList: [],//图片上传
-		imgsrc: '',
+		aimg: '',
+
+		fileList: [],//图片预览
 		list: []//我的活动列表 
 	},
 	changeTab(e) {
@@ -57,7 +59,7 @@ Page({
 			success: ({ data }) => {
 				App.post('/api/user/upload', { image: 'data:image/jpeg;base64,' + data },
 					({ data }) => {
-						this.setData({ imgsrc: data.data })
+						this.setData({ aimg: data.data })
 					})
 			}
 		})
@@ -80,7 +82,8 @@ Page({
 		value = {
 			...value,
 			signup_star: new Date(value.signup_star).getTime(),
-			signup_end: new Date(value.signup_end).getTime()
+			signup_end: new Date(value.signup_end).getTime(),
+			aimg: this.data.aimg
 		}
 		console.log(value)
 		let content = this.validation(value)
@@ -98,7 +101,7 @@ Page({
 					wx.redirectTo({
 						url: '/pages/activity/myactivity',
 					})
-				})
+				}, '#FB6254')
 			}
 		)
 
@@ -135,6 +138,7 @@ Page({
 						aimg: App.baseurl + v.aimg,
 						signup_star: App.getNowTime(Number(v.signup_star) * 1000),
 						signup_end: App.getNowTime(Number(v.signup_end) * 1000),
+						type2props: { snum: v.snum, maxnum: v.maxnum }
 					}
 				})
 				console.log(list)

@@ -8,24 +8,15 @@ page {
 .renzheng {
 	position: relative;
 	box-sizing: border-box;
-	padding: 48rpx 20rpx;
-	width: 710rpx;
-	height: 1200rpx;
-	margin: 48rpx auto;
-	border-radius: 16rpx;
-	box-shadow: 0px 4rpx 12rpx 0px rgba(0, 0, 0, 0.4);
-	border: 2rpx solid rgba(255, 255, 255, 0);
+	padding: 48rpx 30rpx;
+	padding-bottom: 170rpx;
 }
 
 .renzheng2 {
-	position: relative;
 	box-sizing: border-box;
-	padding: 48rpx 20rpx;
-	width: 710rpx;
-	margin: 48rpx auto;
-	border-radius: 16rpx;
-	box-shadow: 0px 4rpx 12rpx 0px rgba(0, 0, 0, 0.4);
-	border: 2rpx solid rgba(255, 255, 255, 0);
+	position: relative;
+	padding: 30rpx 0 0 30rpx;
+	padding-bottom: 170rpx;
 }
 
 .adress {
@@ -55,7 +46,7 @@ page {
 	margin-left: 10rpx;
 	line-height: 78rpx;
 	text-align: center;
-	padding-left: 5rpx;
+	padding: 0 5rpx;
 }
 
 
@@ -125,11 +116,25 @@ page {
 	margin: 40rpx 0;
 }
 
+.myuploader {
+	width: 210rpx;
+	height: 210rpx;
+	background: rgba(242, 242, 242, 1);
+	border-radius: 8px;
+	box-sizing: border-box;
+	padding-top: 25%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-size: 28rpx;
+	color: #999999;
+}
+
 .jpg {
-	font-size: 11px;
+	font-size: 24rpx;
 	font-weight: 400;
-	color: rgba(0, 0, 0, 0.45);
-	width: 206rpx;
+	color: #999999;
+	width: 220rpx;
 }
 
 .uploadview {
@@ -143,7 +148,9 @@ page {
 
 .btn {
 	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
+	bottom: 40rpx;
+	left: 30rpx;
+	right: 30rpx;
+	background: linear-gradient(180deg, rgba(250, 125, 90, 1) 0%, rgba(251, 99, 84, 1) 100%);
+	border-radius: 8px;
 }

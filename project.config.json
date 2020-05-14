@@ -59,20 +59,6 @@
 			"current": -1,
 			"list": [
 				{
-					"id": 0,
-					"name": "抽奖 无page",
-					"pathName": "pages/lottery/lottery",
-					"query": "id=16",
-					"scene": null
-				},
-				{
-					"id": 1,
-					"name": "积分商城intergral",
-					"pathName": "pages/integral/integral",
-					"query": "",
-					"scene": null
-				},
-				{
 					"id": 4,
 					"name": "积分 卡片详情 intergral detail",
 					"pathName": "pages/integral/detail",
@@ -108,13 +94,6 @@
 					"scene": null
 				},
 				{
-					"id": 7,
-					"name": "商家活动商家activ",
-					"pathName": "pages/activity/shangjiaActivity",
-					"query": "id=16",
-					"scene": null
-				},
-				{
 					"id": -1,
 					"name": "积分明细",
 					"pathName": "pages/integral/integralDetail",
@@ -129,24 +108,10 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 7,
 					"name": "tabbar2会员福利商品详情",
 					"pathName": "pages/benefits/goodsDetail",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 11,
-					"name": "咨询首页",
-					"pathName": "pages/project/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "renzheng ",
-					"pathName": "pages/member/memberAbout/renzheng",
-					"query": "type=1",
+					"query": "goods_id=920",
 					"scene": null
 				}
 			]

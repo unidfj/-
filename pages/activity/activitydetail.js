@@ -47,7 +47,7 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-		console.log(options)
+		console.log('0是从活动管理进入 1是我的活动',options)
 		this.setData({ aid: options.id, type: options.type })
 	},
 
@@ -71,7 +71,7 @@ Page({
 					aimg: App.baseurl + data.aimg,
 					signup_star: App.getNowTime(Number(data.signup_star) * 1000),
 					signup_end: App.getNowTime(Number(data.signup_end) * 1000),
-					content: data.content.replace(new RegExp(/src="\//g), `src="${App.baseurl}/`),
+					content: data.content.replace(new RegExp(/src="/g), `class='contentimg' mode="center" src="${App.baseurl}`),
 					signup_log: data.signup_log.map(v => {
 						return {
 							...v,
@@ -84,24 +84,4 @@ Page({
 			})
 	},
 
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-	onPullDownRefresh: function () {
-
-	},
-
-	/**
-	 * 页面上拉触底事件的处理函数
-	 */
-	onReachBottom: function () {
-
-	},
-
-	/**
-	 * 用户点击右上角分享
-	 */
-	onShareAppMessage: function () {
-
-	}
 })

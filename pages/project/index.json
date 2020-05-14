@@ -2,5 +2,6 @@
   "usingComponents": {
     "zixunBlock": "../component/zixunBlock"
   },
-  "onReachBottomDistance": 200
+  "onReachBottomDistance": 200,
+  "navigationBarTitleText": "项目推介"
 }

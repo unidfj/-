@@ -18,7 +18,7 @@ Page({
 			{ value: null, title: '店主姓名:', name: 'name', placeholder: '请输入店主姓名', type: 'text', confirmtype: "next" },
 			{ value: null, title: '手机号码:', name: 'mobile', placeholder: '请输入手机号码', type: 'number', confirmtype: "next" },
 			{ value: null, title: '店铺名称:', name: 'shopname', placeholder: '请输入店铺名称', type: 'text', confirmtype: "next" },
-			{ value: null, title: '营业执照编号', name: 'business_num', placeholder: '请输入营业执照编号', type: 'number', confirmtype: "done" }
+			{ value: null, title: '执照编号:', name: 'business_num', placeholder: '请输入营业执照编号', type: 'number', confirmtype: "done" }
 		],
 		fileList: [],
 		fileList2: [],

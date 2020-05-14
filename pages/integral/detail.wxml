@@ -1,7 +1,5 @@
-<!-- 卡片详情页面 -->
-<navigator url="../integral/detail?id={{12}}" hover-class="none">
-	<cardblock props='{{detail}}' />
-</navigator>
+<cardblock props='{{detail}}' />
+
 
 
 <view class="userinfo">

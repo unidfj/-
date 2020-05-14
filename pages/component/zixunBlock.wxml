@@ -5,5 +5,4 @@
 	<view class="zixuntext">
 		{{prop.title}}
 	</view>
-	<view class="bg"></view>
 </view>

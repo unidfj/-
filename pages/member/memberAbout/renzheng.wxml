@@ -74,28 +74,28 @@
 						{{replace.replace(provincename,'省')}}
 						<van-icon class="arrowicon" name="arrow-down" size="8" />
 					</view>
-				</picker>
+				</picker>省
 				<!-- 市 -->
-				<picker class="dfcenter " bindchange="bindPickerCity" range="{{city.arr}}" disabled='{{city.arr.length==0}}'>
+				<picker class="dfcenter " bindchange="bindPickerCity" range="{{city.arr}}" disabled='{{!city.arr.length}}'>
 					<view class="picker dfcenter">
 					{{replace.replace(cityname,'市')}}
 						<van-icon class="arrowicon" name="arrow-down" size="8" />
 					</view>
-				</picker>
+				</picker>市
 				<!-- 区 aid-->
-				<picker name='aid' value="{{aid}}" class="dfcenter " bindchange="bindPickerDistrict" range="{{district.arr}}" disabled='{{district.arr.length==0}}'>
+				<picker name='aid' value="{{aid}}" class="dfcenter " bindchange="bindPickerDistrict" range="{{district.arr}}" disabled='{{!district.arr.length}}'>
 					<view class="picker dfcenter">
 						{{replace.replace(districtname,'区')}}
 						<van-icon class="arrowicon" name="arrow-down" size="8" />
 					</view>
-				</picker>
+				</picker>区
 			</view>
 
 			<!-- picker2 商家楼盘-->
 			<view class="loupanbox">
 				商家楼盘:
 				<picker name='fid' value="{{fid}}" class="loupanitem" bindchange="bindPickerLoupan" range="{{loupan.arr}}">
-					<view>{{loupanname}}</view>
+					<view>{{loupanname||'请选择楼盘'}}</view>
 					<van-icon class="arrowicon" name="arrow-down" size="8" />
 				</picker>
 			</view>
@@ -113,7 +113,11 @@
 					<view class="jpg">(只支持.jpg格式)</view>
 				</view>
 				<view>
-					<van-uploader max-count='{{1}}' preview-size='100' file-list="{{ fileList }}" bind:after-read="afterRead" accept='image' upload-text='只限jpg' image-fit='aspectFill' use-before-read bind:before-read='beforeFn' bind:delete='deleteImg'>
+					<van-uploader max-count='{{1}}'  file-list="{{ fileList }}" bind:after-read="afterRead" accept='image' upload-text='只限jpg' image-fit='aspectFill' use-before-read bind:before-read='beforeFn' bind:delete='deleteImg'>
+						<view class="myuploader">
+							<van-icon name="plus" size="30px" color="#999999"/>
+							上传照片
+						</view>
 					</van-uploader>
 				</view>
 			</view>
@@ -123,7 +127,11 @@
 					<view class="jpg">(只支持.jpg格式)</view>
 				</view>
 				<view>
-					<van-uploader max-count='{{1}}' data-secend='{{2}}' preview-size='100' file-list="{{ fileList2 }}" bind:after-read="afterRead" accept='image' upload-text='只限jpg' image-fit='aspectFill' use-before-read bind:before-read='beforeFn' bind:delete='deleteImg'>
+					<van-uploader max-count='{{1}}' data-secend='{{2}}'  file-list="{{ fileList2 }}" bind:after-read="afterRead" accept='image' upload-text='只限jpg' image-fit='aspectFill' use-before-read bind:before-read='beforeFn' bind:delete='deleteImg'>
+						<view class="myuploader">
+							<van-icon name="plus" size="30px" color="#999999"/>
+							上传照片
+						</view>
 					</van-uploader>
 				</view>
 			</view>

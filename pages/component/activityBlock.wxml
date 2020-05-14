@@ -7,11 +7,11 @@
 			<view class="name">
 				{{title}}（1日）
 			</view>
-			<view class="jiezhi">报名截止时间{{signup_end}}</view>
+			<view class="jiezhi">报名截止时间:  {{signup_end}}</view>
 		</view>
 		<view class="right">
-			<view wx:if='{{type2}}' class="canyu">{{'68/100人参与'}}</view>
-			<view class="btn">{{text}}</view>
+			<view class="canyu" wx:if='{{snum&&maxnum}}'>{{snum+'/'+maxnum+'人参与'}}</view>
+			<view class="btn {{isEnd?'isEnd':''}}">{{text}}</view>
 		</view>
 	</view>
 </view>

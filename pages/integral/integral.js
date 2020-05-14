@@ -7,9 +7,9 @@ Page({
 	data: {
 		active: 0,
 		tab: [
-			{ title: '全部', data: [123] },
-			{ title: '未领取', data: [234] },
-			{ title: '已领取', data: [345] }
+			{ title: '全部' },
+			{ title: '未领取' },
+			{ title: '已领取' }
 		],
 		credit1: null//积分余额
 
@@ -17,35 +17,30 @@ Page({
 	toogleCurren(e) {
 		let { index } = e.target.dataset
 		this.setData({ active: index })
+		if (index == 0) {
+			this.getData()
+		}
+		if (index == 1) {
+			this.getData(10)
+		}
+		if (index == 2) {
+			this.getData(20)
+		}
 	},
-	/**
-	 * 生命周期函数--监听页面加载
-	 */
-	onLoad: function (options) {
-
-	},
-
-	/**
-	 * 生命周期函数--监听页面初次渲染完成
-	 */
-	onReady: function () {
-
-	},
-
-	/**
-	 * 生命周期函数--监听页面显示
-	 */
 	onShow: function () {
-		// const userInfo = wx.getStorageSync('userInfo')
-		// console.log(userInfo.credit1)
-		// this.setData({ credit1: userInfo.credit1 })
 		this.getData()
 	},
 	getData(type = 0) {
 		App.post('/addons/litestore/api.order/my', { type },
 			res => {
 				let { credit1, list } = res.data.data
-				list =
+				list = list.map(v => {
+					return {
+						...v,
+						pay_time: App.getNowTime(Number(v.pay_time) * 1000),
+						freight_time:App.getNowTime(Number(v.freight_time) * 1000),
+					}
+				})
 				this.setData({ credit1, list })
 			})
 	}

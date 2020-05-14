@@ -14,7 +14,7 @@ page {
   background-color: #f8f8f8;
   font-size: 28rpx;
   /* 变量颜色 */
-  --basecolor: #DD3232;
+  --basecolor: #FB6254;
   font-family: PingFangSC-regular;
 }
 

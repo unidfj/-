@@ -29,7 +29,7 @@ Page({
 				const hasmore = res.data.page < res.data.totalpage//更多
 				page = hasmore ? page + 1 : page
 				this.setData({ list, page, hasmore, credit1, isloading: false })
-				console.log(this.data)
+				console.log(this.data.list)
 			})
 	},
 	scrolltolower() {

@@ -8,12 +8,8 @@ Page({
 		order_no: null,
 		detail: {}
 	},
-
-	/**
-	 * 生命周期函数--监听页面加载
-	 */
 	onLoad: function (options) {
-		console.log(options) //0001
+		console.log(options)
 		this.setData({ order_no: options.order_no })
 	},
 
@@ -31,7 +27,9 @@ Page({
 					...data,
 					// 组件title
 					title: data.goods_name,
-					images: App.bgaseurl + data.images
+					images: App.bgaseurl + data.images,
+					pay_time: App.getNowTime(Number(data.pay_time) * 1000),
+					freight_time:App.getNowTime(Number(data.freight_time) * 1000),
 				}
 				this.setData({ detail })
 				console.log(detail)

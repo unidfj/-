@@ -4,12 +4,13 @@ Component({
 	 * 组件的属性列表
 	 */
 	properties: {
-		aimg:String,
-		title:String,
-		text:String,
-		signup_end:String,
-		type2: Number,
-		type2props: Object
+		aimg: String,
+		title: String,
+		text: String,
+		signup_end: String,
+		isEnd: Boolean,
+		snum: String,
+		maxnum: String,
 	},
 
 	/**

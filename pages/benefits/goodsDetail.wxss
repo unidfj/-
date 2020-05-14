@@ -1,7 +1,13 @@
 page {
-	padding: 0 20rpx;
-	font-family: PingFangSC-regular;
+	font-family: PingFangSC-Medium, PingFang SC;
 	box-sizing: border-box;
+	background: #fff;
+}
+
+.bg {
+	width: 100vw;
+	height: 20rpx;
+	background: #EDEDED;
 }
 
 .swiper {
@@ -9,10 +15,8 @@ page {
 }
 
 .info {
-	width: 100%;
-	padding: 36rpx 20rpx;
+	padding: 0 30rpx;
 	text-align: center;
-	border: 2rpx solid rgba(239, 239, 239, 1);
 }
 
 .infotop {
@@ -28,54 +32,53 @@ page {
 }
 
 .infobottom {
-	margin-top: 15rpx;
-	width: 90%;
+	margin: 20rpx 0;
 	justify-content: space-between;
 }
 
 .infobottom .jifen {
-	color: rgba(221, 50, 50, 1);
-	font-size: 36rpx;
+	font-size: 32rpx;
 	font-weight: 600;
+	font-weight: 600;
+	color: rgba(251, 98, 84, 1);
 }
 
 .infobottom .kucun {
-	color: rgba(16, 16, 16, 1);
-	font-size: 28rpx;
-	font-weight: 600;
+	font-size: 24prx;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
+	color: rgba(153, 153, 153, 1);
 }
 
 .time {
-	padding-left: 28rpx;
-	margin: 16rpx 0;
-	height: 96rpx;
-	width: 100%;
-	border: 2rpx solid rgba(239, 239, 239, 1);
-	color: rgba(16, 16, 16, 1);
+	padding-left: 30rpx;
+	margin: 20rpx 0;
 	font-size: 28rpx;
-	text-align: left;
-	line-height: 96rpx;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
+	color: rgba(51, 51, 51, 1);
+}
+
+.iconbox {
+	width: 30rpx;
+	height: 30rpx;
+	display: flex;
+	margin-right: 20rpx;
+	align-items: center;
 }
 
 .detail {
-	width: 100%;
-	height: 260rpx;
-	padding-left: 10px;
-	color: rgba(16, 16, 16, 1);
-	font-size: 28rpx;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	font-family: Arial;
-	border: 2rpx solid rgba(239, 239, 239, 1);
+	padding-left: 30rpx;
+	color: #666;
+	font-size: 24rpx;
 }
 
-.detail .van-icon {
-	margin-right: 14rpx;
+.detail>view {
+	margin: 20rpx 0;
 }
 
 .detail view:nth-last-child(1) {
-	color: rgba(221, 50, 50, 1);
+	color: var(--basecolor)
 }
 
 .goodsdetail {
@@ -101,8 +104,6 @@ page {
 	height: 402rpx;
 }
 
-
-
 .btn {
 	position: fixed;
 	bottom: 0;
@@ -119,6 +120,6 @@ page {
 }
 
 .contentimg {
-
-	width: 690rpx;
+	max-width: 690rpx;
+	width: 100%;
 }

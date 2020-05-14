@@ -8,38 +8,51 @@ page {
 	padding-top: 10rpx;
 	position: relative;
 	width: 750rpx;
-	/* height: 730rpx; */
+	height: 730rpx;
 	background: linear-gradient(180deg, rgba(250, 125, 90, 1) 0%, rgba(251, 99, 84, 1) 100%);
 }
 
 .luckdraw_back {
-	width: 100%;
-	height: 702rpx;
+	width: 600rpx;
+	height: 600rpx;
+	position: relative;
+	margin: 50rpx auto 0;
 }
 
-#luckdraw_back image {
+.backimage {
 	display: block;
 	width: 100%;
 	height: 100%;
 	transform-origin: center center;
 }
 
-#luckdraw_pointer {
-	width: 174rpx;
-	height: 228rpx;
+.click {
 	position: absolute;
+	top: 50%;
 	left: 50%;
-	top: 42%;
 	transform: translate(-50%, -50%);
-	z-index: 999;
+	width: 200rpx;
+	height: 200rpx;
 }
 
-#luckdraw_pointer image {
-	display: block;
+.clickimg {
 	width: 100%;
 	height: 100%;
 }
 
+.zhizhenbox {
+	width: 100rpx;
+	height: 100rpx;
+	position: absolute;
+	top: 8rpx;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.zhizhenimg {
+	width: 100%;
+	height: 100%;
+}
 
 .available {
 	font-size: 1.5em;
@@ -60,12 +73,11 @@ page {
 }
 
 .explain text {
-	color: var(--basecolor);
+	color: #fff
 }
 
 .code {
-	padding-top: 23rpx;
-	padding-left: 30rpx;
+	padding: 20rpx 120rpx 0 20rpx;
 	box-sizing: border-box;
 	display: flex;
 }
@@ -77,19 +89,42 @@ page {
 }
 
 .code .right {
-	flex: 1;
+	flex: 60%;
 	display: flex;
+	justify-content: start;
+	align-items: center;
 	flex-wrap: wrap;
-	color: rgba(221, 50, 50, 1);
 	font-size: 28rpx;
 }
 
+.rightcode {
+	line-height: 40rpx;
+	display: flex;
+	width: 50%;
+	text-align: center;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
+	color: rgba(251, 98, 84, 1);
+}
+
+.rules {
+	font-size: 24rpx;
+	text-align-last: center;
+}
 
 .rules .title {
 	color: rgba(16, 16, 16, 1);
 	font-size: 36rpx;
-	text-align: center;
 	font-family: PingFangSC-bold;
 	margin: 36rpx 0 14rpx;
 	font-weight: 600;
+}
+
+.rules .text {
+	padding: 0 40rpx;
+}
+
+.bg {
+	width: 100%;
+	height: 20rpx;
 }

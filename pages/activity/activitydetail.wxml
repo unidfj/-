@@ -12,7 +12,7 @@
 <view class="time">
 	<view class="time1">活动报名时间：{{detail.signup_star+' ~ '+detail.signup_end}}</view>
 	<view class="time2 df">
-		<van-icon name="wap-home" size="20" style="margin-right:7px" />
+		<view class="iconbox"> <image class="img" mode="aspectFill" src="/res/imgs/activitydetail.png"></image> </view>
 		{{detail.realname}}
 	</view>
 </view>

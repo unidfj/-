@@ -40,7 +40,7 @@ Page({
   isSubmit() {
     App.post('/api/user/check_apply', {},
       res => {
-        this.setData({ isSubmit: res.data.data.state })
+        this.setData({ isSubmit: res.data.data.type })
         // 之前审核身份(0未申请审核 1业主 2商家)
         console.log(this.data.isSubmit)
       })

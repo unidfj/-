@@ -12,17 +12,23 @@
 <!-- nav导航栏 -->
 <view class="grid">
 	<navigator wx:for='{{index.information_type}}' wx:key='index' url="/pages/project/index?text={{item.name}}" class="griditem" hover-class="none">
-		<icon></icon>
+		<view class="navicon">
+			<image mode="aspectFill" class="img" src="/res/imgs/index/{{item.iconsrc}}"></image>
+		</view>
 		<text>{{item.name}}</text>
 	</navigator>
 
 	<navigator class="griditem" url="/pages/benefits/index" open-type="switchTab" hover-class="none">
-		<icon></icon>
+		<view class="navicon">
+			<image mode="aspectFill" class="img" src="/res/imgs/index/sy_ico_hyfl.png"></image>
+		</view>
 		<text>会员福利</text>
 	</navigator>
 
 	<navigator class="griditem" url="/pages/member/index" open-type="switchTab" hover-class="none">
-		<icon></icon>
+		<view class="navicon">
+			<image mode="aspectFill" class="img" src="/res/imgs/index/sy_ico_hyzc.png"></image>
+		</view>
 		<text > 会员注册</text>
 	</navigator>
 </view>
@@ -35,14 +41,18 @@
 
 <!-- 热门活动tabbar3 -->
 <view class="remen">
-	<view class="left">热门活动</view>
+	<view class="left">
+		<view class="remenicon">
+			<image class="img" mode="aspectFill" src="/res/imgs/index/hot1.png"></image>
+		</view> 热门活动
+	</view>
 	<navigator open-type="switchTab" url="/pages/activity/index" class="dfcenter right" hover-class="none">
 		<text>更多</text>
-		<van-icon name="arrow" size="18" bindtap="" />
+		<van-icon name="arrow" size="15" bindtap="" />
 	</navigator>
 </view>
 <!-- <block wx:for='{{index.hot_activity}}' wx:key='index'> -->
-<navigator url="/pages/activity/activitydetail?id={{index.hot_activity.id}}&type={{0}}" hover-class="none">
+<navigator url="/pages/activity/activitydetail?id={{index.hot_activity.id}}&type=0" hover-class="none">
 	<activityBlock aimg='{{index.hot_activity.aimg}}' signup_end='{{index.hot_activity.signup_end}}' title='{{index.hot_activity.title}}' text='立即参加' />
 </navigator>
 <!-- </block> -->
@@ -50,11 +60,14 @@
 
 <!-- 怡福资讯 -->
 <view class="remen">
-	<view class="left">怡福资讯</view>
+	<view class="left">
+		<view class="remenicon">
+			<image class="img" mode="aspectFill" src="/res/imgs/index/hot2.png"></image>
+		</view>怡福资讯
+	</view>
 	<navigator class="dfcenter right" url="/pages/project/index" hover-class="none">
 		<text>更多</text>
-
-		<van-icon name="arrow" size="20" bindtap="" />
+		<van-icon name="arrow" size="15" bindtap="" />
 	</navigator>
 </view>
 <block wx:for='{{index.information}}' wx:key='index'>
@@ -67,10 +80,14 @@
 
 <!-- 会员福利 -->
 <view class="remen">
-	<view class="left">会员福利</view>
+	<view class="left">
+		<view class="remenicon">
+			<image class="img" mode="aspectFill" src="/res/imgs/index/hot3.png"></image>
+		</view>会员福利
+	</view>
 	<navigator class="dfcenter right" open-type="switchTab" url="/pages/benefits/index" hover-class="none">
 		<text>更多</text>
-		<van-icon name="arrow" size="20" bindtap="" />
+		<van-icon name="arrow" size="15" bindtap="" />
 	</navigator>
 </view>
 <!-- benefits_goodsDetail -->

@@ -10,20 +10,13 @@ Page({
 		index: {}
 	},
 
-	/**
-	 * 生命周期函数--监听页面加载
-	 */
-	onLoad: function (options) {
 
+	search(e) {
+		this.getData(e.detail)
 	},
-
-	/**
-	 * 生命周期函数--监听页面初次渲染完成
-	 */
-	onReady: function () {
-
+	clearValue(e) {
+		this.setData({ value: '' })
 	},
-
 	/**
 	 * 生命周期函数--监听页面显示
 	 */
@@ -47,6 +40,7 @@ Page({
 					},
 				}
 				this.setData({ index })
+				wx.stopPullDownRefresh() //停止下拉刷新
 				console.log(this.data.index)
 			})
 	},
@@ -58,4 +52,7 @@ Page({
 		let tian = date.getDate();
 		return year + '-' + month + '-' + tian
 	},
+	onPullDownRefresh() {
+		this.getData()
+	}
 })

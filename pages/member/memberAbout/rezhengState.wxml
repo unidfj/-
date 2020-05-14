@@ -1,7 +1,7 @@
 <!-- 业主认证状态 -->
 <view class="renzhengState" wx:if='{{type==1}}'>
-	<view class="state">
-		认证状态：<text>{{status}}</text>
+	<view class="state left">
+		认证状态:<text>{{status}}</text>
 	</view>
 
 	<view class="df" wx:if='{{state==2}}'>
@@ -20,8 +20,8 @@
 
 <!-- 商家认证状态 -->
 <view class="shangjiaState" wx:if='{{type==2}}'>
-	<view class="state">
-		认证状态：<text>{{status}}</text>
+	<view class="state left">
+		认证状态:<text>{{status}}</text>
 	</view>
 	<view class="df" wx:if='{{state==2}}'>
 		<view class="left"> 审核反馈: </view>
@@ -42,5 +42,5 @@
 			</view>
 		</view>
 	</block>
-	<view class="btn type1btn" wx:if='{{!state==1}}' bindtap="reAuthentication">重新认证 </view>
+	<view class="btn" wx:if='{{state==2}}' bindtap="reAuthentication">重新认证 </view>
 </view>

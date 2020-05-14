@@ -13,3 +13,6 @@
 		<cardblock props='{{item}}' />
 	</navigator>
 </block>
+
+
+<view wx:if='{{!list.length}}' class="nomore">  没有更多了 </view>

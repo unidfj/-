@@ -14,19 +14,22 @@ page {
 }
 
 .tab {
-	padding: 16rpx 34rpx 0 85rpx;
+	padding:0 69rpx 0 85rpx;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	font-size: 34rpx;
-	height: 84rpx;
 	font-weight: 500;
+	background: #fff;
+	margin-bottom: 40rpx;
 }
 
 .tabitem {
 	box-sizing: border-box;
 	padding-bottom: 20rpx;
 	position: relative;
+	height: 84rpx;
+	line-height: 84rpx;
 }
 
 .active {
@@ -40,4 +43,10 @@ page {
 	width: 100%;
 	background: rgba(251, 98, 84, 1);
 	height: 4rpx;
+}
+
+.nomore{
+	text-align: center;
+	font-size: 30rpx;
+	color: #fb6d56;
 }
