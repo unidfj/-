@@ -20,7 +20,7 @@
 			<image class="img" mode="aspectFill" src="{{item.src}}"></image>
 		</view>
 		<view class="title">{{item.title}}</view>
-		<van-icon name="arrow" color='' size="20" />
+		<van-icon name="arrow" color='#cccccc' size="20" />
 	</view>
 </view>
 

@@ -16,7 +16,7 @@ Page({
 	},
 	getData() {
 		if (this.data.isloading) return
-		console.log('faqomgqoi', this.data.page)
+		console.log('发请求', this.data.page)
 		this.setData({ isloading: true })
 		App.post('/api/user/get_credit_log', { page: this.data.page },
 			res => {
@@ -31,6 +31,7 @@ Page({
 				this.setData({ list, page, hasmore, credit1, isloading: false })
 				console.log(this.data.list)
 			})
+
 	},
 	scrolltolower() {
 		!this.data.isloading && this.data.hasmore && this.getData()

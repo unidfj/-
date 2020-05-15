@@ -101,7 +101,8 @@ page {
 
 .goodsdetail .goodsimg {
 	width: 710rpx;
-	height: 402rpx;
+	height: 400rpx;
+	margin: 0 auto;
 }
 
 .btn {

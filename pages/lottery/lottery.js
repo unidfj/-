@@ -1,8 +1,11 @@
 const App = getApp()
-let animation = wx.createAnimation({
+let animationData = wx.createAnimation({
 	duration: 200,
 	timingFunction: 'linear'
 })
+let animationclick = wx.createAnimation()
+let animationzhizhen = wx.createAnimation()
+// let
 Page({
 	data: {
 		isplay: false,
@@ -14,6 +17,9 @@ Page({
 	},
 
 	onShow: function () {
+		this.updata()
+	},
+	updata() {
 		App.post('/api/activity/get_luckdraw_detaile', {},
 			res => {
 				const { data } = res.data
@@ -32,26 +38,33 @@ Page({
 	// 转
 	luckDrawStart() {
 		if (this.data.isplay) return
-
+		console.log('转!')
 		App.post('/api/activity/do_luckdraw', {}, res => {
 			let result = res.data.data
 			let { prize } = result //1 2 3 4 
 			this.setData({
 				isplay: true,
-				// animationData: animation.export()
 			})
 			let n = 0;
 			this.interval = setInterval(() => {
-				animation.rotate(180 * (++n)).step()
+				animationData.rotate(180 * (++n)).step()
+				animationclick.scale(0.7).opacity(0.7).step(),
+					animationzhizhen.opacity(0.6).step()
 				this.setData({
-					animationData: animation.export()
+					animationData: animationData.export(),
+					animationclick: animationclick.export(),
+					animationzhizhen: animationzhizhen.export()
 				})
 				if (n == 12) {
 					// 转三秒后// 停止在当前角度 
-					animation.rotate(this.angle(prize)).step({ duration: 0, timingFunction: 'linear' })
+					animationData.rotate(this.angle(prize)).step({ duration: 0, timingFunction: 'linear' })
+					animationclick.scale(1).opacity(1).step()
+					animationzhizhen.opacity(1).step()
 					clearInterval(this.interval)
 					this.setData({
-						animationData: animation.export(),
+						animationData: animationData.export(),
+						animationclick: animationclick.export(),
+						animationzhizhen: animationzhizhen.export(),
 						isplay: false,
 						total: (this.data.total - this.data.cost).toFixed(2)
 					})
@@ -60,6 +73,7 @@ Page({
 					兑换码: ${result.code}
 						`,
 						false)
+					this.updata()
 				}
 			}, 200)
 
@@ -69,9 +83,14 @@ Page({
 		if (this.interval) clearInterval(this.interval)
 	},
 	angle(num) {
-		if (num == 4) return 315
-		if (num == 3) return 225
-		if (num == 2) return 135
-		if (num == 1) return 45
+		let n = 0
+		if (num == 4) n = 315
+		if (num == 3) n = 225
+		if (num == 2) n = 135
+		if (num == 1) n = 45
+		n = parseInt(Math.random() * 41 + n - 22, 10);
+		console.log(n)
+		return n
+
 	}
 })

@@ -6,6 +6,8 @@ page {
 .lottery {
 	width: 100%;
 	height: 320rpx;
+	border-radius: 10rpx;
+	overflow: hidden;
 }
 
 .hot {

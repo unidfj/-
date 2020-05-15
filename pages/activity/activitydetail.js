@@ -25,7 +25,7 @@ Page({
 
 	// 立即参加
 	btn() {
-
+		if (this.data.detail.scode) return
 		//可以参加 
 		this.setData({ showoverlay: true })
 	},
@@ -47,7 +47,7 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-		console.log('0是从活动管理进入 1是我的活动',options)
+		console.log('0是从活动管理进入 1是我的活动', options)
 		this.setData({ aid: options.id, type: options.type })
 	},
 

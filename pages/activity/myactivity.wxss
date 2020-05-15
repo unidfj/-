@@ -20,6 +20,23 @@ page {
 	font-family: PingFangSC-Medium, PingFang SC;
 }
 
+.nomore {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	color: #2e2e2e;
+	font-size: 38rpx;
+	font-weight: 500;
+	white-space: nowrap;
+	display: flex;
+}
+
+.nomore .navigator {
+	color: #fb6b56;
+	font-weight: 600;
+}
+
 .active {
 	color: rgba(251, 98, 84, 1);
 	border-bottom: 6rpx solid rgba(251, 98, 84, 1);

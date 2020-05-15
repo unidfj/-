@@ -35,22 +35,14 @@ Page({
 					hot_activity: {
 						...data.data.hot_activity,
 						aimg: App.baseurl + data.data.hot_activity.aimg,
-						signup_star: this.getNowTime(Number(data.data.hot_activity.signup_star) * 1000),
-						signup_end: this.getNowTime(Number(data.data.hot_activity.signup_end) * 1000)
+						signup_star: App.getNowTime(Number(data.data.hot_activity.signup_star) * 1000),
+						signup_end: App.getNowTime(Number(data.data.hot_activity.signup_end) * 1000)
 					},
 				}
 				this.setData({ index })
 				wx.stopPullDownRefresh() //停止下拉刷新
 				console.log(this.data.index)
 			})
-	},
-
-	getNowTime(value) {
-		var date = new Date(value);
-		let year = date.getFullYear();
-		let month = date.getMonth() + 1;
-		let tian = date.getDate();
-		return year + '-' + month + '-' + tian
 	},
 	onPullDownRefresh() {
 		this.getData()

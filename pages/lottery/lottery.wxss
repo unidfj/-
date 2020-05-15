@@ -35,13 +35,9 @@ page {
 	height: 200rpx;
 }
 
-.clickimg {
-	width: 100%;
-	height: 100%;
-}
 
 .zhizhenbox {
-	width: 100rpx;
+	width: 75rpx;
 	height: 100rpx;
 	position: absolute;
 	top: 8rpx;
@@ -49,10 +45,7 @@ page {
 	transform: translate(-50%, 0);
 }
 
-.zhizhenimg {
-	width: 100%;
-	height: 100%;
-}
+
 
 .available {
 	font-size: 1.5em;

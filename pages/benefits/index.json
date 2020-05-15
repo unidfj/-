@@ -3,5 +3,6 @@
     "activityBlock": "../component/activityBlock",
     "van-search": "/res/vant/search/index"
   },
-  "enablePullDownRefresh": true
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "会员福利"
 }

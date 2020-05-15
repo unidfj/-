@@ -6,14 +6,14 @@
 
 
 <scroll-view scroll-y='{{true}}' class="scorlly" lower-threshold='{{100}}' bindscrolltolower='scrolltolower'>
-	<block wx:for='{{list}}' wx:key='index'>
-		<view class="dfcenter detail">
-			<view class="detailitem">{{item.remark}}</view>
-			<view class="detailitem">{{item.num}}</view>
-			<view class="detailitem">{{item.createtime}}</view>
-		</view>
-	</block>
-	<view wx-if='{{!hasmore}}' class="nomore">
-		没有更多记录了
+<block wx:for='{{list}}' wx:key='index'>
+	<view class="dfcenter detail">
+		<view class="detailitem">{{item.remark}}</view>
+		<view class="detailitem">{{item.num}}</view>
+		<view class="detailitem">{{item.createtime}}</view>
 	</view>
+</block>
+<view wx-if='{{!hasmore}}' class="nomore">
+	没有更多记录了
+</view>
 </scroll-view>

@@ -7,12 +7,14 @@
 	<view class="right"> {{detail.statetext}}
 	</view>
 </view>
-<view class="canyu" wx:if='{{type==1}}'>已参与{{detail.snum}}/{{detail.maxnum}}人</view>
+<view class="canyu" wx:if='{{type==1&&idstate==2}}'>已参与{{detail.snum}}/{{detail.maxnum}}人</view>
 <view class="bg"></view>
 <view class="time">
 	<view class="time1">活动报名时间：{{detail.signup_star+' ~ '+detail.signup_end}}</view>
 	<view class="time2 df">
-		<view class="iconbox"> <image class="img" mode="aspectFill" src="/res/imgs/activitydetail.png"></image> </view>
+		<view class="iconbox">
+			<image class="img" mode="aspectFill" src="/res/imgs/activitydetail.png"></image>
+		</view>
 		{{detail.realname}}
 	</view>
 </view>

@@ -1,6 +1,6 @@
 <view class="block">
 	<view class="pic">
-		<image class="picimg" src="{{aimg}}" mode="asaspectFill"></image>
+		<image class="picimg" src="{{aimg}}" mode="aspectFill"></image> 
 	</view>
 	<view class="blockitem">
 		<view class="left">

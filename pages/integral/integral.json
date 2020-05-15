@@ -1,7 +1,5 @@
 {
   "usingComponents": {
-    "van-tab": "/res/vant/tab/index",
-    "van-tabs": "/res/vant/tabs/index",
     "cardblock": "/pages/integral/block"
   },
   "navigationBarTitleText": "积分订单"

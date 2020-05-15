@@ -1,19 +1,21 @@
+<!-- 商家才有的tab -->
 <view wx:if='{{type==2}}' class="tab dfcenter">
 	<view bindtap="changeTab" data-curren='{{1}}' class="tabitem dfcenter {{curren==1?'active':''}}">已发布的活动</view>
 	<view bindtap="changeTab" data-curren='{{2}}' class="tabitem dfcenter {{curren==2?'active':''}}">新建活动</view>
 </view>
 
-
+<!-- 业主的我的活动 -->
 <view wx:if='{{curren==1}}'>
 	<block wx:for='{{list}}' wx:key='index'>
 		<navigator url="/pages/activity/activitydetail?id={{item.id}}&type=1" hover-class="none">
-			<activityBlock  snum='{{item.snum}}' maxnum='{{item.maxnum}}' title='{{item.title}}' text='{{item.applytext}}' aimg='{{item.aimg}}' signup_end='{{item.signup_end}}' />
+			<activityBlock snum='{{item.snum}}' maxnum='{{item.maxnum}}' title='{{item.title}}' text='{{item.applytext}}' aimg='{{item.aimg}}' signup_end='{{item.signup_end}}' />
 		</navigator>
 	</block>
 </view>
+<view class="nomore" wx:if='{{!list.length&&curren==1&&type==1}}'> 您还没有<navigator class="navigator" open-type="switchTab" url="/pages/activity/index">参加</navigator>任何活动呢 </view>
 
 
-<!--  -->
+<!-- 商家的表单 -->
 <form wx:if='{{curren==2}}' bindsubmit="formSubmit">
 	<view class="add">
 		<view class="title m20"> 活动标题:

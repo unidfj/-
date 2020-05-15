@@ -231,9 +231,9 @@ Page({
 
 	submit2: function (e) {
 		let { value } = e.detail
-		if (!this.data.fileList || !this.data.fileList2) {
+		if (!(this.data.fileList.length && this.data.fileList2.length))
 			return
-		}
+
 		value = {
 			...value,
 			type: 2,

@@ -30,8 +30,7 @@ Page({
 						...v,
 						aimg: App.baseurl + v.aimg,
 						signup_star: App.getNowTime(Number(v.signup_star) * 1000),
-						signup_end: App.getNowTime(Number(v.signup_end) * 1000),
-						isEnd: v.statetext == '已结束'
+						signup_end: App.getNowTime(Number(v.signup_end) * 1000)
 					}
 				})
 				list = [...this.data.list, ...list]
