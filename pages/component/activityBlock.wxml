@@ -1,11 +1,11 @@
 <view class="block">
 	<view class="pic">
-		<image class="picimg" src="{{aimg}}" mode="aspectFill"></image> 
+		<image class="picimg" src="{{aimg}}" mode="aspectFit"></image> 
 	</view>
 	<view class="blockitem">
 		<view class="left">
 			<view class="name">
-				{{title}}（1日）
+				{{title}}
 			</view>
 			<view class="jiezhi">报名截止时间:  {{signup_end}}</view>
 		</view>

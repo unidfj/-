@@ -6,9 +6,9 @@ page {
 
 .banner {
   position: relative;
-  background-color: white;
-  width: 750rpx;
-  height: 300rpx;
+  margin: 24rpx auto;
+  width: 710rpx;
+  max-height: 300rpx;
 }
 
 .grid {
@@ -119,6 +119,7 @@ page {
 .goods_name {
   box-sizing: border-box;
   height: 80rpx;
+  line-height: 40rpx;
   padding-left: 12rpx;
   margin-top: 20rpx;
   color: rgba(16, 16, 16, 1);
@@ -150,12 +151,13 @@ page {
 
 .jifenright {
   line-height: 48rpx;
-	text-align: center;
-	color: #fff;
-	width: 110rpx;
-	height: 48rpx;
-	background: linear-gradient(180deg, rgba(250, 125, 90, 1) 0%, rgba(251, 99, 84, 1) 100%);
-	border-radius: 8rpx;
-	font-size: 28rpx;
-	font-family: PingFangSC-Regular, PingFang SC;
-	font-weight: 400;}
+  text-align: center;
+  color: #fff;
+  width: 110rpx;
+  height: 48rpx;
+  background: linear-gradient(180deg, rgba(250, 125, 90, 1) 0%, rgba(251, 99, 84, 1) 100%);
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+}

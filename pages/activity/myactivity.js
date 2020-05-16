@@ -81,8 +81,8 @@ Page({
 		let { value } = e.detail
 		value = {
 			...value,
-			signup_star: new Date(value.signup_star).getTime(),
-			signup_end: new Date(value.signup_end).getTime(),
+			signup_star: new Date(value.signup_star).getTime()/1000,
+			signup_end: new Date(value.signup_end).getTime()/1000,
 			aimg: this.data.aimg
 		}
 		console.log(value)

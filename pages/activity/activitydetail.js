@@ -13,7 +13,9 @@ Page({
 			signup_mobile: null
 		},
 		detail: {},
-		idstate: null //身份
+		idstate: null, //身份
+		loading: true,//骨架屏
+		focus: false
 	},
 
 	onClickHide() {
@@ -29,7 +31,11 @@ Page({
 		//可以参加 
 		this.setData({ showoverlay: true })
 	},
-
+	// 点击第一个input 让第二个input聚焦
+	bindconfirm(e) {
+		console.log(e)
+		this.setData({ focus: true })
+	},
 	// 参加活动的点击提交 http success
 	submit: function (e) {
 		const { value } = e.detail
@@ -43,18 +49,12 @@ Page({
 				})
 			})
 	},
-	/**
-	 * 生命周期函数--监听页面加载
-	 */
+
 	onLoad: function (options) {
 		console.log('0是从活动管理进入 1是我的活动', options)
 		this.setData({ aid: options.id, type: options.type })
 	},
 
-
-	/**
-	 * 生命周期函数--监听页面显示
-	 */
 	onShow: function () {
 		this.setData({ idstate: wx.getStorageSync('userInfo').level })
 		this.getData()
@@ -80,7 +80,7 @@ Page({
 					})
 				}
 				console.log(detail)
-				this.setData({ detail })
+				this.setData({ detail, loading: false })
 			})
 	},
 

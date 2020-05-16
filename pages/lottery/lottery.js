@@ -38,13 +38,14 @@ Page({
 	// 转
 	luckDrawStart() {
 		if (this.data.isplay) return
+		this.setData({
+			isplay: true,
+		})
 		console.log('转!')
 		App.post('/api/activity/do_luckdraw', {}, res => {
 			let result = res.data.data
 			let { prize } = result //1 2 3 4 
-			this.setData({
-				isplay: true,
-			})
+			
 			let n = 0;
 			this.interval = setInterval(() => {
 				animationData.rotate(180 * (++n)).step()
@@ -68,11 +69,15 @@ Page({
 						isplay: false,
 						total: (this.data.total - this.data.cost).toFixed(2)
 					})
-					App.modal('提醒',
-						`恭喜您获得${result.lrank}!
-					兑换码: ${result.code}
+					if (result.code == 0) {
+						App.modal('提示', '谢谢参与', false)
+					} else {
+						App.modal('提醒',
+							`恭喜您获得${result.lrank}!
+						兑换码: ${result.code}
 						`,
 						false)
+					}
 					this.updata()
 				}
 			}, 200)
@@ -84,13 +89,14 @@ Page({
 	},
 	angle(num) {
 		let n = 0
-		if (num == 4) n = 315
-		if (num == 3) n = 225
-		if (num == 2) n = 135
-		if (num == 1) n = 45
-		n = parseInt(Math.random() * 41 + n - 22, 10);
-		console.log(n)
+		if (num == 4) n = 295 //小数
+		if (num == 3) n = 205
+		if (num == 2) n = 115
+		if (num == 1) n = 25
+		if (num == 0) n = 70 + Math.random() * 3           //谢谢惠顾
+		// 公式 parseInt(Math.random()*(max-min+1)+min,10); 
+		n = parseInt(Math.random() * 41 + n, 10);
+		console.log(num + '等奖', n + '角度')
 		return n
-
 	}
 })

@@ -37,7 +37,7 @@ page {
 	right: 0;
 	top: 50%;
 	transform: translate(0, -50%);
-	width: 140rpx;
+	width: 160rpx;
 	height: 60rpx;
 	background: rgba(255, 255, 255, 1);
 	box-shadow: 0rpx 2rpx 4rpx 0rpx rgba(178, 27, 0, 0.49);

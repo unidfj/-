@@ -1,5 +1,5 @@
 <view class="pic">
-	<image class="img" mode="aspectFill" src="{{detail.aimg}}"></image>
+	<image class="img" mode="aspectFit" src="{{detail.aimg}}"></image>
 </view>
 
 <view class="text df">
@@ -7,17 +7,22 @@
 	<view class="right"> {{detail.statetext}}
 	</view>
 </view>
+<!-- 只有商家才有的 -->
 <view class="canyu" wx:if='{{type==1&&idstate==2}}'>已参与{{detail.snum}}/{{detail.maxnum}}人</view>
 <view class="bg"></view>
-<view class="time">
-	<view class="time1">活动报名时间：{{detail.signup_star+' ~ '+detail.signup_end}}</view>
-	<view class="time2 df">
-		<view class="iconbox">
-			<image class="img" mode="aspectFill" src="/res/imgs/activitydetail.png"></image>
+<van-skeleton title avatar row="3" loading="{{ loading }}">
+	<view class="time">
+		<view class="time1">活动报名时间：{{detail.signup_star+' ~ '+detail.signup_end}}</view>
+		<view class="time2 df">
+			<view class="iconbox">
+				<image class="img" mode="aspectFit" src="/res/imgs/activitydetail.png"></image>
+			</view>
+			{{detail.realname}}
 		</view>
-		{{detail.realname}}
 	</view>
-</view>
+</van-skeleton>
+
+
 <view class="bg"></view>
 
 <view class="detail"> 活动详情 </view>
@@ -26,7 +31,7 @@
 </view>
 
 <!-- 只有商家才有的 -->
-<view class="signup_log" wx:if='{{idstate==2}}'>
+<view class="signup_log" wx:if='{{idstate==2&&signup_log.length}}'>
 	<view class="bg"></view>
 	<view class="signuptitle df">
 		<text>参与人</text>
@@ -41,7 +46,8 @@
 	<view class="nomore">没有更多了</view>
 </view>
 
-<view class="btn" bindtap="btn">
+<!-- 只有业主才有的 -->
+<view class="btn" bindtap="btn" wx:if='{{idstate==1}}'>
 	{{detail.scode?'报名码'+detail.scode:'立即参与'}}
 </view>
 
@@ -53,11 +59,11 @@
 			</view>
 
 			<view class="inpbox df">
-				姓名: <input class="inp" value="{{form.signup_name}}" name='signup_name' type="text" confirm-type="next" placeholder="请输入参与人姓名"></input>
+				姓名: <input class="inp" value="{{form.signup_name}}" name='signup_name' type="text" confirm-type="next" placeholder="请输入参与人姓名" bindconfirm='bindconfirm'></input>
 			</view>
 
 			<view class="inpbox df">
-				手机: <input class="inp" value="{{form.signup_mobile}}" name='signup_mobile' type="tnumber" confirm-type="done" placeholder="请输入参与人手机" bindconfirm="suresubmit"></input>
+				手机: <input class="inp" value="{{form.signup_mobile}}" name='signup_mobile' type="tnumber" confirm-type="done" placeholder="请输入参与人手机" focus="{{focus}}"></input>
 			</view>
 
 

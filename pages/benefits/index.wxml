@@ -10,7 +10,7 @@
 
 <!-- 广告 -->
 <view class="adbox">
-	<image class="img" src="{{index.show_img}}" mode="aspectFit"></image>
+	<image class="img" src="{{index.show_img}}" mode="aspectFill"></image>
 </view>
 
 

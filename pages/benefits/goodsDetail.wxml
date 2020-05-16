@@ -1,6 +1,6 @@
 <swiper class="swiper" interval="{{3000}}" indicator-dots circular="{{800}}" indicator-color='rgba(53, 52, 51)' indicator-active-color='rgb(221, 221, 221)' autoplay>
 	<swiper-item wx:for='{{detail.images}}' wx:key='index'>
-		<image class="img" mode="aspectFill" src="{{item}}"></image>
+		<image class="img" mode="aspectFit" src="{{item}}"></image>
 	</swiper-item>
 </swiper>
 

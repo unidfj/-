@@ -1,9 +1,9 @@
 <!-- banner轮播 -->
-<view class="banner">
+<view class="">
 	<swiper autoplay duration="{{duration}}" circular="{{800}}" interval="{{3000}}" indicator-dots>
 		<swiper-item wx:for='{{index.bannerlist}}' wx:key='index'>
 			<!-- <navigator url="/pages/benefits/goodsDetail?id={{item.id}}" hover-class="none"> -->
-			<image class="img" mode="aspectFill" src="{{item.image}}" lazy-load></image>
+			<image class="img" mode="aspectFit" src="{{item.image}}" lazy-load></image>
 			<!-- </navigator> -->
 		</swiper-item>
 	</swiper>
@@ -13,7 +13,7 @@
 <view class="grid">
 	<navigator wx:for='{{index.information_type}}' wx:key='index' url="/pages/project/index?text={{item.name}}" class="griditem" hover-class="none">
 		<view class="navicon">
-			<image mode="aspectFill" class="img" src="/res/imgs/index/{{item.iconsrc}}"></image>
+			<image mode="aspectFit" class="img" src="/res/imgs/index/{{item.iconsrc}}"></image>
 		</view>
 		<text>{{item.name}}</text>
 	</navigator>
@@ -90,7 +90,6 @@
 		<van-icon name="arrow" size="15" bindtap="" />
 	</navigator>
 </view>
-<!-- benefits_goodsDetail -->
 <view class="card">
 	<block wx:for='{{index.NewList}}' wx:key='index'>
 		<navigator class="carditem" url="/pages/benefits/goodsDetail?goods_id={{item.goods_id}}" hover-class="none">

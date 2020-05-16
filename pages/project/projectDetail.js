@@ -6,9 +6,6 @@ Page({
 	 */
 	data: {
 		id: null,
-		text: `      贷款市场报价利率（LPR）由各报价行按公开市场操作利率（主要指中期借贷便利利率）加点形成的方式报价，由全国银行间同业拆借中心计算得出，为银行贷款提供定价参考。目前，LPR包括1年期和5年期以上两个品种。
-		所以和从前最大的变化其实就是用LPR来代替从前的贷款基准利率。因此，随着LPR降至新低，对于要贷款买房个人来说，的确是个不错的入市时机。`
-		,
 		detail: {}
 	},
 
@@ -37,7 +34,7 @@ Page({
 		App.post('/api/information/get_information_detail', { aid },
 			res => {
 				console.log(res)
-				res.data.data.content = res.data.data.content.replace(new RegExp(/src="\//g), `mode='aspectFill' src="${App.baseurl}/`)
+				res.data.data.content = res.data.data.content.replace(new RegExp(/src="\//g), `mode='aspectFit' src="${App.baseurl}/`)
 				this.setData({ detail: res.data.data })
 				console.log(this.data)
 			})

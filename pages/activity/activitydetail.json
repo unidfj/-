@@ -3,6 +3,7 @@
   "usingComponents": {
     "van-icon": "/res/vant/icon/index",
     "van-overlay": "/res/vant/overlay/index",
-    "van-field": "/res/vant/field/index"
+    "van-field": "/res/vant/field/index",
+    "van-skeleton": "/res/vant/skeleton/index"
   }
 }

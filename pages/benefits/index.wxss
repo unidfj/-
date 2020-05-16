@@ -5,13 +5,15 @@ page {
 .swiper {
 	margin: 24rpx auto;
 	width: 710rpx;
-	height: 272rpx;
+	max-height: 300rpx;
 }
 
 .adbox {
 	margin: 20rpx auto;
 	max-width: 710rpx;
 	height: 250rpx;
+	overflow: hidden;
+	border-radius: 10rpx;
 }
 
 .inpbox {
@@ -83,6 +85,7 @@ page {
 
 .itemchit {
 	height: 80rpx;
+	line-height: 40rpx;
 	margin-left: 12rpx;
 	margin-top: 20rpx;
 	color: rgba(16, 16, 16, 1);

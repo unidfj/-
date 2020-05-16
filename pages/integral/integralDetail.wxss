@@ -40,7 +40,6 @@
 .detailitem {
 	flex-shrink: 0;
 	text-align: center;
-	/* white-space: nowrap; */
 	overflow: hidden;
 	text-overflow: ellipsis;
 	font-size: 24rpx;

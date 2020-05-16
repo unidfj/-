@@ -38,11 +38,12 @@ Page({
 					return {
 						...v,
 						pay_time: App.getNowTime(Number(v.pay_time) * 1000),
-						freight_time:App.getNowTime(Number(v.freight_time) * 1000),
+						freight_time: v.freight_time&&App.getNowTime(Number(v.freight_time) * 1000),
+						// mysrc: v.goods[0].images.split(',').map(v => App.baseurl + v)
 					}
 				})
 				this.setData({ credit1, list })
+				console.log(list)
 			})
 	}
-
 })

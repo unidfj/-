@@ -1,6 +1,5 @@
 .tabitem {
 	width: 690rpx;
-	/* height: 350rpx; */
 	background: rgba(255, 255, 255, 1);
 	border-radius: 10rpx;
 	margin: 0 auto 21rpx;
@@ -20,13 +19,11 @@
 	margin-right: 20rpx;
 	overflow: hidden;
 	border-radius: 5px;
-	overflow: hidden;
 }
 
-.image {
-	width: 100% !important;
-	height: 100% !important;
-
+.img {
+	width: 100%;
+	height: 100%;
 }
 
 .itemright {
@@ -47,7 +44,7 @@
 	color: rgba(51, 51, 51, 1);
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 1;
+	-webkit-line-clamp: 2;
 	overflow: hidden;
 }
 

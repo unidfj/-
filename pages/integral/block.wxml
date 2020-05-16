@@ -1,7 +1,6 @@
 <view class="tabitem df">
 	<view class="itemleft">
-		<image class="image" mode="aspectFill" class="img" src="{{props.ImageFrist}}">
-		</image>
+		<image class="img" mode="aspectFill" src="{{props.ImageFrist}}"></image>
 	</view>
 	<view class="itemright">
 		<view class="title">
@@ -21,7 +20,7 @@
 		</view>
 		<view class="mendian">
 			<text class="text">领取时间: </text>
-			<view class="view">{{props.freight_time}}</view>
+			<view class="view">{{props.freight_time||'未领取'}}</view>
 		</view>
 	</view>
 	<!-- freight_status -->
