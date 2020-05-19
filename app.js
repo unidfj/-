@@ -27,6 +27,7 @@
       wx.setBackgroundColor({
         backgroundColor: '#fff',
       })
+      
     },
 
     /**post请求*/

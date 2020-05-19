@@ -116,7 +116,9 @@ page {
 .rules .text {
 	padding: 0 40rpx;
 }
-
+.textimg{
+	max-width: 690rpx;
+}
 .bg {
 	width: 100%;
 	height: 20rpx;

@@ -33,7 +33,7 @@ page {
 }
 
 .nomore .navigator {
-	color: #fb6b56;
+	color: var(--basecolor);
 	font-weight: 600;
 }
 

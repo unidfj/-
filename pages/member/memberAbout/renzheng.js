@@ -91,8 +91,6 @@ Page({
 		let lnum = Number(this.data.louhao.lnum[value])
 		this.setData({ louhaoname, lnum })
 	},
-
-
 	//获取省
 	getprovincet() {
 		App.post('/api/user/get_province', {},
@@ -148,8 +146,6 @@ Page({
 
 			})
 	},
-
-
 	//图片上传前
 	beforeFn(e) {
 		const { file, callback } = e.detail;
@@ -259,71 +255,71 @@ Page({
 	// 验证
 	validation(value) {
 		if (!value.aid) {
-			this.setData({ msg: '地区不能为空' })
+			this.setData({ msg: '请选择地区' })
 			return false
 		};
 		if (!value.fid) {
-			this.setData({ msg: '业主楼盘不能为空' })
+			this.setData({ msg: '请选择业主楼盘' })
 			return false
 		}
 		if (!value.lnum) {
-			this.setData({ msg: '业主楼号不能为空' })
+			this.setData({ msg: '请填写业主楼号' })
 			return false
 		}
 		if (!value.room) {
-			this.setData({ msg: '业主房号不能为空' })
+			this.setData({ msg: '请填写业主房号' })
 			return false
 		}
 		if (!value.name) {
-			this.setData({ msg: '业主姓名不能为空' })
+			this.setData({ msg: '请填写业主姓名' })
 			return false
 		}
 		let reg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
 		if (!value.mobile) {
-			this.setData({ msg: '手机号不能留空' })
+			this.setData({ msg: '请填写手机号' })
 			return false
 		}
 		if (!value.idcard) {
-			this.setData({ msg: '身份证号码不能为空' })
+			this.setData({ msg: '请填写身份证号码' })
 			return false
 		}
 		return true
 	},
 	validation2(value) {
 		if (!value.aid) {
-			this.setData({ msg: '地区不能为空' })
+			this.setData({ msg: '请选择地区' })
 			return false
 		}
 		if (!value.fid) {
-			this.setData({ msg: '业主楼盘不能为空' })
+			this.setData({ msg: '请选择业主楼盘' })
 			return false
 		}
 		if (!value.room) {
-			this.setData({ msg: '商铺门牌不能为空' })
+			this.setData({ msg: '请填写商铺门牌' })
 			return false
 		}
 		if (!value.name) {
-			this.setData({ msg: '店主姓名不能为空' })
+			this.setData({ msg: '请填写店主姓名' })
 			return false
 		}
 		let reg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
 		if (!value.mobile) {
-			this.setData({ msg: '手机号不能留空' })
+			this.setData({ msg: '请填写手机号' })
 			return false
 		}
 		if (!value.shopname) {
-			this.setData({ msg: '店铺名称不能为空' })
+			this.setData({ msg: '请填写店铺名称' })
 			return false
 		}
 		if (!value.business_num) {
-			this.setData({ msg: '店铺营业执照编号不能为空' })
+			this.setData({ msg: '请填写店铺营业执照编号' })
 			return false
 		}
-		if (!value.business_img[0]) {
+		if (!value.business_img[0].length) {
 			this.setData({ msg: '请上传营业执照照片' })
 			return false
 		}
-		if (!value.shop_img[0]) {
+		if (!value.shop_img[0].length) {
 			this.setData({ msg: '请上传门店照片' })
 			return false
 		}
@@ -341,41 +337,6 @@ Page({
 		this.getprovincet()
 		//楼盘
 		this.getloupan(this.data.type)
-
 	},
 
-	/**
-	 * 生命周期函数--监听页面隐藏
-	 */
-	onHide: function () {
-
-	},
-
-	/**
-	 * 生命周期函数--监听页面卸载
-	 */
-	onUnload: function () {
-
-	},
-
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-	onPullDownRefresh: function () {
-
-	},
-
-	/**
-	 * 页面上拉触底事件的处理函数
-	 */
-	onReachBottom: function () {
-
-	},
-
-	/**
-	 * 用户点击右上角分享
-	 */
-	onShareAppMessage: function () {
-
-	}
 })

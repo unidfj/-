@@ -43,7 +43,7 @@ Page({
 		App.post('/api/activity/do_activity_signup', { ...value },
 			res => {
 				console.log(res)
-				App.modal(res.data.msg, `您的活动报名码为 ${res.data.code}`, false, () => {
+				App.modal(res.data.msg, `您的活动报名码为 ${res.data.data.code}`, false, () => {
 					//跳转到哪里
 					wx.redirectTo({ url: '/pages/activity/myactivity', })
 				})

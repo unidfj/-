@@ -107,9 +107,11 @@ page {
 .jifenleft {
 	margin-left: 20rpx;
 	color: rgba(215, 89, 76, 1);
-	font-size: 30rpx;
+	font-size: 24rpx;
 	text-align: left;
-
+}
+.jifenleft text{
+	font-size: 40rpx;
 }
 
 .jifenright {

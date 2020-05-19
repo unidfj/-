@@ -1,23 +1,50 @@
 page {
-	padding: 0 10px;
+	padding: 0 20rpx;
 }
 
 .title {
-	width: 710rpx;
-	height: 88rpx;
-	margin: 30rpx auto;
+	margin: 35rpx auto;
 	color: rgba(16, 16, 16, 1);
-	font-size: 32rpx;
+	font-size: 36rpx;
 	text-align: left;
 	font-family: PingFangSC-bold;
 	font-weight: 600;
 }
 
 .imgbox {
-	width: 710rpx;
-	height: 420rpx;
+	width: 690rpx;
+	margin: 0 auto;
+	height: 300rpx;
 	border-radius: 8rpx;
 	overflow: hidden;
+	border-radius: 10rpx;
+	overflow: hidden;
+}
+
+.gay {
+	box-sizing: border-box;
+	min-height: 0;
+	margin: 30rpx 0;
+	width: 690rpx;
+	padding: 20rpx 35rpx;
+	box-sizing: border-box;
+	color: #999999;
+	border-top: solid 1px #DADADA;
+	font-size: 24rpx;
+}
+
+.gayitem {
+	white-space: nowrap;
+	overflow: hidden;
+	line-height: 48rpx;
+}
+.gayitem:nth-last-child(1){
+	border-bottom: 1px solid #dadada;
+}
+
+.itemright {
+	color: #666666;
+	margin-left: 20rpx;
 }
 
 .detail {
@@ -36,9 +63,12 @@ page {
 	border: 2rpx solid rgba(187, 187, 187, 1);
 }
 
+.contenimg {
+	width: 100%;
+	max-width: 690rpx;
+}
 
 .richtext {
 	width: 710rpx;
 	padding-bottom: 10rpx;
-
 }

@@ -1,9 +1,5 @@
 const App = getApp()
 Page({
-
-	/**
-	 * 页面的初始数据
-	 */
 	data: {
 		type: null,//业主1   商家2
 		state: false,//认证失败   认证通过
@@ -85,10 +81,12 @@ Page({
 	onLoad: function (opt) {
 		console.log(opt)
 		this.setData({ type: opt.type })
+		wx.setNavigationBarTitle({
+			title: opt.type == 2 ? '商家认证' : '业主认证',
+		})
 	},
 	onShow: function () {
 		// 拿到业主/商家
-
 		this.info(this.data.type)
 	},
 })

@@ -1,6 +1,6 @@
 <swiper class="swiper" indicator-dots circular="{{800}}" indicator-color='rgba(53, 52, 51)' indicator-active-color='rgb(221, 221, 221)' interval="{{3000}}" autoplay>
 	<swiper-item class='swiperitem' wx:for='{{index.store_imgs}}' wx:key='index'>
-		<image class="img" mode="aspectFit" src="{{item}}"></image>
+		<image class="img" mode="aspectFill" src="{{item}}"></image>
 		<!-- 长aspectFit 短aspectFill -->
 	</swiper-item>
 </swiper>
@@ -22,7 +22,7 @@
 			</view>
 			<view class="itemchit"> {{item.goods_name}}</view>
 			<view class="df itemjifen">
-				<view class="jifenleft">{{item.spec[0].goods_price}} 积分</view>
+				<view class="jifenleft"><text>{{item.spec[0].goods_price}}</text> 积分</view>
 				<view class="jifenright">兑换</view>
 			</view>
 		</navigator>

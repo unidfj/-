@@ -86,8 +86,8 @@
 	padding-top: 110rpx;
 	font-size: 20rpx;
 	font-family: PingFangSC-Regular, PingFang SC;
-	background: #FB6254;
-	color: rgba(255, 255, 255, 1);
+	background: var(--basecolor);
+	color: #fff;
 	text-align: center;
 	transform: translate(50%, -50%) rotate(45deg);
 }

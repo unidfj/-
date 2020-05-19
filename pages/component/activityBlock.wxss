@@ -7,6 +7,8 @@
 	background: #fff;
 	box-sizing: border-box;
 	margin: 20rpx auto;
+	border-radius: 10rpx;
+	overflow: hidden;
 }
 
 .pic {

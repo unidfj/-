@@ -16,7 +16,7 @@
 				</picker>省
 				<!-- 市 -->
 				<picker class="dfcenter " bindchange="bindPickerCity" range="{{city.arr}}" disabled='{{!city.arr.length}}'>
-					<view class="picker ">
+					<view class="picker">
 						{{replace.replace(cityname,'市')}}
 						<van-icon class="arrowicon" name="arrow-down" size="10" />
 					</view>
@@ -57,6 +57,7 @@
 			<button class="btn" type="warn" form-type="submit">提交申请</button>
 		</view>
 	</form>
+
 
 
 	<!-- 第二套 -->
@@ -135,7 +136,7 @@
 					</van-uploader>
 				</view>
 			</view>
-			<view class="tips"> *注意: 业主信息必须为购房者信息 </view>
+			<view class="tips"> * 注意：店主信息必须为营业执照法人代表 </view>
 			<button class="btn" type="warn" form-type="submit">提交申请</button>
 		</view>
 	</form>

@@ -24,7 +24,7 @@ Page({
 			res => {
 				const { data } = res.data
 				console.log(data)
-				let lucky_text = data.lucky_text.replace(new RegExp(/img src="\//g), `img src="${App.baseurl}/`)
+				let lucky_text = data.lucky_text.replace(new RegExp(/img src="\//g), `img class="textimg" mode="center" src="${App.baseurl}/`)
 				let uncomplete = data.uncomplete.split(',')
 				this.setData({
 					uncomplete,
@@ -41,7 +41,6 @@ Page({
 		this.setData({
 			isplay: true,
 		})
-		console.log('转!')
 		App.post('/api/activity/do_luckdraw', {}, res => {
 			let result = res.data.data
 			let { prize } = result //1 2 3 4 
@@ -57,7 +56,7 @@ Page({
 					animationzhizhen: animationzhizhen.export()
 				})
 				if (n == 12) {
-					// 转三秒后// 停止在当前角度 
+					// 转秒后// 停止在当前角度 
 					animationData.rotate(this.angle(prize)).step({ duration: 0, timingFunction: 'linear' })
 					animationclick.scale(1).opacity(1).step()
 					animationzhizhen.opacity(1).step()
@@ -76,7 +75,7 @@ Page({
 							`恭喜您获得${result.lrank}!
 						兑换码: ${result.code}
 						`,
-						false)
+						false,)
 					}
 					this.updata()
 				}
@@ -93,10 +92,9 @@ Page({
 		if (num == 3) n = 205
 		if (num == 2) n = 115
 		if (num == 1) n = 25
-		if (num == 0) n = 70 + Math.random() * 3           //谢谢惠顾
+		if (num == 0) n = 70 + Math.random() * 3//谢谢惠顾
 		// 公式 parseInt(Math.random()*(max-min+1)+min,10); 
 		n = parseInt(Math.random() * 41 + n, 10);
-		console.log(num + '等奖', n + '角度')
 		return n
 	}
 })

@@ -65,6 +65,7 @@ Page({
     }
     //3我的活动
     if (index == 2) {
+      
       wx.navigateTo({
         url: '/pages/activity/myactivity',
       })

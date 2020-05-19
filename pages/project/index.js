@@ -6,16 +6,18 @@ Page({
 	 */
 	data: {
 		list: [],
-		tid: 1,//类型id
+		tid: 0,//类型id
 		page: 1,//页数
 		isloading: false,
 		hasmore: true
 	},
 	onLoad: function (opt) {
-		// console.log(opt)
+		console.log(opt)
+		this.setData({ tid: opt.tid })
 		wx.setNavigationBarTitle({
 			title: opt.text,
 		})
+
 	},
 	onShow: function () {
 		this.setData({ list: [], page: 1 })

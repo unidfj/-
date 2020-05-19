@@ -47,7 +47,7 @@
 </view>
 
 <!-- 只有业主才有的 -->
-<view class="btn" bindtap="btn" wx:if='{{idstate==1}}'>
+<view class="btn" bindtap="btn" wx:if='{{idstate!==2}}'>
 	{{detail.scode?'报名码'+detail.scode:'立即参与'}}
 </view>
 

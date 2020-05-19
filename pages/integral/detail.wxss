@@ -15,8 +15,9 @@ page {
 	flex-direction: column;
 	justify-content: space-between;
 	padding: 25rpx 0 30rpx 30rpx;
+	font-size: 30rpx;
 }
 
 .color {
-	color: #FB6254
+	color: var(--basecolor)
 }

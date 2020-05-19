@@ -33,7 +33,7 @@ page {
 }
 
 .active {
-	color: #FB6254;
+	color: var(--basecolor)
 }
 
 .active::after {
@@ -48,5 +48,5 @@ page {
 .nomore{
 	text-align: center;
 	font-size: 30rpx;
-	color: #fb6d56;
+	color: var(--basecolor)
 }

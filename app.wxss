@@ -20,7 +20,6 @@ page {
 
 .ad {
   margin: 40rpx 0;
-  background: pink;
 }
 
 
@@ -44,17 +43,5 @@ page {
 .img {
   width: 100% !important;
   height: 100% !important;
-}
-
-.m15 {
-  margin: 15rpx 0;
-}
-
-.p15 {
-  padding: 0 15rpx;
-}
-
-.pl15 {
-  padding-left: 15rpx;
 }
 

@@ -1,15 +1,18 @@
 .zixunbox {
 	width: 690rpx;
-	margin: 32px auto;
+	margin: 32rpx auto;
 	padding-bottom: 20rpx;
 	background: #fff;
+	border-radius: 10rpx;
+	overflow: hidden;
 }
 
 .zixunimg {
 	width: 690rpx;
 	height: 300rpx;
-	border-radius: 8rpx;
+	border-radius: 10rpx;
 	overflow: hidden;
+	/* background: #ededed; */
 }
 
 .img {
@@ -21,10 +24,10 @@
 	margin-top: 20rpx;
 	padding: 0 30rpx;
 	margin-bottom: 20rpx;
-	font-size: 24rpx;
+	font-size: 28rpx;
 	font-family: PingFangSC-Regular, PingFang SC;
-	font-weight: 400;
-	color: rgba(51, 51, 51, 1);
+	font-weight: 600;
+	color: #333;
 	text-overflow: ellipsis;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
